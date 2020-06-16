@@ -1,0 +1,35 @@
+---
+permalink: /test/
+title: bob
+---
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>repl.it</title>
+		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    <link href="style.css" rel="stylesheet" type="text/css" />
+  </head>
+  <body>
+		<header>
+			<center>cole wilson</center>
+		</header>
+		<div id="hspace"></div>
+		<section id="hero" style="background-image: url(https://miro.medium.com/max/12000/1*dEVrKvDP3cDl4rHDkgne0g.jpeg);">
+			<span class="herotitle">{{page.title}}</span>
+		</section>
+		<section id="body">
+		<aside>
+			aside
+		</aside>
+		<article>
+			{{content}}
+		</article>
+		</section>
+		<footer>
+			footer
+		</footer>
+    <script src="script.js"></script>
+  </body>
+</html>
