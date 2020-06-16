@@ -52,3 +52,8 @@ footer {
 	clear: both;
 	padding: 10px;
 }
+code { font-family: 'Fira Code', monospace; }
+
+@supports (font-variation-settings: normal) {
+  code { font-family: 'Fira Code VF', monospace; }
+}
