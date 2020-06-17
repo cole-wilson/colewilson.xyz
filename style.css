@@ -45,6 +45,9 @@ article {
 	padding: 10px;
 	float: left;
 }
+article img {
+	width: 20vw;
+}
 footer {
 	height: 50px;
 	width: 100vw;
