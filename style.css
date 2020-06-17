@@ -52,6 +52,17 @@ footer {
 	clear: both;
 	padding: 10px;
 }
+article h2::before {
+	content: "# ";
+	color: lightgrey;
+}
+.copycode {
+	position: absolute;
+	width: 20px;
+	height: 20px;
+	cursor: pointer;
+	right: 100px;
+}
 code { font-family: 'Fira Code', monospace; }
 
 @supports (font-variation-settings: normal) {
