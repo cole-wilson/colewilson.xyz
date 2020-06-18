@@ -26,7 +26,7 @@
 		{% endif %}
 		<span><i>by Cole Wilson</i></span>
 		<hr>
-		{% foreach in tag in page.tags %}
+		{% for tag in page.tags %}
 		<a class="tag" href="/tags#{{tag | downcase}}">{{tag}}</a>
 		{% endfor %}
 		</div>
