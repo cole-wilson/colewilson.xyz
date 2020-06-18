@@ -1,3 +1,9 @@
+@import url('monokai.css');
+@import url('https://cdn.jsdelivr.net/gh/tonsky/FiraCode@4/distr/fira_code.css');
+@import url('//fonts.googleapis.com/css?family=Anonymous+Pro');
+@import url('https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css');
+
+
 body {
 	margin: 0;
 }
