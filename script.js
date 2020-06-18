@@ -41,3 +41,14 @@ function myFunction() {
   var scrolled = (winScroll / height) * 100;
   document.getElementById("myBar").style.width = scrolled + "%";
 }
+
+
+viewportHeight = Math.max(document.documentElement.clientHeight, window.innerHeight || 0) - 50;
+document.onscroll = function() {
+	if ($(window).scrollTop() > viewportHeight) {
+		$('#about').css({'position':'fixed',"width":"18vw"})
+	}
+	else {
+		$('#about').css({'position':'static',"width":"auto"})
+	}
+}

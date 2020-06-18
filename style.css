@@ -51,14 +51,34 @@ header {
   width: 0%;
 }
 aside {
+	text-align: center;
 	width: 20vw;
 	float: left;
 	padding: 10px;
+}
+aside hr {
+	background:grey;
+	width:50%;
+}
+#about {
+	top: 60px;
+	left: 14px;
+}
+.tag {
+	border-radius: 25px;
+	padding: 5px;
+	border: 2px solid lightgrey;
+	color: lightgrey;
 }
 article {
 	width: 80vw;
 	padding: 10px;
 	float: left;
+}
+#desc {
+	text-overflow: ellipsis;
+	overflow: scroll;
+	max-height: 50vh;
 }
 article img {
 	max-width: 70%;
@@ -71,6 +91,8 @@ footer {
 	padding: 10px;
 	text-align: center;
 	font-family: monospace;
+	z-index: 9999;
+	background: white;
 }
 article h2::before {
 	content: "## ";
@@ -79,7 +101,7 @@ article h2::before {
 }
 article h2{
 	text-decoration: underline;
-	text-decoration-color: lightgray;
+	text-decoration-color: lightgrey;
 	cursor: pointer;
 }
 .copycode {

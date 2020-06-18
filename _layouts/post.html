@@ -23,14 +23,22 @@
 		</section>
 		<section id="body">
 		<aside>
-			aside
+		<div id="about">
+		<p id="desc"><i>{{page.desc}}</i></p>
+		<hr>
+		<span><i>by Cole Wilson</i></span>
+		<hr>
+		{% foreach in tag in tags %}
+		<a class="tag" href="/tags#{{tag | downcase}}">{{tag}}</a>
+		{% endfor %}
+		</div>
 		</aside>
 		<article>
 			{{content}}
 		</article>
 		</section>
 		<footer>
-			footer
+			
 		</footer>
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script> 
     <script src="/script.js"></script>
