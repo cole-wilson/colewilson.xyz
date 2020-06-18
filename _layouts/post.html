@@ -24,11 +24,13 @@
 		<section id="body">
 		<aside>
 		<div id="about">
+		{% if page.desc %}
 		<p id="desc"><i>{{page.desc}}</i></p>
 		<hr>
+		{% endif %}
 		<span><i>by Cole Wilson</i></span>
 		<hr>
-		{% foreach in tag in tags %}
+		{% foreach in tag in page.tags %}
 		<a class="tag" href="/tags#{{tag | downcase}}">{{tag}}</a>
 		{% endfor %}
 		</div>
