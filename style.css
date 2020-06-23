@@ -73,6 +73,8 @@ aside hr {
 .tag {
 	border-radius: 25px;
 	padding: 5px;
+	font-style: italic;
+	marging-bottom: 5px;
 	border: 2px solid lightgrey;
 	color: lightgrey;
 }
