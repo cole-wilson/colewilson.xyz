@@ -24,7 +24,7 @@
 		<p id="desc"><i>{{page.desc}}</i></p>
 		<hr>
 		{% endif %}
-		<span><i>by Cole Wilson</i></span>
+		<span><i>{{ page.date | date_to_string }} - by Cole Wilson</i></span>
 		<hr>
 		{% for tag in page.tags %}
 		<a class="tag" href="/tags#{{tag | downcase}}">{{tag}}</a>
