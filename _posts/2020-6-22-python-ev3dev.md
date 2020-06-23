@@ -17,7 +17,7 @@ Recently, I have been working on a project to use Python on the ev3dev platform.
 ## Overview:
 In this tuorial, I will show you how to:
 - Download the ev3dev operating system for your brick.
-- Connect your brick to your Wndows or Mac computer.
+- Connect your brick to your Windows or Mac computer.
 - Setup PyCharm on your computer.
 - Connect to a GitHub repo.
 - Sync the code to your brick.
