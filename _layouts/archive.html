@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+	  <title>{{page.title}}  &middot;  Cole Wilson</title>
+    <link href="/style.css" rel="stylesheet" type="text/css" />
+  </head>
+  <body>
+		<header>
+			<center>cole wilson</center>
+			<div class="progress-container">
+    		<div class="progress-bar" id="myBar"></div>
+  		</div>
+		</header>
+		<div id="hspace"></div>
+		<section id="hero" style="background-image: url(https://miro.medium.com/max/12000/1*dEVrKvDP3cDl4rHDkgne0g.jpeg);">
+			<span class="herotitle">{{page.title}}</span>
+		</section>
+		<section id="body">
+		<aside>
+		<div id="about">
+		{% if page.desc %}
+		<p id="desc"><i>{{page.desc}}</i></p>
+		<hr>
+		{% endif %}
+		<span><i>{{ page.date | date_to_string }} - by Cole Wilson</i></span>
+		<hr>
+		{% for tag in page.tags %}
+		<a class="tag" href="/tags#{{tag | downcase}}">{{tag}}</a>
+		{% endfor %}
+		</div>
+		</aside>
+		<article>
+			{{content}}
+		</article>
+		</section>
+		<footer>
+			
+		</footer>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script> 
+    <script src="/script.js"></script>
+  </body>
+</html>
