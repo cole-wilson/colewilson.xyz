@@ -47,6 +47,7 @@ viewportHeight = Math.max(document.documentElement.clientHeight, window.innerHei
 document.onscroll = function() {
 	if ($(window).scrollTop() > viewportHeight) {
 		$('#about').css({'position':'fixed',"width":"18vw"})
+		$('#header-title').html("cole wilson / "+$(".herotitle").text());
 	}
 	else {
 		$('#about').css({'position':'static',"width":"auto"})
