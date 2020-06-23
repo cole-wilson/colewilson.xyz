@@ -51,5 +51,6 @@ document.onscroll = function() {
 	}
 	else {
 		$('#about').css({'position':'static',"width":"auto"})
+		$('#header-title').html("cole wilson");
 	}
 }
