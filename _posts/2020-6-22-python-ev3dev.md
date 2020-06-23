@@ -1,5 +1,5 @@
 ---
-title: Python on the ev3dev framework
+title: 'Python on the ev3dev framework'
 layout: post
 tags:
 	- python
@@ -7,6 +7,7 @@ tags:
 	- robotics
 	- linux
 	- github
+	
 ---
 ## Introduction:
 Recently, I have been working on a project to use Python on the ev3dev platform. This is useful, because you can write complex programs for your robots. For example, you could [connect the ev3 to a PS4 controller.](https://by-the-w3i.github.io/2018/01/03/EV3-PS4-controller/) For me, I was working on a SumoBot, a robot that battles with another, and tries to push it out of a ring. However, this approach will work with an sort of robot.
