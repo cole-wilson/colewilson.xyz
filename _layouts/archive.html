@@ -8,20 +8,19 @@
   </head>
   <body>
 		<header>
-			<center>cole wilson / {{page.title | downcase}}</center>
+			<center><a style="color:black;" href="/">cole wilson</a></center>
 			<div class="progress-container">
     		<div class="progress-bar" id="myBar"></div>
   		</div>
 		</header>
 		<div id="hspace"></div>
-		<section id="body">
-			<article>
+		<section id="archive-body">
+			<h2>{{page.title}}}</h2>
 			{{content}}
-			</article>
 		</section>
-		<footer>
-			
+		<footer>		
 		</footer>
+		<script>var layout="archive";</script>
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script> 
     <script src="/script.js"></script>
   </body>

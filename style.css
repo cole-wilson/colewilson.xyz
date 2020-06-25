@@ -26,6 +26,11 @@ header {
 #hspace {
 	height: 50px;
 }
+#archive-body {
+	margin-top: 10px;
+	margin-left: 10vw;
+	margin-right: 10vw;
+}
 #hero {
 	height: calc(100vh - 50px);
 	text-align: center;
@@ -94,7 +99,7 @@ article img {
 footer {
 	height: 50px;
 	width: 100vw;
-	border-top: 1px solid black;
+	border-top: 1px solid lightgrey;
 	clear: both;
 	padding: 10px;
 	text-align: center;
@@ -133,7 +138,7 @@ article blockquote {
   padding: 0.5em 10px;
 }
 
-article, aside {font-family: 'Anonymous Pro'}
+article, aside, #archive-body {font-family: 'Anonymous Pro'}
 code, h1, h2, h3, h4, h5, h6 { font-family: 'Fira Code', monospace; }
 
 aside :any-link {

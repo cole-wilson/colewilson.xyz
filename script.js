@@ -42,15 +42,40 @@ function myFunction() {
   document.getElementById("myBar").style.width = scrolled + "%";
 }
 
-
+if (layout = "post") {
 viewportHeight = Math.max(document.documentElement.clientHeight, window.innerHeight || 0) - 50;
 document.onscroll = function() {
 	if ($(window).scrollTop() > viewportHeight) {
 		$('#about').css({'position':'fixed',"width":"18vw"})
-		$('#header-title').html("cole wilson / "+$(".herotitle").text());
+		$('#header-title').html("<a style='color:black;' href='/'>cole wilson</a> / "+$(".herotitle").text());
 	}
 	else {
 		$('#about').css({'position':'static',"width":"auto"})
-		$('#header-title').html("cole wilson");
+		$('#header-title').html("<a style='color:black;' href='/'>cole wilson</a>");
 	}
+}
+}
+else {
+viewportHeight = Math.max(document.documentElement.clientHeight, window.innerHeight || 0)/3;
+document.onscroll = function() {
+	if ($(window).scrollTop() > viewportHeight) {
+		$('#about').css({'position':'fixed',"width":"18vw"})
+		$('#header-title').html("<a style='color:black;' href='/'>cole wilson</a> / "+$(".herotitle").text());
+	}
+	else {
+		$('#about').css({'position':'static',"width":"auto"})
+		$('#header-title').html("<a style='color:black;' href='/'>cole wilson</a>");
+	}
+}
+}
+var body = document.body,
+    html = document.documentElement;
+
+var height = Math.max( body.scrollHeight, body.offsetHeight, 
+                       html.clientHeight, html.scrollHeight, html.offsetHeight );
+alert(height)
+alert(viewportHeight)
+
+if (height > viewportHeight) {
+	$('footer').css({'position':'fixed',"bottom":"0"})
 }
