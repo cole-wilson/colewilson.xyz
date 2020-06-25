@@ -71,10 +71,7 @@ document.onscroll = function() {
 var body = document.body,
     html = document.documentElement;
 
-var height = Math.max( body.scrollHeight, body.offsetHeight, 
-                       html.clientHeight, html.scrollHeight, html.offsetHeight );
-alert(height)
-alert(viewportHeight)
+var height = Math.max( body.scrollHeight, body.offsetHeight, html.clientHeight, html.scrollHeight, html.offsetHeight );
 
 if (height < viewportHeight+100) {
 	$('footer').css({'position':'fixed',"bottom":"0"})

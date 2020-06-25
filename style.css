@@ -157,3 +157,14 @@ code ::selection {
 	background: white;
 	color: black;
 }
+.archive-card {
+	text-align: center;
+	color: black;
+	border-radius: 5px;
+	border: 1px solid lightgrey;
+	padding-bottom: 0;
+	list-style: none;
+}
+.archive-card > div {
+	height: 150px;
+}
