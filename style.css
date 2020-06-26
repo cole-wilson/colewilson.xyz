@@ -27,9 +27,13 @@ header {
 	height: 50px;
 }
 #archive-body {
+	align-content: center;
 	margin-top: 10px;
-	margin-left: 10vw;
-	margin-right: 10vw;
+	margin-left: 0vw;
+	margin-right: 0vw;
+}
+.archive-title {
+	transform: translate(40px,0);
 }
 #hero {
 	height: calc(100vh - 50px);
@@ -164,7 +168,22 @@ code ::selection {
 	border: 1px solid lightgrey;
 	padding-bottom: 0;
 	list-style: none;
+	min-width: 20vw;
+	max-width: 40vw;
+	display: inline-block;
+	margin: 10px;
 }
 .archive-card > div {
 	height: 150px;
+	background-size: 100%;
+}
+.archive-card h4 {
+	width: 100%;
+	height: 100%;
+	line-height: 150px;
+	background-color: rgba(100,100,100,0.3);
+}
+.archive-card p {
+	margin-top: 10px;
+	font-style: italic;
 }
