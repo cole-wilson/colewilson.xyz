@@ -27,7 +27,7 @@ header {
 #hspace {
 	height: 50px;
 }
-#archive-body {
+#o-body {
 	align-content: center;
 	margin-top: 10px;
 	margin-left: 0vw;
@@ -144,7 +144,7 @@ article blockquote {
   padding: 0.5em 10px;
 }
 
-article, aside, #archive-body {font-family: 'Anonymous Pro'}
+article, aside, #o-body {font-family: 'Anonymous Pro'}
 code, h1, h2, h3, h4, h5, h6 { font-family: 'Fira Code', monospace; }
 
 aside :any-link {

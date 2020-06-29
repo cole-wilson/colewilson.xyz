@@ -1,22 +1,11 @@
-<!DOCTYPE html>
-<html>
-
-<head>
-	<meta charset="utf-8">
-	<meta name="viewport" content="width=device-width">
-	<title>{{page.title}} &middot; Cole Wilson</title>
-	{% include styles.html %}
-</head>
-
-<body>
+---
+layout: master
+---
 	{% include nav.html %}
-	<section id="archive-body">
+	<section id="o-body">
 		<h2 class="archive-title">{{page.title}}</h2>
 		{{content}}
 	</section>
 	{% include footer.html %}
 	<script>var layout="archive";</script>
 	{% include scripts.html %}
-</body>
-
-</html>
