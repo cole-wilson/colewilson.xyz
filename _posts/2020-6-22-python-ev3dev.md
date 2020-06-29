@@ -68,7 +68,7 @@ You will need the following:
 4. Now, [get a GitHub account](https://github.com/signup) if you don't have one yet. They are free, and tremendously useful.
 5. Goto [https://github.com/new](https://github.com/new) and create a new repository with the name `ev3`, and select the option to include a `README.md`.<br>![New Repo](https://raw.githubusercontent.com/cole-wilson/cole-wilson.github.io/master/static/assets/img/ghnew.png)
 6. Open PyCharm.
-7. Goto `Checkout from Version Control` and go to the GitHub tab. Sign in, and select your `ev3` repository. ![Git](http://www2.lawrence.edu/fast/GREGGJ/CMSC210/intro/installing1.png)
+7. Goto `Checkout from Version Control` and go to the GitHub tab. Sign in, and select your `ev3` repository. ![Git](https://www2.lawrence.edu/fast/GREGGJ/CMSC210/intro/installing1.png)
 8. Now, you should have your code in PyCharm. As you can see, all that you have now is a file called `README.md`.
 
 ## 3: Adding Code to the Program.
