@@ -42,7 +42,7 @@ function myFunction() {
   document.getElementById("myBar").style.width = scrolled + "%";
 }
 
-if (true) {//layout == ''
+if (layout == 'post') {//layout == ''
 viewportHeight = Math.max(document.documentElement.clientHeight, window.innerHeight || 0) - 50;
 document.onscroll = function() {
 	if ($(window).scrollTop() > viewportHeight) {
