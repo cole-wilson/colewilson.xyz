@@ -16,6 +16,7 @@ if (window.matchMedia("(max-width: 600px)").matches) {
 	var home = "<a href='/'>home</a><br>";
 	$("#navsmall").html(button+l+home+t);
 	$('.n1, .n2').remove();
+	$('.n1, .n2').html('');
 }
 $("#closenav").click(function(){
 	$('#navsmall').css({'display':'none'})
