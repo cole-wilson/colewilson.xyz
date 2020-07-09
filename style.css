@@ -76,7 +76,7 @@ header {
   width: 100vw;
 	transform: translate(-5px,10px);
   height: 1px;
-  background: var(--lc);
+  background: lightgrey;
 }
 .progress-bar {
   height: 1px;
