@@ -1,3 +1,4 @@
+document.documentElement.setAttribute('data-theme', localStorage.getItem('themeSwitch'));
 const copyToClipboard = str => {
   const el = document.createElement('textarea');
   el.value = str;
@@ -6,6 +7,22 @@ const copyToClipboard = str => {
   document.execCommand('copy');
   document.body.removeChild(el);
 };
+
+if (window.matchMedia("(max-width: 600px)").matches) {
+	$('header').prepend('<button id="openav">&equiv;</button>');
+	var l = $('.n1').html().replace(/(\<.*?\>.*?\<\/a\>)/g, '$1'+'<br>').replace(/style=".*?"/g,'');
+	var t = $('.n2').html().replace(/(\<.*?\>.*?\<\/a\>)/g, '$1'+'<br>').replace(/style=".*?"/g,'');
+	var button = "<button id='closenav'>&times;</button><br>";
+	var home = "<a href='/'>home</a><br>";
+	$("#navsmall").html(button+l+home+t);
+	$('.n1, .n2').remove();
+}
+$("#closenav").click(function(){
+	$('#navsmall').css({'display':'none'})
+});
+$("#openav").click(function(){
+	$('#navsmall').css({'display':'block'})
+});
 
 document.querySelectorAll('.highlight').forEach(function(node) {
   node.innerHTML = "<img class='copycode' src='https://img.icons8.com/windows/30/999999/copy.png'>" + node.innerHTML
@@ -45,26 +62,30 @@ function myFunction() {
 if (layout == 'post') {//layout == ''
 viewportHeight = Math.max(document.documentElement.clientHeight, window.innerHeight || 0) - 50;
 document.onscroll = function() {
+	if (!window.matchMedia("(max-width: 600px)").matches) {
 	if ($(window).scrollTop() > viewportHeight) {
 		$('#about').css({'position':'fixed',"width":"18vw"})
-		$('#header-title').html("<a style='color:black;' href='/'>cole wilson</a> / "+$(".herotitle").text());
+		$('#toptitle').html(" / "+$(".herotitle").text());
 	}
 	else {
 		$('#about').css({'position':'static',"width":"auto"})
-		$('#header-title').html("<a style='color:black;' href='/'>cole wilson</a>");
+		$('#toptitle').html("");
+	}
 	}
 }
 }
 else {
 viewportHeight = Math.max(document.documentElement.clientHeight, window.innerHeight || 0)/3;
 document.onscroll = function() {
+	if (!window.matchMedia("(max-width: 600px)").matches) {
 	if ($(window).scrollTop() > viewportHeight) {
 		$('#about').css({'position':'fixed',"width":"18vw"})
-		$('#header-title').html("<a style='color:black;' href='/'>cole wilson</a> / "+$(".herotitle").text());
+		$('#toptitle').html(" / "+$(".herotitle").text());
 	}
 	else {
 		$('#about').css({'position':'static',"width":"auto"})
-		$('#header-title').html("<a style='color:black;' href='/'>cole wilson</a>");
+		$('#toptitle').html(" / "+$(".herotitle").text());
+	}
 	}
 }
 }
@@ -91,6 +112,3 @@ $("#darkmode").click(function() {
 setInterval(function(){ 
 	document.documentElement.setAttribute('data-theme', localStorage.getItem('themeSwitch'));
 }, 3000);
-document.documentElement.onload = function() {
-	document.documentElement.setAttribute('data-theme', localStorage.getItem('themeSwitch'));
-};

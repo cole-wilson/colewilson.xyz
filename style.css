@@ -118,8 +118,27 @@ article {
 	max-height: 50vh;
 }
 article img {
-	max-width: 70%;
+  font-family: 'Helvetica';
+  font-weight: 300;
+  line-height: 2;  
+  text-align: center;
+  border: 0.5px solid var(--color);
+  width: 100%;
+  height: auto;
+  display: block;
+  position: relative;
 }
+article img:before { 
+  content: "This image is broken, sorry";
+  display: block;
+  margin-bottom: 10px;
+}
+article img:after { 
+  content: "(url: " attr(src) ")";
+  display: block;
+  font-size: 12px;
+}
+
 footer {
 	height: 50px;
 	width: 100vw;
@@ -210,4 +229,46 @@ code ::selection {
 	border: none;
 	outline: none;
 	color: var(--opc);
+}
+#navsmall {
+	display: none;
+}
+
+@media only screen and (max-width: 600px) {
+aside {
+  width: 100vw;
+}
+#navsmall {
+	text-align: center;
+	width: 100vw;
+	height: 100vh;
+	position: fixed;
+	background: var(--bg);
+	font-size: 2rem;
+	font-weight: bold;
+	z-index: 9999999999999999999999999999999999;
+}
+#closenav, #openav  {
+	background: transparent;
+	color: var(--color);
+	outline: none;
+	border: none;
+	font-size: 2rem;
+	position: fixed;
+	top: 0px;
+	left: 10px;
+	margin: none;
+}
+#openav {
+	font-size: 2.2rem;
+}
+#navsmall :any-link {
+	color: var(--color);
+}
+article>* {
+	margin-left: 0px;
+}
+article {
+	width: 100vw;
+}
 }
