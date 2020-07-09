@@ -206,6 +206,9 @@ code ::selection {
 	display: inline-block;
 	margin: 10px;
 }
+.archive-card :any-link{
+	color: var(--color);
+}
 .archive-card > div {
 	height: 150px;
 	background-size: 100%;
