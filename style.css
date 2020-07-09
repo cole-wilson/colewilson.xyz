@@ -60,6 +60,9 @@ header {
   background-size: cover;
 	border-bottom: 1px solid black;
 }
+.navlinks {
+	display: inline-block;
+}
 .herotitle {
 	color: white;
 	padding-top: 40vh;
@@ -175,7 +178,6 @@ code ::selection {
 }
 .archive-card {
 	text-align: center;
-	color: black;
 	border-radius: 5px;
 	border: 1px solid var(--lc);
 	padding-bottom: 0;
