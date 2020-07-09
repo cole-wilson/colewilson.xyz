@@ -57,7 +57,7 @@ header {
 	background-attachment: fixed;
   background-position: center;
   background-repeat: no-repeat;
-  background-size: cover;
+  background-size: fit;
 	border-bottom: 1px solid black;
 }
 .navlinks {
@@ -259,7 +259,7 @@ aside {
 	font-size: 2rem;
 	position: fixed;
 	top: 0px;
-	left: 10px;
+	left: 0px;
 	margin: none;
 }
 #openav {
