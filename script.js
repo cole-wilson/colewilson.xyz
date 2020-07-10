@@ -9,10 +9,10 @@ const copyToClipboard = str => {
 };
 
 if (window.matchMedia("(max-width: 600px)").matches) {
-	$('header').prepend('<button id="openav">&equiv;</button>');
+	$('header').prepend('<span id="openav">&equiv;</span>');
 	var l = $('.n1').html().replace(/(\<.*?\>.*?\<\/a\>)/g, '$1'+'<br>').replace(/style=".*?"/g,'');
 	var t = $('.n2').html().replace(/(\<.*?\>.*?\<\/a\>)/g, '$1'+'<br>').replace(/style=".*?"/g,'');
-	var button = "<button id='closenav'>&times;</button><br>";
+	var button = "<span id='closenav'>&times;</span><br>";
 	var home = "<a href='/'>home</a><br>";
 	$("#navsmall").html(button+l+home+t);
 	$('.n1, .n2').remove();

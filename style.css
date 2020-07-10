@@ -55,9 +55,8 @@ header {
 	height: calc(100vh - 50px);
 	text-align: center;
 	background-attachment: fixed;
-  background-position: center;
   background-repeat: no-repeat;
-  background-size: 100% auto;
+  background-size: cover;
 	border-bottom: 1px solid black;
 }
 .navlinks {
@@ -73,14 +72,14 @@ header {
 	height: 100%;
 }
 .progress-container {
-  width: 100vw;
+  width: 120vw;
 	transform: translate(-5px,10px);
   height: 1px;
-  background: lightgrey;
+  background: var(--lc);
 }
 .progress-bar {
   height: 1px;
-  background: var(--color);
+  background: var(--op);
   width: 0%;
 }
 aside {
@@ -167,6 +166,7 @@ article h2{
 	cursor: pointer;
 	right: 10px;
 	display: invisible;
+	border: none;
 }
 article>* {
 	margin-left: 65px;
@@ -181,7 +181,7 @@ article blockquote {
   padding: 0.5em 10px;
 }
 
-article, aside, #o-body {font-family: 'Anonymous Pro'}
+article, aside, #o-body, #navsmall {font-family: 'Anonymous Pro'}
 code, h1, h2, h3, h4, h5, h6, .herotitle { font-family: 'Fira Code', monospace; }
 
 @supports (font-variation-settings: normal) {
@@ -257,10 +257,10 @@ aside {
 	outline: none;
 	border: none;
 	font-size: 2rem;
-	position: fixed;
-	top: 0px;
-	left: 0px;
-	margin: none;
+	position: absolute;
+	top: -1px;
+	display: block;
+	left: 7px;
 }
 #openav {
 	font-size: 2.2rem;
@@ -276,5 +276,14 @@ article {
 }
 .archive-card {
 	width: 100%;
+}
+#hero {
+	height: calc(100vh - 50px); */
+	text-align: center;
+	background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-size: auto 100vh;
+	background-position-x: center;
+	border-bottom: 1px solid black;
 }
 }
