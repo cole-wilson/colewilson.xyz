@@ -72,7 +72,7 @@ header {
 	height: 100%;
 }
 .progress-container {
-  width: 120vw;
+  width: 100vw;
 	transform: translate(-5px,10px);
   height: 1px;
   background: var(--lc);
