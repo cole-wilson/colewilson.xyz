@@ -45,8 +45,8 @@ header {
 #o-body {
 	align-content: center;
 	margin-top: 10px;
-	margin-left: 0vw;
-	margin-right: 0vw;
+	margin-left: 1vw;
+	margin-right: 1vw;
 }
 .archive-title {
 	transform: translate(40px,0);
