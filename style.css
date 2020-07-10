@@ -210,8 +210,8 @@ code ::selection {
 	color: var(--color);
 }
 .archive-card > div {
-	height: 150px;
-	background-size: auto 150px;
+	height: 3000px;
+	background-size: auto auto;
 }
 .archive-card h4 {
 	width: 100%;
@@ -275,7 +275,7 @@ article {
 	width: 100vw;
 }
 .archive-card {
-	width: 100%;
+	min-width: 100%;
 }
 #hero {
 	height: calc(100vh - 50px); */
