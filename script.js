@@ -1,4 +1,5 @@
 document.documentElement.setAttribute('data-theme', localStorage.getItem('themeSwitch'));
+
 const copyToClipboard = str => {
   const el = document.createElement('textarea');
   el.value = str;
@@ -24,6 +25,11 @@ $("#closenav").click(function(){
 $("#openav").click(function(){
 	$('#navsmall').css({'display':'block'})
 });
+
+$("article img").click(function(){
+	window.open($(this).attr('src'));
+});
+
 
 document.querySelectorAll('.highlight').forEach(function(node) {
   node.innerHTML = "<img class='copycode' src='https://img.icons8.com/windows/30/999999/copy.png'>" + node.innerHTML
@@ -63,15 +69,23 @@ function myFunction() {
 if (layout == 'post') {//layout == ''
 viewportHeight = Math.max(document.documentElement.clientHeight, window.innerHeight || 0) - 50;
 document.onscroll = function() {
+	// alert();
 	if (!window.matchMedia("(max-width: 600px)").matches) {
-	if ($(window).scrollTop() > viewportHeight) {
-		$('#about').css({'position':'fixed',"width":"18vw"})
-		$('#toptitle').html(" / "+$(".herotitle").text());
-	}
-	else {
-		$('#about').css({'position':'static',"width":"auto"})
-		$('#toptitle').html("");
-	}
+		if ($(window).scrollTop() > viewportHeight) {
+			$('#about').css({'position':'fixed',"width":"18vw","top":"60px"})
+			// if (($(document).height()-viewportHeight)-135 <= $(window).scrollTop()) {
+			// 	var offset = 60-(($(window).scrollTop()) - ($(document).height()-viewportHeight-135));
+			// 	// alert(offset);
+			// 	$('#about').css({'top':parseInt(offset)+'px'})
+			// }
+			// else {
+				$('#toptitle').html(" / "+$(".herotitle").text());
+			// }
+		}
+		else {
+			$('#about').css({'position':'static',"width":"auto"})
+			$('#toptitle').html("");
+		}
 	}
 }
 }
@@ -112,4 +126,4 @@ $("#darkmode").click(function() {
 });
 setInterval(function(){ 
 	document.documentElement.setAttribute('data-theme', localStorage.getItem('themeSwitch'));
-}, 3000);
+}, 10000);

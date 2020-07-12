@@ -72,7 +72,7 @@ header {
 	height: 100%;
 }
 .progress-container {
-  width: 100vw;
+  width: 101vw;
 	transform: translate(-5px,10px);
   height: 1px;
   background: var(--lc);
@@ -93,7 +93,6 @@ aside hr {
 	width:50%;
 }
 #about {
-	top: 60px;
 	left: 14px;
 }
 aside :any-link {
@@ -117,6 +116,7 @@ article {
 	max-height: 50vh;
 }
 article img {
+	cursor: pointer;
   font-family: 'Helvetica';
   font-weight: 300;
   line-height: 2;  
@@ -137,7 +137,27 @@ article img:after {
   display: block;
   font-size: 12px;
 }
-
+#name-c, #text-c {
+	display: inline-block;
+	outline: none;
+	background: none;
+	border: none;
+	border-bottom: 1px solid lightgrey;
+	color: var(--color);
+}
+#text-c {
+	width: 80%;
+}
+.bigg {
+	font-size: 100px;
+}
+#post-c {
+	display: inline-block;
+	outline: none;
+	background: none;
+	border: 1px solid lightgrey;
+	color: var(--color);
+}
 footer {
 	height: 50px;
 	width: 100vw;
@@ -181,7 +201,7 @@ article blockquote {
   padding: 0.5em 10px;
 }
 
-article, aside, #o-body, #navsmall {font-family: 'Anonymous Pro'}
+article, aside, #o-body, #navsmall, * {font-family: 'Anonymous Pro'}
 code, h1, h2, h3, h4, h5, h6, .herotitle { font-family: 'Fira Code', monospace; }
 
 @supports (font-variation-settings: normal) {
@@ -236,10 +256,34 @@ code ::selection {
 #navsmall {
 	display: none;
 }
+#comments {
+	display: inline-block;
+	width: 70vw;
+	padding: 10px;
+	height: 200px;
+	overflow-y: scroll;
+	margin: 0 15vw -7px 15vw;
+	border: 1px  solid lightgrey;
+	border-bottom: none;
+}
+.comment i {
+	font-weight: bold;
+	font-style: normal;
+	font-size: 1.5rem;
+}
+.comment p {
+	font-style: italic;
+}
+/* .comment {
+	padding: 5px;
+} */
 
 @media only screen and (max-width: 600px) {
 aside {
   width: 100vw;
+}
+.progress-container {
+	width: 110%;
 }
 #navsmall {
 	text-align: center;
@@ -252,6 +296,7 @@ aside {
 	z-index: 9999999999999999999999999999999999;
 }
 #closenav, #openav  {
+	cursor: pointer;
 	background: transparent;
 	color: var(--color);
 	outline: none;
@@ -285,5 +330,9 @@ article {
   background-size: auto 100vh;
 	background-position-x: center;
 	border-bottom: 1px solid black;
+}
+#comments {
+	width: 100vw;
+	margin: 0 0 40px 0;
 }
 }

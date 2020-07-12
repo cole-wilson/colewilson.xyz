@@ -23,5 +23,6 @@ layout: master
 			{{content}}
 		</article>
 		</section>
+		{% if page.comments %}{% include comments.html %}{% endif %}
 		{% include footer.html %}
 		{% include scripts.html %}
