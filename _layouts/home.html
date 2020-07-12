@@ -1,6 +1,10 @@
 ---
 layout: master
 ---
+{% include nav.html %}
 <section id="hero" style="background-image: url({{page.image}});">
 <span class="herotitle">{{page.title}}</span>
 </section>
+{{content}}
+{% include footer.html %}
+{% include scripts.html %}
