@@ -229,6 +229,13 @@ code ::selection {
 .archive-card :any-link{
 	color: var(--color);
 }
+.project-card {
+	border-radius: 25px;
+	border: 1px solid lightgrey;
+	width: 50%;
+	margin-bottom: 10px;
+	display: inline-block;
+}
 /* .archive-card > div {
 	height:  3000px;
 	background-size: auto auto;

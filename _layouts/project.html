@@ -1,0 +1,37 @@
+---
+layout: master
+--- 
+{% include nav.html %}
+<section id="hero" style="background-image: url({{page.image}});">
+	<span class="herotitle">{{page.title}}</span>
+		</section>
+		<section id="body">
+		<aside>
+		<div id="about">
+{% if page.repo %}
+<a href="https://github.com/{{page.user}}/{{page.repo}}" class="project-card">
+	<img src="https://img.icons8.com/windows/90/000000/github.png">
+	<span>GitHub</span>
+</a>
+{% endif %}
+{% if page.url %}
+<a href="{{page.url}}" class="project-card">
+	<img src="https://img.icons8.com/windows/90/000000/globe.png">
+	<span>Visit Site</span>
+</a>
+{% endif %}
+{% if page.download %}
+<a href="{{page.download}}" class="project-card">
+	<img src="https://img.icons8.com/windows/90/000000/download.png">
+	<span>Download</span>
+</a>
+{% endif %}
+		</div>
+		</aside>
+		<article>
+			{{content}}
+		</article>
+		</section>
+		{% if page.comments %}{% include comments.html %}{% endif %}
+		{% include footer.html %}
+		{% include scripts.html %}

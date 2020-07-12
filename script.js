@@ -35,6 +35,7 @@ document.querySelectorAll('.highlight').forEach(function(node) {
   node.innerHTML = "<img class='copycode' src='https://img.icons8.com/windows/30/999999/copy.png'>" + node.innerHTML
 });
 
+
 $(document).on("click",":header", function () {
    var clickedBtnID = $(this).attr('id'); // or var clickedBtnID = this.id
    window.location.hash = '#' + clickedBtnID;
@@ -113,17 +114,42 @@ if (height < viewportHeight+1000) {
 	$('footer').css({'position':'fixed',"bottom":"0"})
 }
 
-
+if (localStorage.getItem('themeSwitch') == 'dark') {
+document.querySelectorAll('img').forEach(function(node) {
+		node.src = node.src.replace('000000','ffffff');
+	});
+}
+else {
+	document.querySelectorAll('img').forEach(function(node) {
+		node.src = node.src.replace('ffffff','000000');
+	});
+}
 $("#darkmode").click(function() {
   if (localStorage.getItem('themeSwitch') == 'dark') {
     document.documentElement.setAttribute('data-theme', 'light');
 		localStorage.setItem('themeSwitch', 'light');
+		document.querySelectorAll('img').forEach(function(node) {
+			node.src = node.src.replace('ffffff','000000');
+		});
 	}
 	else {
     document.documentElement.setAttribute('data-theme', 'dark');
 		localStorage.setItem('themeSwitch', 'dark');
+		document.querySelectorAll('img').forEach(function(node) {
+			node.src = node.src.replace('000000','ffffff');
+		});
 	}
 });
 setInterval(function(){ 
 	document.documentElement.setAttribute('data-theme', localStorage.getItem('themeSwitch'));
+if (localStorage.getItem('themeSwitch') == 'dark') {
+document.querySelectorAll('img').forEach(function(node) {
+		node.src = node.src.replace('000000','ffffff');
+	});
+}
+else {
+	document.querySelectorAll('img').forEach(function(node) {
+		node.src = node.src.replace('ffffff','000000');
+	});
+}
 }, 10000);
