@@ -202,7 +202,7 @@ article blockquote {
 }
 
 article, aside, #o-body, #navsmall, * {font-family: 'Anonymous Pro'}
-code, h1, h2, h3, h4, h5, h6, .herotitle { font-family: 'Fira Code', monospace; }
+code, h1, h2, h3, h4, h5, h6, .herotitle, .bigg { font-family: 'Fira Code', monospace; }
 
 @supports (font-variation-settings: normal) {
   code { font-family: 'Fira Code VF', monospace; }
