@@ -230,11 +230,17 @@ code ::selection {
 	color: var(--color);
 }
 .project-card {
-	border-radius: 25px;
+	border-radius: 10px;
 	border: 1px solid lightgrey;
-	width: 50%;
+	width: 80%;
 	margin-bottom: 10px;
 	display: inline-block;
+}
+.project-card img {
+	width: 40%;
+}
+.project-card p {
+	font-weight: bolder; 
 }
 /* .archive-card > div {
 	height:  3000px;
@@ -281,16 +287,16 @@ code ::selection {
 .comment p {
 	font-style: italic;
 }
-/* .comment {
-	padding: 5px;
-} */
-
-@media only screen and (max-width: 600px) {
-aside {
-  width: 100vw;
+#openav {
+	display: none;
 }
-.progress-container {
-	width: 110%;
+.n1, .n2 {
+	display: inline-block;
+}
+
+@media only screen and (max-width: 650px) {
+.n1, .n2 {
+	display: none;
 }
 #navsmall {
 	text-align: center;
@@ -320,6 +326,13 @@ aside {
 #navsmall :any-link {
 	color: var(--color);
 }
+aside {
+  width: 100vw;
+}
+.progress-container {
+	width: 110%;
+}
+
 article>* {
 	margin-left: 0px;
 }
@@ -330,7 +343,7 @@ article {
 	min-width: 100%;
 }
 #hero {
-	height: calc(100vh - 50px); */
+	height: calc(100vh - 50px);
 	text-align: center;
 	background-attachment: fixed;
   background-repeat: no-repeat;
@@ -342,4 +355,14 @@ article {
 	width: 100vw;
 	margin: 0 0 40px 0;
 }
+
+.project-card {
+	border-radius: 10px;
+	border: 1px solid lightgrey;
+	width: 20%;
+	margin-bottom: 10px;
+	display: inline-block;
+}
+
+
 }

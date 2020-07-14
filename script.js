@@ -9,16 +9,18 @@ const copyToClipboard = str => {
   document.body.removeChild(el);
 };
 
-if (window.matchMedia("(max-width: 600px)").matches) {
+
+
 	$('header').prepend('<span id="openav">&equiv;</span>');
 	var l = $('.n1').html().replace(/(\<.*?\>.*?\<\/a\>)/g, '$1'+'<br>').replace(/style=".*?"/g,'');
 	var t = $('.n2').html().replace(/(\<.*?\>.*?\<\/a\>)/g, '$1'+'<br>').replace(/style=".*?"/g,'');
 	var button = "<span id='closenav'>&times;</span><br>";
 	var home = "<a href='/'>home</a><br>";
 	$("#navsmall").html(button+l+home+t);
-	$('.n1, .n2').remove();
-	$('.n1, .n2').html('');
-}
+	// $('.n1, .n2').remove();
+	// $('.n1, .n2').html('');
+
+
 $("#closenav").click(function(){
 	$('#navsmall').css({'display':'none'})
 });
@@ -116,12 +118,12 @@ if (height < viewportHeight+1000) {
 
 if (localStorage.getItem('themeSwitch') == 'dark') {
 document.querySelectorAll('img').forEach(function(node) {
-		node.src = node.src.replace('000000','ffffff');
+		node.src = node.src.replace('666666','ffffff');
 	});
 }
 else {
 	document.querySelectorAll('img').forEach(function(node) {
-		node.src = node.src.replace('ffffff','000000');
+		node.src = node.src.replace('ffffff','666666');
 	});
 }
 $("#darkmode").click(function() {
@@ -129,14 +131,14 @@ $("#darkmode").click(function() {
     document.documentElement.setAttribute('data-theme', 'light');
 		localStorage.setItem('themeSwitch', 'light');
 		document.querySelectorAll('img').forEach(function(node) {
-			node.src = node.src.replace('ffffff','000000');
+			node.src = node.src.replace('ffffff','666666');
 		});
 	}
 	else {
     document.documentElement.setAttribute('data-theme', 'dark');
 		localStorage.setItem('themeSwitch', 'dark');
 		document.querySelectorAll('img').forEach(function(node) {
-			node.src = node.src.replace('000000','ffffff');
+			node.src = node.src.replace('666666','ffffff');
 		});
 	}
 });
@@ -144,12 +146,12 @@ setInterval(function(){
 	document.documentElement.setAttribute('data-theme', localStorage.getItem('themeSwitch'));
 if (localStorage.getItem('themeSwitch') == 'dark') {
 document.querySelectorAll('img').forEach(function(node) {
-		node.src = node.src.replace('000000','ffffff');
+		node.src = node.src.replace('666666','ffffff');
 	});
 }
 else {
 	document.querySelectorAll('img').forEach(function(node) {
-		node.src = node.src.replace('ffffff','000000');
+		node.src = node.src.replace('ffffff','666666');
 	});
 }
 }, 10000);
