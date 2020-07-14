@@ -218,6 +218,7 @@ code ::selection {
 .archive-card {
 	text-align: center;
 	border-radius: 5px;
+	height: 100px;
 	border: 1px solid var(--lc);
 	padding-bottom: 0;
 	list-style: none;
