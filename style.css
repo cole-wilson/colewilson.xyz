@@ -309,7 +309,7 @@ code ::selection {
 	display: inline-block;
 }
 
-@media only screen and (max-width: 650px) {
+@media only screen and (max-width: 735px) {
 .n1, .n2 {
 	display: none;
 }
