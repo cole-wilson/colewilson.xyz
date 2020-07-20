@@ -2,7 +2,7 @@ permalink: /:title/
 
 collections:
   projects:
-		output: true
+    output: true
 
 #defaults:
 #  - scope:
