@@ -57,6 +57,9 @@ header {
 	margin-left: 1vw;
 	margin-right: 1vw;
 }
+#o-body p {
+	transform: translate(10px,0);
+}
 .archive-title {
 	transform: translate(50px,0);
 }
