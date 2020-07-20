@@ -18,12 +18,12 @@
 		--opc: black;
 }
 
-*:hover {
+/* *:hover {
 	border: 2px solid red;
 }
 *:hover::before {
 	content: "a";
-}
+} */
 
 
 body {
