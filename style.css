@@ -115,6 +115,7 @@ aside :any-link {
 	text-decoration: underline;
 }
 article {
+	min-height: 100vw;
 	width: 80vw;
 	padding: 10px;
 	float: left;
