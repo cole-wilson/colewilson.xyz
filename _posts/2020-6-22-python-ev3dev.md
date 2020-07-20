@@ -1,14 +1,15 @@
 ---
-title: 'Python on the ev3dev framework'
+title: Python on the ev3dev framework
 layout: post
-desc: 'How to program your ev3 brick with Python!'
-image: 'https://i.ytimg.com/vi/JGcjqvwfL3s/maxresdefault.jpg'
+date: 2020-07-20T21:37:53.089Z
 tags:
- - python
- - ev3
- - robotics
- - linux
- - github	
+  - python
+  - ev3
+  - robotics
+  - linux
+  - github
+desc: How to program your ev3 brick with Python!
+image: https://i.ytimg.com/vi/JGcjqvwfL3s/maxresdefault.jpg
 ---
 
 ## Introduction:
