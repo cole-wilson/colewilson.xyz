@@ -112,7 +112,7 @@ var body = document.body,
 
 var height = Math.max( body.scrollHeight, body.offsetHeight, html.clientHeight, html.scrollHeight, html.offsetHeight );
 
-if (height < viewportHeight+1000) {
+if (height < viewportHeight+100) {
 	$('footer').css({'position':'fixed',"bottom":"0"})
 }
 
