@@ -1,7 +1,9 @@
 ---
-permalink: /projects/
 title: Projects
+permalink: /projects/
 layout: archive
+date: 2020-07-21T17:29:16.786Z
+desc: A list of all projects on the site
 ---
 <ul>
   {% for post in site.projects %}
