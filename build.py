@@ -1,5 +1,6 @@
 f = open('netlify.toml','w+')
-f.write('---\nj: true\n---\n' + str(f.read()))
+old = f.read()
+f.write('---\nj: true\n---\n' + str(old))
 f.close()
 import os
 os.system('cp netlify.toml test.txt')
