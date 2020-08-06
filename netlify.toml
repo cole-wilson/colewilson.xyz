@@ -47,5 +47,6 @@
   to = "{{url.u}}"
   status = 302
    force = true
+#{% endif %}
 #{% endfor %}
 # END URL SHORTENER
