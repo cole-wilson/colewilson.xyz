@@ -12,7 +12,7 @@
   publish = "_site/"
 
   # Default build command.
-  command = "jekyll build"
+  command = "python3 build.py;jekyll build"
 
   # Directory with the serverless Lambda functions to deploy to AWS.
   functions = "_functions/"
