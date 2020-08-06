@@ -4,7 +4,7 @@ title: redirects file
 # Force HTTPS
 http://colewilson.xyz/* https://colewilson.xyz/:splat 301!
 
-{% for url in urls %}
+{% for url in links %}
   {% if url.countries or url.languages %}
   
   {% for country in url.countries %}
