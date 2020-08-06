@@ -1,5 +1,4 @@
 permalink: /:title/
-
 collections:
   projects:
     output: true
@@ -8,15 +7,38 @@ collections:
     permalink: /:name
   links:
     output: false
-
 defaults:
   - scope:
       path: ""
-      type: "projects"
+      type: projects
     values:
-      layout: "project"
+      layout: project
   - scope:
       path: ""
-      type: "posts"
+      type: posts
     values:
-      layout: "post"
+      layout: post
+body:
+  code: |-
+    permalink: /:title/
+
+    collections:
+      projects:
+        output: true
+      pages:
+        output: true
+        permalink: /:name
+      links:
+        output: false
+
+    defaults:
+      - scope:
+          path: ""
+          type: "projects"
+        values:
+          layout: "project"
+      - scope:
+          path: ""
+          type: "posts"
+        values:
+          layout: "post"
