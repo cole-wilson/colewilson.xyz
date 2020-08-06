@@ -18,27 +18,3 @@ defaults:
       type: posts
     values:
       layout: post
-body:
-  code: |-
-    permalink: /:title/
-
-    collections:
-      projects:
-        output: true
-      pages:
-        output: true
-        permalink: /:name
-      links:
-        output: false
-
-    defaults:
-      - scope:
-          path: ""
-          type: "projects"
-        values:
-          layout: "project"
-      - scope:
-          path: ""
-          type: "posts"
-        values:
-          layout: "post"
