@@ -50,8 +50,19 @@
 #{% endif %}
 #{% endfor %}
 [[redirects]]
-  from = ["https://u.risforrecess.com/*","https://url.colewilson.xyz/*","https://u.colewilson.xyz/*"]
+  from = "https://u.risforrecess.com/*"
   to = "https://colewilson.xyz/u/"
   status = 200
   force = true
+[[redirects]]
+  from = "https://url.colewilson.xyz/*"
+  to = "https://colewilson.xyz/u/"
+  status = 200
+  force = true
+[[redirects]]
+  from = "https://u.colewilson.xyz/*"
+  to = "https://colewilson.xyz/u/"
+  status = 200
+  force = true
+
 # END URL SHORTENER
