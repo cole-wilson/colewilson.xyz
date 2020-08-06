@@ -40,7 +40,7 @@
   status = 302
   force = true
   conditions = {Language = ["{{url.language}}"]}
-    {% endfor %}
+#    {% endfor %}
 #  {% else %}
 [[redirects]]
   from = "/u/{{url.key}}"
