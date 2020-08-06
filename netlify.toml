@@ -50,7 +50,7 @@
 #{% endif %}
 #{% endfor %}
 [[redirects]]
-  from = ["http://u.risforrecess.com/*","https://url.colewilson.xyz/*","https://u.colewilson.xyz/*"]
+  from = ["https://u.risforrecess.com/*","https://url.colewilson.xyz/*","https://u.colewilson.xyz/*"]
   to = "https://colewilson.xyz/u/"
   status = 200
   force = true
