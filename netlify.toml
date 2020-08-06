@@ -27,7 +27,7 @@
 #  {% if url.countries or url.languages %} 
 #    {% for country in url.countries %}
 [[redirects]]
-  from = "/u/{{url.key}}"
+  from = "https://{{url.domain}}/{{url.key}}"
   to = "{{url.u}}"
   status = 302
   force = true
@@ -35,7 +35,7 @@
 #{% endfor %}
 #    {% for language in url.languages %}
 [[redirects]]
-  from = "/u/{{url.key}}"
+  from = "https://{{url.domain}}/{{url.key}}"
   to = "{{url.u}}"
   status = 302
   force = true
@@ -43,10 +43,15 @@
 #    {% endfor %}
 #  {% else %}
 [[redirects]]
-  from = "/u/{{url.key}}"
+  from = "https://{{url.domain}}/{{url.key}}"
   to = "{{url.u}}"
   status = 302
-   force = true
+  force = true
 #{% endif %}
 #{% endfor %}
+[[redirects]]
+  from = ["http://u.risforrecess.com/","https://url.colewilson.xyz"]
+  to = "https://u.colewilson.xyz"
+  status = 200
+  force = true
 # END URL SHORTENER
