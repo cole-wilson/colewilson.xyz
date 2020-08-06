@@ -17,35 +17,35 @@
 
 [[redirects]]
 # Force HTTPS
-  from: "http://colewilson.xyz/*"
-  to: "https://colewilson.xyz/:splat"
-  status: 301
-  force: true
+  from = "http://colewilson.xyz/*"
+  to = "https://colewilson.xyz/:splat"
+  status = 301
+  force = true
   
 # START URL SHORTENER
 {% for url in site.links %}
   {% if url.countries or url.languages %} 
     {% for country in url.countries %}
 [[redirects]]
-  from: "/u/{{url.key}}"
-  to: "{{url.u}}"
-  status: 302
-  force: true
+  from = "/u/{{url.key}}"
+  to = "{{url.u}}"
+  status = 302
+  force = true
   conditions = {Country = ["{{url.country}}"]}
 {% endfor %}
     {% for language in url.languages %}
 [[redirects]]
-  from: "/u/{{url.key}}"
-  to: "{{url.u}}"
-  status: 302
-  force: true
+  from = "/u/{{url.key}}"
+  to = "{{url.u}}"
+  status = 302
+  force = true
   conditions = {Language = ["{{url.language}}"]}
     {% endfor %}
   {% else %}
 [[redirects]]
-  from: "/u/{{url.key}}"
-  to: "{{url.u}}"
-  status: 302
-   force: true
+  from = "/u/{{url.key}}"
+  to = "{{url.u}}"
+  status = 302
+   force = true
 {% endfor %}
 # END URL SHORTENER
