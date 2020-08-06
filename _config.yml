@@ -6,6 +6,8 @@ collections:
   pages:
     output: true
     permalink: /:name
+  links:
+    output: false
 
 defaults:
   - scope:
