@@ -31,7 +31,7 @@
   to = "{{url.u}}"
   status = 302
   force = true
-  conditions = {Country = ["{{url.country}}"]}
+  conditions = {Country = ["{{country}}"]}
 #{% endfor %}
 #    {% for language in url.languages %}
 [[redirects]]
@@ -39,7 +39,7 @@
   to = "{{url.u}}"
   status = 302
   force = true
-  conditions = {Language = ["{{url.language}}"]}
+  conditions = {Language = ["{{language}}"]}
 #    {% endfor %}
 #  {% else %}
 [[redirects]]
