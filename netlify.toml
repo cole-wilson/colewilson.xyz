@@ -9,18 +9,6 @@
 [context.deploy-preview]
   publish = "_site/"
 
-[[redirects]]
-  from = "/old-path"
-  to = "/new-path"
-  status = 302
-  force = true
-  # More information at https://docs.netlify.com/routing/redirects/redirect-options/#query-parameters
-  query = {id = ":id"}
-  conditions = {Language = ["en"], Country = ["US"]}
-  # You can also define custom headers within your redirects blocks.
-  [redirects.headers]
-    X-From = "Cole Wilson"
-
 [[headers]]
   # Define which paths this specific [[headers]] block will cover.
   for = "/*"
