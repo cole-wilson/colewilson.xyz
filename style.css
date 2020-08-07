@@ -62,7 +62,7 @@ header {
 	transform: translate(4px,0);
 }
 .archive-title {
-	transform: translate(50px,0);
+	transform: translate(0px,0);
 }
 #hero {
 	height: calc(100vh - 50px);
