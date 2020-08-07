@@ -230,6 +230,7 @@ code ::selection {
 	color: black;
 }
 .archive-card {
+	transform: translate(-50px,0px);
 	text-align: center;
 	border-radius: 5px;
 	height: 200%;
@@ -379,6 +380,4 @@ article {
 	margin-bottom: 10px;
 	display: inline-block;
 }
-
-
 }
