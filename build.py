@@ -1,4 +1,4 @@
-import os, json, requests
+import os, json
 os.system('curl -u cole-wilson:12d0e4cca5a9bc2c5eb3cd40999b231b4bd8e5df -s "https://api.github.com/users/cole-wilson/repos?access_token=[12d0e4cca5a9bc2c5eb3cd40999b231b4bd8e5df]" > output.json')
 
 data = json.loads(open('output.json').read())
