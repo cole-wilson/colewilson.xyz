@@ -20,7 +20,7 @@ for x in data:
 	if not os.path.isfile('_projects/' + x['name'] + '.md'):		
 		os.system('touch _projects/' + x['name'] + '.md')
 		f = open('_projects/' + x['name'] + '.md','w+')
-		os.system('curl -s "https://raw.githubusercontent.com/'+x['owner']['login']+'/'+x['name']+'/master/README.md'" > d.md')
+		os.system('curl -s "https://raw.githubusercontent.com/' + x['owner']['login'] + '/' + x['name'] + '/master/README.md" > d.md')
 		b = open('d.md').read()
 		if b == '404: Not Found':
 			b = str(x['description'])
