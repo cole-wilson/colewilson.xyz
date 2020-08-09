@@ -32,9 +32,9 @@
   status = 301
   force = true
 [[redirects]]
-  from = "https://{{url.domain}}/{{url.key}}/*"
-  to = "https://{{url.domain}}/urls/password.html#{{url.key}}"
-  status = 301
+  from = "https://{{url.domain}}/{{url.key}}/"
+  to = "https://{{url.domain}}/urls/password.html"
+  status = 200
   force = true
 #{% else %}
 [[redirects]]
