@@ -33,7 +33,7 @@
   force = true
 [[redirects]]
   from = "https://{{url.domain}}/{{url.key}}/*"
-  to = "https://colewilson.xyz/urls/password.html#{{url.key}}"
+  to = "https://{{url.domain}}/urls/password.html#{{url.key}}"
   status = 301
   force = true
 #{% else %}
@@ -46,3 +46,8 @@
 #############################################################################################################################################
 #{% endfor %}
 # END URL SHORTENER
+[[redirects]]
+  from = "https://{{url.domain}}/{{url.key}}/*"
+  to = "https://colewilson.xyz/404.html"
+  status = 404
+  force = true
