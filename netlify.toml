@@ -27,14 +27,14 @@
 
 #{% if url.password %}
 [[redirects]]
-  from = "https://{{url.domain}}/{{url.key}}"
-  to = "https://colewilson.xyz/urls/password.html#{{url.key}}"
-  status = 200
-  force = true
-[[redirects]]
   from = "https://{{url.domain}}/{{url.key}}/{{ url.password }}"
   to = "{{url.u}}"
   status = 301
+  force = true
+[[redirects]]
+  from = "https://{{url.domain}}/{{url.key}}/*"
+  to = "https://colewilson.xyz/urls/password.html#{{url.key}}"
+  status = 200
   force = true
 #{% else %}
 [[redirects]]
