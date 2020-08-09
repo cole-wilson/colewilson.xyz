@@ -47,7 +47,7 @@
 #{% endfor %}
 # END URL SHORTENER
 [[redirects]]
-  from = "https://{{url.domain}}/{{url.key}}/*"
+  from = "https://u.colewilson.xyz/*"
   to = "https://colewilson.xyz/404.html"
   status = 404
   force = true
