@@ -4,5 +4,8 @@ title: 404 Not Found
 permalink: /404.html
 image: data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAIMAAAC6CAMAAAC6Ng4xAAAAA1BMVEUAAACnej3aAAAAL0lEQVR4nO3BgQAAAADDoPlTX+EAVQEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAK8BX+gAAZnSP9sAAAAASUVORK5CYII=
 ---
-<base href="https://colewilson.xyz/" target="_blank">
-<!-- <script>window.location="/test.html"</script> -->
+<script>
+if (window.location.hostname != 'colewilson.xyz') {
+document.write('404: Not Found');
+}
+</script>
