@@ -24,7 +24,7 @@
   
 # START URL SHORTENER
 #{% for url in site.links %}
-
+#############################################################################################################################################
 #{% if url.password %}
 [[redirects]]
   from = "https://{{url.domain}}/{{url.key}}/{{ url.password }}"
@@ -33,7 +33,7 @@
   force = true
 [[redirects]]
   from = "https://{{url.domain}}/{{url.key}}/*"
-  to = "https://colewilson.xyz/urls/password.html#{{url.key}}"
+  to = "https://colewilson.xyz/urls/password.html?k={{url.key}}"
   status = 200
   force = true
 #{% else %}
@@ -43,13 +43,6 @@
   status = 302
   force = true
 #{% endif %}
-
+#############################################################################################################################################
 #{% endfor %}
-
-[[redirects]]
-  from = "https://u.colewilson.xyz/*"
-  to = "https://colewilson.xyz/urls/404.html"
-  status = 404
-  force = true
-
 # END URL SHORTENER
