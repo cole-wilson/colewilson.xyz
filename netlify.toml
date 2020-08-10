@@ -35,7 +35,7 @@ force = true
 
 [[redirects]]
 from = "https://{{url.domain}}/{{url.key}}/"
-to = "https://{{url.domain}}/urls/password.html"
+to = "/urls/password.html"
 status = 200
 force = true
 #{%- else -%}
