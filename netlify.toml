@@ -17,7 +17,7 @@
   # Define which paths this specific [[headers]] block will cover.
   for = "/n.txt"
   [headers.values]
-    WWW-Authenticate: Basic realm="Credentials:", charset="UTF-8"
+    WWW-Authenticate: "Basic"
 
 [[redirects]]
 # Force HTTPS
