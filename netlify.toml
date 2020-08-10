@@ -1,24 +1,18 @@
 [build]
-  base = "."
-  publish = "_site/"
-  command = "echo -e '---\nj: true\n---' | cat - netlify.toml > n.txt; cp n.txt netlify.toml;jekyll build"
-  functions = "_functions/"
-
+base = "."
+publish = "_site/"
+command = "echo -e '---\nj: true\n---' | cat - netlify.toml > n.txt; cp n.txt netlify.toml;jekyll build"
+functions = "_functions/"
 [context.deploy-preview]
-  publish = "_site/"
-
+publish = "_site/"
 [[headers]]
-  # Define which paths this specific [[headers]] block will cover.
-  for = "/*"
-  [headers.values]
-    X-Random = "Goats are funny"
-    
+for = "/*"
+[headers.values]
+X-Random = "Goats are funny"
 [[headers]]
-# Define which paths this specific [[headers]] block will cover.
 for = "/n.txt"
 [headers.values]
 WWW-Authenticate = "Basic"
-    
 [[redirects]]
 from = "http://colewilson.xyz/*"
 to = "https://colewilson.xyz/:splat"
@@ -29,32 +23,30 @@ from = "https://colewilson.netlify.app/*"
 to = "https://colewilson.xyz/:splat"
 status = 301
 force = true
+#############
+#{%- for url in site.links -%}
+#{%- if url.password -%}
+[[redirects]]
+from = "https://{{url.domain}}/{{url.key}}/{{ url.password }}"
+to = "{{url.u}}"
+status = 302
+force = true
+[[redirects]]
+from = "https://{{url.domain}}/{{url.key}}/"
+to = "https://{{url.domain}}/urls/password.html"
+status = 200
+force = true
+#{%- else -%}
+[[redirects]]
+from = "https://{{url.domain}}/{{url.key}}"
+to = "{{url.u}}"
+status = 302
+force = true
+#{%- endif -%}
+#{%- endfor -%}
+#############
 [[redirects]]
 from = "https://u.colewilson.xyz/*"
 to = "/404.html"
 status = 404
 force = true
-
-#{% for url in site.links %}
-#############################################################################################################################################
-#{% if url.password %}
-[[redirects]]
-  from = "https://{{url.domain}}/{{url.key}}/{{ url.password }}"
-  to = "{{url.u}}"
-  status = 301
-  force = true
-[[redirects]]
-  from = "https://{{url.domain}}/{{url.key}}/"
-  to = "https://{{url.domain}}/urls/password.html"
-  status = 200
-  force = true
-#{% else %}
-[[redirects]]
-  from = "https://{{url.domain}}/{{url.key}}"
-  to = "{{url.u}}"
-  status = 302
-  force = true
-#{% endif %}
-#############################################################################################################################################
-#{% endfor %}
-# END URL SHORTENER
