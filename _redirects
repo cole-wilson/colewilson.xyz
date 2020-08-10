@@ -1,0 +1,3 @@
+http://colewilson.xyz/*             https://colewilson.xyz/:splat   301!    # Enforce HTTPS
+https://colewilson.netlify.app/*    https://colewilson.xyz/:splat   301!    # Always use custom domain
+https://u.colewilson.xyz/*          /404.html                       404!    # 
