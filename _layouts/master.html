@@ -29,7 +29,19 @@
 	<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
 	<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
 	<link rel="manifest" href="/site.webmanifest">
-	<title>{{page.title}} {% if page.overidesub %}{% else %} &middot; Cole Wilson{% endif %}</title>
+	<title>{{page.title}} {% if page.overidesub %}{% else %} | Cole Wilson{% endif %}</title>
+	<meta name="title" content="">
+	<meta name="description" content="{% if page.desc %}{{ page.desc }}{% else %}Cole Wilson is a freelance programmer who works mainly with Python, PHP, Bash, and HTML/JS/CSS. He has lots of experience on Linux machines.{% endif %}">
+	<meta property="og:type" content="website">
+	<meta property="og:url" content="https://colewilson.xyz/">
+	<meta property="og:title" content="{{page.title}} {% if page.overidesub %}{% else %} | Cole Wilson{% endif %}">
+	<meta property="og:description" content="{% if page.desc %}{{ page.desc }}{% else %}Cole Wilson is a freelance programmer who works mainly with Python, PHP, Bash, and HTML/JS/CSS. He has lots of experience on Linux machines.{% endif %}">
+	<meta property="og:image" content="{{page.image}}">
+	<meta property="twitter:card" content="summary_large_image">
+	<meta property="twitter:url" content="https://colewilson.xyz/">
+	<meta property="twitter:title" content="{{page.title}} {% if page.overidesub %}{% else %} | Cole Wilson{% endif %}">
+	<meta property="twitter:description" content="{% if page.desc %}{{ page.desc }}{% else %}Cole Wilson is a freelance programmer who works mainly with Python, PHP, Bash, and HTML/JS/CSS. He has lots of experience on Linux machines.{% endif %}">
+	<meta property="twitter:image" content="{{page.image}}">
 	{% include styles.html %}
 	{% include analytics.html %}
 </head>
