@@ -53,3 +53,8 @@ from = "https://u.colewilson.xyz/*"
 to = "/404.html"
 status = 404
 force = true
+[[redirects]]
+from = "https://kreacher.colewilson.xyz/*"
+to = "https://kreacher.herokuapp.com/:splat"
+status = 200
+force = true
