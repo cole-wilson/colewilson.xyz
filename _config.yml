@@ -2,6 +2,7 @@ url: "https://colewilson.xyz" # the base hostname & protocol for your site
 plugins:
   - jekyll-sitemap
   - jekyll-feed
+  - jemoji
   
 permalink: /:title/
 collections:
