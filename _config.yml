@@ -3,7 +3,7 @@ plugins:
   - jekyll-sitemap
   - jekyll-feed
   - jemoji
-	- jekyll-paginate
+  - jekyll-paginate
   - jekyll-assets
   
 permalink: /:title/
