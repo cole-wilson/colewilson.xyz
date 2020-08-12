@@ -1,7 +1,10 @@
-url: "https://colewilson.xyz" # the base hostname & protocol for your site
+url: "https://colewilson.xyz"
 plugins:
   - jekyll-sitemap
   - jekyll-feed
+  - jemoji
+	- jekyll-paginate
+  - jekyll-assets
   
 permalink: /:title/
 collections:
@@ -23,3 +26,4 @@ defaults:
       type: posts
     values:
       layout: post
+#

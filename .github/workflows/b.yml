@@ -23,7 +23,7 @@ jobs:
         fetch-depth: 0 # otherwise, you will failed to push refs to dest repo
     - name: Create local changes
       run: |
-        python3 build.py
+        python3 .github/build.py
     - name: Commit files
       run: |
         git config --local user.email "bot@colewilson.xyz"

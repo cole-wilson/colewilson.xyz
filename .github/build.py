@@ -36,3 +36,4 @@ for x in data:
 			body=b
 		))
 		f.close()
+os.system('rm -rf output.json d.md')
