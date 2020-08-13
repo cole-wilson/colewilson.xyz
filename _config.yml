@@ -3,8 +3,6 @@ plugins:
   - jekyll-sitemap
   - jekyll-feed
   - jemoji
-  - jekyll-paginate
-  - jekyll-assets
   
 permalink: /:title/
 collections:
