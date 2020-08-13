@@ -30,8 +30,7 @@ for path, directories, files in os.walk('.'):
 	for file in files:
 		if '.html' in file:
 			print(path+'/'+file)
-			os.system("sed -i 's/{% css main %}/\<link rel\='stylesheet' href\='https:\/\/colewilson.xyz\/assets\
-/"+hash+".min.css'\>\<\/link\>/g' "+path+'/'+file)
+			os.system("sed -i 's/{% css main %}/\<link rel\='stylesheet' href\='https:\/\/colewilson.xyz\/assets\/"+hash+".min.css'\>\<\/link\>/g' "+path+'/'+file)
 
 hash = hash_file('_assets/js/script.js')
 
