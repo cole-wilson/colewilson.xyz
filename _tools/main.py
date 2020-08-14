@@ -30,7 +30,9 @@ for path, directories, files in os.walk('.'):
 	for file in files:
 		if '.html' in file:
 			print(path+'/'+file)
-			open(path+'/'+file,'w+').write(open(path+'/'+file).read().replace('{% css main %}','<link rel="stylesheet" href="assets/'+hash+'.min.css"></link>'))
+			d = open(path+'/'+file,'w+')
+			d.write(open(path+'/'+file).read().replace('{% css main %}','<link rel="stylesheet" href="assets/'+hash+'.min.css"></link>'))
+			d.close()
 
 
 hash = hash_file('_assets/js/script.js')
@@ -41,6 +43,7 @@ for path, directories, files in os.walk('.'):
 	for file in files:
 		if '.html' in file:
 			print(path+'/'+file)
-			open(path+'/'+file,'w+').write(open(path+'/'+file).read().replace('{% js main %}','<script src="assets/'+hash+'.js"></script>'))
-
+			d = open(path+'/'+file,'w+')
+			d.write(open(path+'/'+file).read().replace('{% js main %}','<script src="assets/'+hash+'.js"></script>'))
+			d.close()
 os.system('mv _assets/icons/* .')
