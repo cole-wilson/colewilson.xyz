@@ -31,7 +31,7 @@ f.write('<link rel="stylesheet" href="assets/'+hash+'.min.css"></link>')
 f.close()
 hash = hash_file('_assets/js/script.js')
 os.system('mv _assets/js/script.js assets/'+hash+'.js')
-f = open('_includes/styles.html')
+f = open('_includes/scripts.html')
 f.write(f.read().replace('{% js main %}','<link rel="stylesheet" href="assets/'+hash+'.min.css"></link>'))
 f.close()
 
