@@ -23,27 +23,16 @@ def hash_file(filename):
 
 os.system('rm -rf assets/;mkdir assets')
 open('assets/bundle.min.css','w+').write(mincss.cssmin(bigfile))
+
 hash = hash_file('assets/bundle.min.css')
 os.system('mv assets/bundle.min.css assets/'+hash+'.min.css')
-
-for path, directories, files in os.walk('.'):
-	for file in files:
-		if '.html' in file:
-			print(path+'/'+file)
-			d = open(path+'/'+file,'w+')
-			d.write(open(path+'/'+file).read().replace('{% css main %}','<link rel="stylesheet" href="assets/'+hash+'.min.css"></link>'))
-			d.close()
-
-
+f = open('_includes/styles.html')
+f.write('<link rel="stylesheet" href="assets/'+hash+'.min.css"></link>')
+f.close()
 hash = hash_file('_assets/js/script.js')
-
 os.system('mv _assets/js/script.js assets/'+hash+'.js')
+f = open('_includes/styles.html')
+f.write(f.read().replace('{% js main %}','<link rel="stylesheet" href="assets/'+hash+'.min.css"></link>'))
+f.close()
 
-for path, directories, files in os.walk('.'):
-	for file in files:
-		if '.html' in file:
-			print(path+'/'+file)
-			d = open(path+'/'+file,'w+')
-			d.write(open(path+'/'+file).read().replace('{% js main %}','<script src="assets/'+hash+'.js"></script>'))
-			d.close()
 os.system('mv _assets/icons/* .')
