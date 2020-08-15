@@ -64,20 +64,21 @@ f.close()
 
 # JS
 bigfile = open('_assets/js/script.js').read()
-f = re.findall('\/\/import (.*?)\n',open('_assets/js/script.js').read())
-for x in f:
-	print('Bundling JavaScript file: '+x)
-	if os.path.isfile('_assets/js/'+x):
-		bigfile=bigfile.replace('//import '+x,open('_assets/css/'+x).read())
-	else:
-		os.system('wget -q '+x+' -O temp')
-		bigfile=bigfile.replace('//import '+x,open('temp').read())
-		os.system('rm -rf temp')
-open('assets/bundle.min.js','w+').write(minjs.jsmin(bigfile).replace('\n',' '))
+# f = re.findall('\/\/import (.*?)\n',open('_assets/js/script.js').read())
+# for x in f:
+# 	print('Bundling JavaScript file: '+x)
+# 	if os.path.isfile('_assets/js/'+x):
+# 		bigfile=bigfile.replace('//import '+x,open('_assets/css/'+x).read())
+# 	else:
+# 		os.system('wget -q '+x+' -O temp')
+# 		bigfile=bigfile.replace('//import '+x,open('temp').read())
+# 		os.system('rm -rf temp')
+# open('assets/bundle.min.js','w+').write(minjs.jsmin(bigfile).replace('\n',' '))
+os.system('mv _assets/js/script.js assets/bundle.min.js')
 hash = hash_file('assets/bundle.min.js')
 os.system('mv assets/bundle.min.js assets/'+hash+'.min.js')
 f = open('_includes/scripts.html','w+')
-f.write('<script src="https://colewilson.xyz/assets/'+hash+'.min.js"></script>')
+f.write('<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>'+'<script src="https://colewilson.xyz/assets/'+hash+'.min.js"></script>')#############
 f.close()
 
 
