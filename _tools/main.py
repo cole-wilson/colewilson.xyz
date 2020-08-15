@@ -59,7 +59,7 @@ open('assets/bundle.min.css','w+').write(mincss.cssmin(bigfile)) # Make ugly
 hash = hash_file('assets/bundle.min.css')
 os.system('mv assets/bundle.min.css assets/'+hash+'.min.css')
 f = open('_includes/styles.html','w+')
-f.write('<link rel="stylesheet" href="assets/'+hash+'.min.css"></link>')
+f.write('<link rel="stylesheet" href="/assets/'+hash+'.min.css"></link>')
 f.close()
 
 # JS
@@ -77,7 +77,7 @@ open('assets/bundle.min.js','w+').write(minjs.jsmin(bigfile).replace('\n',' '))
 hash = hash_file('assets/bundle.min.js')
 os.system('mv assets/bundle.min.js assets/'+hash+'.min.js')
 f = open('_includes/scripts.html','w+')
-f.write('<script src="assets/'+hash+'.min.js"></script>')
+f.write('<script src="/assets/'+hash+'.min.js"></script>')
 f.close()
 
 
