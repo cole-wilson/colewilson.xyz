@@ -3,7 +3,6 @@ plugins:
   - jekyll-sitemap
   - jekyll-feed
   - jemoji
-  - jekyll-polyglot
   
 permalink: /:title/
 collections:
