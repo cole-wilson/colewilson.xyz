@@ -13,6 +13,7 @@ X-Random = "Goats are funny"
 for = "/n.txt"
 [headers.values]
 WWW-Authenticate = "Basic"
+
 [[redirects]]
 from = "http://colewilson.xyz/*"
 to = "https://colewilson.xyz/:splat"
