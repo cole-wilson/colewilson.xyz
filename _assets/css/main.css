@@ -275,6 +275,7 @@ code ::selection {
 .archive-card p {
 	margin-top: 10px;
 	font-style: italic;
+	padding: 10px;
 }
 #darkmode {
 	border-radius: 5px;
