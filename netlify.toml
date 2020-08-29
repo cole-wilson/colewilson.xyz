@@ -1,7 +1,7 @@
 [build]
 base = "."
 publish = "_site/"
-command = "python3 _tools/main.py;echo -e '---\nj: true\n---' | cat - netlify.toml > n.txt; cp n.txt netlify.toml;jekyll build"
+command = "python3 _tools/main.py;echo -e '---\nj: true\n---' | cat - netlify.toml > n.txt; cp n.txt netlify.toml;cp assets/*.css m.css;jekyll build"
 functions = "_functions/"
 [context.deploy-preview]
 publish = "_site/"
