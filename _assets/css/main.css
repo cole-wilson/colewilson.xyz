@@ -188,7 +188,28 @@ article h2::before {
 	color: var(--lc);
 	cursor: pointer;
 }
-article h2{
+article h3::before {
+	content: "### ";
+	color: var(--lc);
+	cursor: pointer;
+}
+article h4::before {
+	content: "#### ";
+	color: var(--lc);
+	cursor: pointer;
+}
+article h5::before {
+	content: "##### ";
+	color: var(--lc);
+	cursor: pointer;
+}
+article h6::before {
+	content: "###### ";
+	color: var(--lc);
+	cursor: pointer;
+}
+
+article h2, article h3, article h4, article h5, article h6 {
 	text-decoration: underline;
 	text-decoration-color: var(--lc);
 	cursor: pointer;
