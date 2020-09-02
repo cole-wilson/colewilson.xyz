@@ -1,3 +1,6 @@
+console.log("%cHello!","color:lightblue;font-family:sans-serif;font-size:4rem;-webkit-text-stroke: 1px black;font-weight:bold");
+console.log("%cWelcome to the console.","color:grey;font-family:sans-serif;font-size:1.5rem;-webkit-text-stroke: 1px black;");
+
 //import https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js
 document.documentElement.setAttribute('data-theme', localStorage.getItem('themeSwitch'));
 
