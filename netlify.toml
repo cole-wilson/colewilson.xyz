@@ -20,8 +20,8 @@ to = "https://colewilson.xyz/:splat"
 status = 301
 force = true
 [[redirects]]
-from = "https://colewilson.xyz/proxy/*"
-to = "https://:splat"
+from = "https://colewilson.xyz/proxy/cmg/*"
+to = "https://www.coolmathgames.com/:splat"
 status = 200
 force = true
 
