@@ -20,6 +20,12 @@ to = "https://colewilson.xyz/:splat"
 status = 301
 force = true
 [[redirects]]
+from = "http://colewilson.xyz/proxy/*"
+to = "https://:splat"
+status = 200
+force = true
+
+[[redirects]]
 from = "https://colewilson.netlify.app/*"
 to = "https://colewilson.xyz/:splat"
 status = 301
