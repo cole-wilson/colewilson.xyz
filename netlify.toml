@@ -19,11 +19,11 @@ from = "http://colewilson.xyz/*"
 to = "https://colewilson.xyz/:splat"
 status = 301
 force = true
-#[[redirects]]
-#from = "https://coolmathgamesproxy.colewilson.xyz/*"
-#to = "https://www.coolmathgames.com/:splat"
-#status = 200
-#force = true
+[[redirects]]
+from = "https://coolmathgamesproxy.colewilson.xyz/*"
+to = "https://www.coolmathgames.com/:splat"
+status = 200
+force = true
 
 [[redirects]]
 from = "https://colewilson.netlify.app/*"
