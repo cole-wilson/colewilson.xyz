@@ -21,7 +21,7 @@ status = 301
 force = true
 [[redirects]]
 from = "https://p.colewilson.xyz/*"
-to = "https://libbyapp.com/:splat"
+to = "https://www.pinterest.com/:splat"
 status = 200
 force = true
 
