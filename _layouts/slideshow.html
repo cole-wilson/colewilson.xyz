@@ -16,17 +16,7 @@
 	<body>
 		<div class="reveal">
 			<div class="slides">
-      				{% for leftright in page.mainslides %}
-				<section>
-					{% for slide in leftright.slides %}
-					<section data-markdown data-background-color="{{slide.bg}}">	
-						<textarea data-template>
-						        {{slide.content}}
-						</textarea>
-					</section>
-       					{% endfor %}
-				</section>
-				{% endfor %}
+      				{{page.code}}
 			</div>
 		</div>
 
@@ -40,8 +30,7 @@
 			// - https://revealjs.com/config/
 			Reveal.initialize({
 				hash: true,
-
-				// Learn about plugins: https://revealjs.com/plugins/
+				{{page.config}}
 				plugins: [ RevealMarkdown, RevealHighlight, RevealNotes ]
 			});
 		</script>
