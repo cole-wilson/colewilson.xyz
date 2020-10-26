@@ -30,6 +30,13 @@ from = "https://colewilson.netlify.app/*"
 to = "https://colewilson.xyz/:splat"
 status = 301
 force = true
+
+[[redirects]]
+from = "https://slides.colewilson.xyz/*"
+to = "https://colewilson.xyz/slides/:splat"
+status = 200
+force = true
+
 #############
 #{%- for url in site.links -%}
 #{%- if url.password -%}
