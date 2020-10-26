@@ -16,13 +16,16 @@
 	<body>
 		<div class="reveal">
 			<div class="slides">
-      {% for slide in page.slides %}
-				<section data-markdown>
-				<textarea data-template>
-        {{slide.content}}
-				</textarea>
+      				{% for leftright in page.mainslides %}
+				<section>
+					{% for slide in page.mainslides %}
+					<section data-markdown data-background-color="{{slide.bg}}">	
+						<textarea data-template>
+						        {{slide.content}}
+						</textarea>
+					</section>
+       					{% endfor %}
 				</section>
-       {% endfor %}
 			</div>
 		</div>
 
