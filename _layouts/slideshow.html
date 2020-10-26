@@ -18,7 +18,7 @@
 			<div class="slides">
       				{% for leftright in page.mainslides %}
 				<section>
-					{% for slide in leftright %}
+					{% for slide in leftright.slides %}
 					<section data-markdown data-background-color="{{slide.bg}}">	
 						<textarea data-template>
 						        {{slide.content}}
