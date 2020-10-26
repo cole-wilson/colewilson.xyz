@@ -13,6 +13,10 @@ collections:
     permalink: /:name
   links:
     output: false
+  slideshows:
+    output: true
+    premalink: /slides/:name
+
 defaults:
   - scope:
       path: ""
