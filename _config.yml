@@ -28,4 +28,9 @@ defaults:
       type: posts
     values:
       layout: post
+  - scope:
+      path: ""
+      type: slideshows
+    values:
+      layout: slideshow
 #
