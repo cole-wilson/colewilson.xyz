@@ -8,7 +8,7 @@ publish = "_site/"
 [[headers]]
 for = "/*"
 [headers.values]
-X-Random = "Goats are funny"
+X-Random = "The tiny baby goats are coming for you... run..."
 [[headers]]
 for = "/n.txt"
 [headers.values]
