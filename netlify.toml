@@ -38,8 +38,8 @@ status = 200
 force = true
 
 [[redirects]]
-from = "https://dobby.colewilson.xyz/files/external/*"
-to = "https://kreacher.colewilson.xyz/files/:splat"
+from = "https://amin.colewilson.xyz/:splat"
+to = "https://colewilson.xyz/admin/:splat"
 status = 200
 force = true
 
