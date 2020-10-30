@@ -37,6 +37,19 @@ to = "https://colewilson.xyz/slides/:splat"
 status = 200
 force = true
 
+[[redirects]]
+from = "https://dobby.colewilson.xyz/files/external/*"
+to = "https://kreacher.colewilson.xyz/files/:splat"
+status = 200
+force = true
+
+[[redirects]]
+from = "https://dobby.colewilson.xyz/*"
+to = "https://colewilson.xyz/dobby/:splat"
+status = 200
+force = true
+
+
 #############
 #{%- for url in site.links -%}
 #{%- if url.password -%}

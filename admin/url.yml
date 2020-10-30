@@ -1,0 +1,281 @@
+backend:
+  name: github
+  repo: cole-wilson/cole-wilson.github.io # Path to your GitHub repository
+media_folder: "nonexistent_folder"
+logo_url: data:image/png;base64,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
+
+collections:
+  - name: "urls" # Used in routes, e.g., /admin/collections/blog
+    label: "Shortened URLs" # Used in the UI
+    label_singular: 'URL'
+    description: >
+      Create shortened URLS!
+    editor:
+      preview: false
+    summary: ""
+    folder: "_links/" # The path to the folder where the documents are stored
+    create: true # Allow users to create new documents in this collection
+    delete: false
+    slug: "" # Filename template, e.g., YYYY-MM-DD-title.md
+    fields: # The fields for each document, usually in front matter
+      - { label: "Key", name: "key",required: true, widget: "string"}
+      - { label: "Links to:", name: "u", required: true, widget: "string", pattern: ['https?:\/\/(www\.)?[-a-zA-Z0-9@:%._\+~#=]{1,256}\.[a-zA-Z0-9()]{1,6}\b([-a-zA-Z0-9()@:%_\+.~#?&//=]*)', "Must be a URL"]}
+      - { label: "Domain",required: true, default: ["u.colewilson.xyz"], name: "domain", widget: "select", options: ["u.colewilson.xyz", "url.colewilson.xyz", "u.risforrecess.com"] }
+      - label: "Countries"
+        name: "countries"
+        widget: "select"
+        multiple: true
+        required: true
+        options:
+          - { label: "🕶️ Anonymous Proxy", value: "A1" }
+          - { label: "🛰️ Satellite Provider", value: "A2" }
+          - { label: "❓ Other Country", value: "01" }
+          - { label: "🇦🇩 Andorra", value: "AD" }
+          - { label: "🇦🇪 United Arab Emirates", value: "AE" }
+          - { label: "🇦🇫 Afghanistan", value: "AF" }
+          - { label: "🇦🇬 Antigua and Barbuda", value: "AG" }
+          - { label: "🇦🇮 Anguilla", value: "AI" }
+          - { label: "🇦🇱 Albania", value: "AL" }
+          - { label: "🇦🇲 Armenia", value: "AM" }
+          - { label: "🇦🇴 Angola", value: "AO" }
+          - { label: "🇦🇶 Antarctica", value: "AQ" }
+          - { label: "🇦🇷 Argentina", value: "AR" }
+          - { label: "🇦🇸 American Samoa", value: "AS" }
+          - { label: "🇦🇹 Austria", value: "AT" }
+          - { label: "🇦🇺 Australia", value: "AU" }
+          - { label: "🇦🇼 Aruba", value: "AW" }
+          - { label: "🇦🇽 Åland Islands", value: "AX" }
+          - { label: "🇦🇿 Azerbaijan", value: "AZ" }
+          - { label: "🇧🇦 Bosnia and Herzegovina", value: "BA" }
+          - { label: "🇧🇧 Barbados", value: "BB" }
+          - { label: "🇧🇩 Bangladesh", value: "BD" }
+          - { label: "🇧🇪 Belgium", value: "BE" }
+          - { label: "🇧🇫 Burkina Faso", value: "BF" }
+          - { label: "🇧🇬 Bulgaria", value: "BG" }
+          - { label: "🇧🇭 Bahrain", value: "BH" }
+          - { label: "🇧🇮 Burundi", value: "BI" }
+          - { label: "🇧🇯 Benin", value: "BJ" }
+          - { label: "🇧🇱 Saint Barthélemy", value: "BL" }
+          - { label: "🇧🇲 Bermuda", value: "BM" }
+          - { label: "🇧🇳 Brunei Darussalam", value: "BN" }
+          - { label: "🇧🇴 Bolivia", value: "BO" }
+          - { label: "🇧🇶 Bonaire Sint Eustatius and Saba", value: "BQ" }
+          - { label: "🇧🇷 Brazil", value: "BR" }
+          - { label: "🇧🇸 Bahamas", value: "BS" }
+          - { label: "🇧🇹 Bhutan", value: "BT" }
+          - { label: "🇧🇻 Bouvet Island", value: "BV" }
+          - { label: "🇧🇼 Botswana", value: "BW" }
+          - { label: "🇧🇾 Belarus", value: "BY" }
+          - { label: "🇧🇿 Belize", value: "BZ" }
+          - { label: "🇨🇦 Canada", value: "CA" }
+          - { label: "🇨🇨 Cocos (Keeling) Islands", value: "CC" }
+          - { label: "🇨🇩 Congo", value: "CD" }
+          - { label: "🇨🇫 Central African Republic", value: "CF" }
+          - { label: "🇨🇬 Congo", value: "CG" }
+          - { label: "🇨🇭 Switzerland", value: "CH" }
+          - { label: "🇨🇮 Côte D'Ivoire", value: "CI" }
+          - { label: "🇨🇰 Cook Islands", value: "CK" }
+          - { label: "🇨🇱 Chile", value: "CL" }
+          - { label: "🇨🇲 Cameroon", value: "CM" }
+          - { label: "🇨🇳 China", value: "CN" }
+          - { label: "🇨🇴 Colombia", value: "CO" }
+          - { label: "🇨🇷 Costa Rica", value: "CR" }
+          - { label: "🇨🇺 Cuba", value: "CU" }
+          - { label: "🇨🇻 Cape Verde", value: "CV" }
+          - { label: "🇨🇼 Curaçao", value: "CW" }
+          - { label: "🇨🇽 Christmas Island", value: "CX" }
+          - { label: "🇨🇾 Cyprus", value: "CY" }
+          - { label: "🇨🇿 Czech Republic", value: "CZ" }
+          - { label: "🇩🇪 Germany", value: "DE" }
+          - { label: "🇩🇯 Djibouti", value: "DJ" }
+          - { label: "🇩🇰 Denmark", value: "DK" }
+          - { label: "🇩🇲 Dominica", value: "DM" }
+          - { label: "🇩🇴 Dominican Republic", value: "DO" }
+          - { label: "🇩🇿 Algeria", value: "DZ" }
+          - { label: "🇪🇨 Ecuador", value: "EC" }
+          - { label: "🇪🇪 Estonia", value: "EE" }
+          - { label: "🇪🇬 Egypt", value: "EG" }
+          - { label: "🇪🇭 Western Sahara", value: "EH" }
+          - { label: "🇪🇷 Eritrea", value: "ER" }
+          - { label: "🇪🇸 Spain", value: "ES" }
+          - { label: "🇪🇹 Ethiopia", value: "ET" }
+          - { label: "🇫🇮 Finland", value: "FI" }
+          - { label: "🇫🇯 Fiji", value: "FJ" }
+          - { label: "🇫🇰 Falkland Islands (Malvinas)", value: "FK" }
+          - { label: "🇫🇲 Micronesia", value: "FM" }
+          - { label: "🇫🇴 Faroe Islands", value: "FO" }
+          - { label: "🇫🇷 France", value: "FR" }
+          - { label: "🇬🇦 Gabon", value: "GA" }
+          - { label: "🇬🇧 United Kingdom", value: "GB" }
+          - { label: "🇬🇩 Grenada", value: "GD" }
+          - { label: "🇬🇪 Georgia", value: "GE" }
+          - { label: "🇬🇫 French Guiana", value: "GF" }
+          - { label: "🇬🇬 Guernsey", value: "GG" }
+          - { label: "🇬🇭 Ghana", value: "GH" }
+          - { label: "🇬🇮 Gibraltar", value: "GI" }
+          - { label: "🇬🇱 Greenland", value: "GL" }
+          - { label: "🇬🇲 Gambia", value: "GM" }
+          - { label: "🇬🇳 Guinea", value: "GN" }
+          - { label: "🇬🇵 Guadeloupe", value: "GP" }
+          - { label: "🇬🇶 Equatorial Guinea", value: "GQ" }
+          - { label: "🇬🇷 Greece", value: "GR" }
+          - { label: "🇬🇸 South Georgia", value: "GS" }
+          - { label: "🇬🇹 Guatemala", value: "GT" }
+          - { label: "🇬🇺 Guam", value: "GU" }
+          - { label: "🇬🇼 Guinea-Bissau", value: "GW" }
+          - { label: "🇬🇾 Guyana", value: "GY" }
+          - { label: "🇭🇰 Hong Kong", value: "HK" }
+          - { label: "🇭🇲 Heard Island and Mcdonald Islands", value: "HM" }
+          - { label: "🇭🇳 Honduras", value: "HN" }
+          - { label: "🇭🇷 Croatia", value: "HR" }
+          - { label: "🇭🇹 Haiti", value: "HT" }
+          - { label: "🇭🇺 Hungary", value: "HU" }
+          - { label: "🇮🇩 Indonesia", value: "ID" }
+          - { label: "🇮🇪 Ireland", value: "IE" }
+          - { label: "🇮🇱 Israel", value: "IL" }
+          - { label: "🇮🇲 Isle of Man", value: "IM" }
+          - { label: "🇮🇳 India", value: "IN" }
+          - { label: "🇮🇴 British Indian Ocean Territory", value: "IO" }
+          - { label: "🇮🇶 Iraq", value: "IQ" }
+          - { label: "🇮🇷 Iran", value: "IR" }
+          - { label: "🇮🇸 Iceland", value: "IS" }
+          - { label: "🇮🇹 Italy", value: "IT" }
+          - { label: "🇯🇪 Jersey", value: "JE" }
+          - { label: "🇯🇲 Jamaica", value: "JM" }
+          - { label: "🇯🇴 Jordan", value: "JO" }
+          - { label: "🇯🇵 Japan", value: "JP" }
+          - { label: "🇰🇪 Kenya", value: "KE" }
+          - { label: "🇰🇬 Kyrgyzstan", value: "KG" }
+          - { label: "🇰🇭 Cambodia", value: "KH" }
+          - { label: "🇰🇮 Kiribati", value: "KI" }
+          - { label: "🇰🇲 Comoros", value: "KM" }
+          - { label: "🇰🇳 Saint Kitts and Nevis", value: "KN" }
+          - { label: "🇰🇵 North Korea", value: "KP" }
+          - { label: "🇰🇷 South Korea", value: "KR" }
+          - { label: "🇰🇼 Kuwait", value: "KW" }
+          - { label: "🇰🇾 Cayman Islands", value: "KY" }
+          - { label: "🇰🇿 Kazakhstan", value: "KZ" }
+          - { label: "🇱🇦 Lao People's Democratic Republic", value: "LA" }
+          - { label: "🇱🇧 Lebanon", value: "LB" }
+          - { label: "🇱🇨 Saint Lucia", value: "LC" }
+          - { label: "🇱🇮 Liechtenstein", value: "LI" }
+          - { label: "🇱🇰 Sri Lanka", value: "LK" }
+          - { label: "🇱🇷 Liberia", value: "LR" }
+          - { label: "🇱🇸 Lesotho", value: "LS" }
+          - { label: "🇱🇹 Lithuania", value: "LT" }
+          - { label: "🇱🇺 Luxembourg", value: "LU" }
+          - { label: "🇱🇻 Latvia", value: "LV" }
+          - { label: "🇱🇾 Libya", value: "LY" }
+          - { label: "🇲🇦 Morocco", value: "MA" }
+          - { label: "🇲🇨 Monaco", value: "MC" }
+          - { label: "🇲🇩 Moldova", value: "MD" }
+          - { label: "🇲🇪 Montenegro", value: "ME" }
+          - { label: "🇲🇫 Saint Martin (French Part)", value: "MF" }
+          - { label: "🇲🇬 Madagascar", value: "MG" }
+          - { label: "🇲🇭 Marshall Islands", value: "MH" }
+          - { label: "🇲🇰 Macedonia", value: "MK" }
+          - { label: "🇲🇱 Mali", value: "ML" }
+          - { label: "🇲🇲 Myanmar", value: "MM" }
+          - { label: "🇲🇳 Mongolia", value: "MN" }
+          - { label: "🇲🇴 Macao", value: "MO" }
+          - { label: "🇲🇵 Northern Mariana Islands", value: "MP" }
+          - { label: "🇲🇶 Martinique", value: "MQ" }
+          - { label: "🇲🇷 Mauritania", value: "MR" }
+          - { label: "🇲🇸 Montserrat", value: "MS" }
+          - { label: "🇲🇹 Malta", value: "MT" }
+          - { label: "🇲🇺 Mauritius", value: "MU" }
+          - { label: "🇲🇻 Maldives", value: "MV" }
+          - { label: "🇲🇼 Malawi", value: "MW" }
+          - { label: "🇲🇽 Mexico", value: "MX" }
+          - { label: "🇲🇾 Malaysia", value: "MY" }
+          - { label: "🇲🇿 Mozambique", value: "MZ" }
+          - { label: "🇳🇦 Namibia", value: "NA" }
+          - { label: "🇳🇨 New Caledonia", value: "NC" }
+          - { label: "🇳🇪 Niger", value: "NE" }
+          - { label: "🇳🇫 Norfolk Island", value: "NF" }
+          - { label: "🇳🇬 Nigeria", value: "NG" }
+          - { label: "🇳🇮 Nicaragua", value: "NI" }
+          - { label: "🇳🇱 Netherlands", value: "NL" }
+          - { label: "🇳🇴 Norway", value: "NO" }
+          - { label: "🇳🇵 Nepal", value: "NP" }
+          - { label: "🇳🇷 Nauru", value: "NR" }
+          - { label: "🇳🇺 Niue", value: "NU" }
+          - { label: "🇳🇿 New Zealand", value: "NZ" }
+          - { label: "🇴🇲 Oman", value: "OM" }
+          - { label: "🇵🇦 Panama", value: "PA" }
+          - { label: "🇵🇪 Peru", value: "PE" }
+          - { label: "🇵🇫 French Polynesia", value: "PF" }
+          - { label: "🇵🇬 Papua New Guinea", value: "PG" }
+          - { label: "🇵🇭 Philippines", value: "PH" }
+          - { label: "🇵🇰 Pakistan", value: "PK" }
+          - { label: "🇵🇱 Poland", value: "PL" }
+          - { label: "🇵🇲 Saint Pierre and Miquelon", value: "PM" }
+          - { label: "🇵🇳 Pitcairn", value: "PN" }
+          - { label: "🇵🇷 Puerto Rico", value: "PR" }
+          - { label: "🇵🇸 Palestinian Territory", value: "PS" }
+          - { label: "🇵🇹 Portugal", value: "PT" }
+          - { label: "🇵🇼 Palau", value: "PW" }
+          - { label: "🇵🇾 Paraguay", value: "PY" }
+          - { label: "🇶🇦 Qatar", value: "QA" }
+          - { label: "🇷🇪 Réunion", value: "RE" }
+          - { label: "🇷🇴 Romania", value: "RO" }
+          - { label: "🇷🇸 Serbia", value: "RS" }
+          - { label: "🇷🇺 Russia", value: "RU" }
+          - { label: "🇷🇼 Rwanda", value: "RW" }
+          - { label: "🇸🇦 Saudi Arabia", value: "SA" }
+          - { label: "🇸🇧 Solomon Islands", value: "SB" }
+          - { label: "🇸🇨 Seychelles", value: "SC" }
+          - { label: "🇸🇩 Sudan", value: "SD" }
+          - { label: "🇸🇪 Sweden", value: "SE" }
+          - { label: "🇸🇬 Singapore", value: "SG" }
+          - { label: "🇸🇭 Saint Helena Ascension and Tristan Da Cunha", value: "SH" }
+          - { label: "🇸🇮 Slovenia", value: "SI" }
+          - { label: "🇸🇯 Svalbard and Jan Mayen", value: "SJ" }
+          - { label: "🇸🇰 Slovakia", value: "SK" }
+          - { label: "🇸🇱 Sierra Leone", value: "SL" }
+          - { label: "🇸🇲 San Marino", value: "SM" }
+          - { label: "🇸🇳 Senegal", value: "SN" }
+          - { label: "🇸🇴 Somalia", value: "SO" }
+          - { label: "🇸🇷 Suriname", value: "SR" }
+          - { label: "🇸🇸 South Sudan", value: "SS" }
+          - { label: "🇸🇹 Sao Tome and Principe", value: "ST" }
+          - { label: "🇸🇻 El Salvador", value: "SV" }
+          - { label: "🇸🇽 Sint Maarten (Dutch Part)", value: "SX" }
+          - { label: "🇸🇾 Syrian Arab Republic", value: "SY" }
+          - { label: "🇸🇿 Swaziland", value: "SZ" }
+          - { label: "🇹🇨 Turks and Caicos Islands", value: "TC" }
+          - { label: "🇹🇩 Chad", value: "TD" }
+          - { label: "🇹🇫 French Southern Territories", value: "TF" }
+          - { label: "🇹🇬 Togo", value: "TG" }
+          - { label: "🇹🇭 Thailand", value: "TH" }
+          - { label: "🇹🇯 Tajikistan", value: "TJ" }
+          - { label: "🇹🇰 Tokelau", value: "TK" }
+          - { label: "🇹🇱 Timor-Leste", value: "TL" }
+          - { label: "🇹🇲 Turkmenistan", value: "TM" }
+          - { label: "🇹🇳 Tunisia", value: "TN" }
+          - { label: "🇹🇴 Tonga", value: "TO" }
+          - { label: "🇹🇷 Turkey", value: "TR" }
+          - { label: "🇹🇹 Trinidad and Tobago", value: "TT" }
+          - { label: "🇹🇻 Tuvalu", value: "TV" }
+          - { label: "🇹🇼 Taiwan", value: "TW" }
+          - { label: "🇹🇿 Tanzania", value: "TZ" }
+          - { label: "🇺🇦 Ukraine", value: "UA" }
+          - { label: "🇺🇬 Uganda", value: "UG" }
+          - { label: "🇺🇲 United States Minor Outlying Islands", value: "UM" }
+          - { label: "🇺🇸 United States", value: "US" }
+          - { label: "🇺🇾 Uruguay", value: "UY" }
+          - { label: "🇺🇿 Uzbekistan", value: "UZ" }
+          - { label: "🇻🇦 Vatican City", value: "VA" }
+          - { label: "🇻🇨 Saint Vincent and The Grenadines", value: "VC" }
+          - { label: "🇻🇪 Venezuela", value: "VE" }
+          - { label: "🇻🇬 British Virgin Islands", value: "VG" }
+          - { label: "🇻🇮 U.S. Virgin Islands", value: "VI" }
+          - { label: "🇻🇳 Viet Nam", value: "VN" }
+          - { label: "🇻🇺 Vanuatu", value: "VU" }
+          - { label: "🇼🇫 Wallis and Futuna", value: "WF" }
+          - { label: "🇼🇸 Samoa", value: "WS" }
+          - { label: "🇾🇪 Yemen", value: "YE" }
+          - { label: "🇾🇹 Mayotte", value: "YT" }
+          - { label: "🇿🇦 South Africa", value: "ZA" }
+          - { label: "🇿🇲 Zambia", value: "ZM" }
+          - { label: "🇿🇼 Zimbabwe", value: "ZW" }

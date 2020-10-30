@@ -1,0 +1,25 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Content Manager</title>
+</head>
+<body>
+  <!-- Include the script that builds the page and powers Netlify CMS -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://unpkg.com/netlify-cms@^2.0.0/dist/netlify-cms.js"></script>
+  <script>
+    setInterval(function() {
+      if (document.getElementById('badge')) {
+        var myImageElement = document.getElementById('badge');
+      }
+      else {
+        $("ul.css-12zz42a-AppHeaderNavList").append('<li><img id="badge" class="css-104dqk8-AppHeaderButton-button-buttonActive-buttonActive-buttonActive-buttonActive-AppHeaderButton e16dayda1" src="https://api.netlify.com/api/v1/badges/b452dc30-a1d4-45c0-8d9f-f6862378c0de/deploy-status"></li>');
+      }
+      myImageElement.src = myImageElement.src + '?i=' + Math.random();
+    }, 5000);
+    CMS.registerPreviewStyle("/m.css");
+  </script>
+</body>
+</html>
