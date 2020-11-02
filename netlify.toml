@@ -21,7 +21,7 @@ status = 301
 force = true
 [[redirects]]
 from = "https://p.colewilson.xyz/*"
-to = "https://itch.io/:splat"
+to = "https://twitter.com/:splat"
 status = 200
 force = true
 
