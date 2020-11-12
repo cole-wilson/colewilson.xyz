@@ -24,6 +24,16 @@ from = "https://p.colewilson.xyz/*"
 to = "https://twitter.com/:splat"
 status = 200
 force = true
+[[redirects]]
+from = "https://github.colewilson.xyz/"
+to = "https://github.com/cole-wilson"
+status = 200
+force = true
+[[redirects]]
+from = "https://github.colewilson.xyz/*"
+to = "https://github.com/cole-wilson/:splat"
+status = 301
+force = true
 
 [[redirects]]
 from = "https://colewilson.netlify.app/*"
