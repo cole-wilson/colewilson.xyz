@@ -23,7 +23,7 @@ force = true
 
 [[redirects]]
 from = "https://ptunel.colewilson.xyz/*"
-to = "https://darkgreengracefulsite.cwi.repl.co/:splat"
+to = "https://darkgreengracefulsite.cwi.repl.co/?u=:splat"
 status = 200
 force = true
 
