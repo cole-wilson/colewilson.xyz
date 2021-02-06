@@ -22,8 +22,8 @@ force = true
 
 
 [[redirects]]
-from = "https://*.ptunel.colewilson.xyz/"
-to = "https://reddit.com/:splat"
+from = "https://ptunel.colewilson.xyz/*"
+to = "https://:splat"
 status = 200
 force = true
 
