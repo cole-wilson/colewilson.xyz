@@ -19,11 +19,15 @@ from = "http://colewilson.xyz/*"
 to = "https://colewilson.xyz/:splat"
 status = 301
 force = true
+
+
 [[redirects]]
-from = "https://p.colewilson.xyz/*"
+from = "https://*.ptunel.colewilson.xyz/"
 to = "https://reddit.com/:splat"
 status = 200
 force = true
+
+
 [[redirects]]
 from = "https://github.colewilson.xyz/"
 to = "https://github.com/cole-wilson"
