@@ -22,7 +22,7 @@ var month = dateObj.getUTCMonth() + 1; //months from 1-12
 var day = dateObj.getUTCDate();
 var year = dateObj.getUTCFullYear();
 var emojis = {
-	-1:["??"],
+	"-1":["??"],
 	1: {  // january
 		2: ["🧀"], // Swiss Cheese Day
 		4: ["🍝"], // Spaghetti Day
@@ -46,7 +46,7 @@ var emojis = {
 		31:["🎃"]
 	} // october
 	11: { // november
-		-1:["?"]
+		"-1":["?"]
 	}
 	12: {
 		25:["🎅"]
@@ -56,10 +56,10 @@ if (day in emojis[month]) {
 	var emoji = emojis[month][day]
 }
 else if (-1 in emojis[month]) {
-	var emoji = emojis[month][-1][Math.floor(Math.random() * emojis[month][-1].length)];
+	var emoji = emojis[month]["-1"][Math.floor(Math.random() * emojis[month]["-1"].length)];
 }
 else {
-	var emoji = emojis[-1][Math.floor(Math.random() * emojis[-1].length)];
+	var emoji = emojis["-1"][Math.floor(Math.random() * emojis["-1"].length)];
 }
 $('body').append('<span style="position:fixed;z-index:9999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999;top:15px;color:red;font-style:bold;right:5px;">'+emoji+'</span>')
 $('code').click(function(){copyToClipboard($(this).text())});
