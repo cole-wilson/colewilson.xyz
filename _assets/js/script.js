@@ -48,7 +48,7 @@ newScript = document.createElement("script");
 newScript.src = "https://unpkg.com/clippyjs@latest";
 document.getElementsByTagName('body')[0].appendChild(newScript);
 window.addEventListener('devtoolschange', event => {
-if (event.detail.isOpen) {alert('You found easter egg #4!');window.location = "https://www.youtube.com/watch?v=dQw4w9WgXcQ";};
+if (event.detail.isOpen and localStorage.getItem('me')!='1') {alert('You found easter egg #4!');window.location = "https://www.youtube.com/watch?v=dQw4w9WgXcQ";};
 });
 
 var agents = ['Merlin', 'Links', 'Genius', 'Peedy', 'Clippy']
