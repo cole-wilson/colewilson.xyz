@@ -68,8 +68,8 @@ header {
 	height: calc(100vh - 50px);
 	text-align: center;
 	background-attachment: fixed;
-  background-repeat: no-repeat;
-  background-size: cover;
+  	background-repeat: no-repeat;
+  	background-size: cover;
 	border-bottom: 1px solid black;
 }
 .navlinks {
@@ -126,7 +126,7 @@ article {
 }
 #desc {
 	text-overflow: ellipsis;
-	overflow: scroll;
+	overflow: hidden;
 	max-height: 50vh;
 }
 article img {
@@ -136,7 +136,7 @@ article img {
   line-height: 2;  
   text-align: center;
   border: 0.5px solid var(--color);
-  width: 100%;
+  width: 60%;
   height: auto;
   display: block;
   position: relative;
@@ -258,8 +258,8 @@ code ::selection {
 	border: 1px solid var(--lc);
 	padding-bottom: 0;
 	list-style: none;
-	min-width: 20vw;
-	max-width: 40vw;
+	width: 90vw;
+/* 	max-width: 40vw; */
 	display: inline-block;
 	margin: 10px;
 }
@@ -385,8 +385,8 @@ article {
 	height: calc(100vh - 50px);
 	text-align: center;
 	background-attachment: fixed;
-  background-repeat: no-repeat;
-  background-size: auto 100vh;
+  	background-repeat: no-repeat;
+  	background-size: auto 100vh;
 	background-position-x: center;
 	border-bottom: 1px solid black;
 }
