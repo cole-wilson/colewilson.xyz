@@ -3,5 +3,95 @@
   <a href="https://webring.hackclub.com/" id="previousBtn" class="webring-anchor" title="Previous">‹</a>
   <a href="https://webring.hackclub.com/" class="webring-logo" title="Hack Club Webring" alt="Hack Club Webring"></a>
   <a href="https://webring.hackclub.com/" id="nextBtn" class="webring-anchor" title="Next">›</a>
-  <script src="https://webring.hackclub.com/public/embed.min.js"></script>
+  <script>
+  (function() {
+    var h = document.getElementById("webring-wrapper"),
+        g = document.createElement("style");
+    g.innerHTML = `    #webring-wrapper {
+        opacity: 20%;
+        transition: opacity 0.5s;
+    }
+    #webring-wrapper:hover {
+        opacity: 100%;
+    }
+	.webring-anchor{
+		font-size: 33px;
+        position: fixed;
+        transform: rotate(90deg);
+		color: red;
+        left: 10px;
+		text-decoration:none;
+		transition:color .5s
+	}
+    #nextBtn {
+        top: calc(30vh + 30px);
+    }
+    #previousBtn {
+        top: calc(30vh - 30px);
+    }
+	.webring-anchor:hover{
+		color:#8492a6;
+		text-decoration:none
+	}
+	.webring-logo{
+		background-image:url(https://assets.hackclub.com/flag-orpheus-left.svg);
+		background-repeat:no-repeat;
+		background-position:top left;
+		background-size:contain;
+        position: fixed;
+        left: -5px;
+        top: 30vh;
+		-webkit-flex-shrink:0;
+		-ms-flex-negative:0;
+		flex-shrink:0;
+		display:inline-block;
+		width:70px;
+		height:70px;
+		margin:0 4px;
+		vertical-align:middle
+	}
+    .webring-logo:hover {
+        -webkit-animation: wobble 1.5s ease infinite;
+	    -moz-animation: wobble 1.5s ease infinite;
+	    animation: wobble 1.5s ease infinite;
+    }
+    @-webkit-keyframes wobble {
+	    0%{ transform: rotate(0deg); }
+	    50%{ transform: rotate(5deg); }
+        100% { transform: rotate(0deg); }
+    }
+    @-moz-keyframes wobble {
+    	0%{ transform: rotate0deg(0deg); }
+    	50%{ transform: rotate(5deg); }
+        100% { transform: rotate(0deg); }
+    }
+    @keyframes wobble {
+    	0%{ transform: rotate(0deg); }
+    	50%{ transform: rotate(5deg); }
+        100% { transform: rotate(0deg); }
+    }`;
+    h.appendChild(g);
+    var k = document.location.href.toLowerCase(),
+        f = 0,
+        c = 0,
+        d = 0,
+        l = document.getElementById("previousBtn"),
+        m = document.getElementById("nextBtn"),
+        b = new XMLHttpRequest;
+    b.open("GET", "https://webring.hackclub.com/public/members.json");
+    b.responseType = "json";
+    b.send();
+    b.onload = function() {
+        for (var a = b.response, e = 0; e < a.length; e++)
+            if (k == a[e].url.toLowerCase()) {
+                f = e;
+                break
+            } c = f - 1; - 1 == c && (c = a.length - 1);
+        l.href = a[c].url;
+        d = f + 1;
+        d == a.length && (d = 0);
+        m.href = a[d].url
+    }
+})();
+</script>
 </div>
