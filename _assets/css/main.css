@@ -120,7 +120,7 @@ aside :any-link {
 }
 article {
 	min-height: 100vh;
-	width: 80vw;
+	width: 74vw;
 	padding: 10px;
 	float: left;
 }
@@ -244,7 +244,7 @@ code, h1, h2, h3, h4, h5, h6, .herotitle, .bigg { font-family: 'Fira Code', mono
 }
 article ::selection {
 	background: var(--color);
-	color: white;
+	color: red;
 }
 code ::selection {
 	background: white;
