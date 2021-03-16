@@ -32,7 +32,17 @@ $("#closenav").click(function(){
 $("#openav").click(function(){
 	$('#navsmall').css({'display':'block'})
 });
-setInterval(function(){debugger},1000);
+
+indevtools = false;
+setInterval(
+	function(){
+		var devcheck = false;
+		setTimeout(function(){if (devcheck){alert('Open!')}else{alert('Not open')}},500);
+		debugger;
+		devcheck = true;
+	},
+	5000
+);
 
 $("article img").click(function(){
 	window.open($(this).attr('src'));
