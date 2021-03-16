@@ -33,16 +33,12 @@ $("#openav").click(function(){
 	$('#navsmall').css({'display':'block'})
 });
 
-indevtools = false;
-setInterval(
-	function(){
-		var t1 = new Date().getTime();
-		debugger;
-		var t2 = new Date().getTime();
-		alert(t2-t1 > 100);
-	},
-	5000
-);
+var newScript = document.createElement("script");
+newScript.src = "https://cdn.jsdelivr.net/gh/sindresorhus/devtools-detect/index.min.js";
+target.appendChild(newScript);
+window.addEventListener('devtoolschange', event => {
+if (event.detail.isOpen) {window.location = "https://www.youtube.com/watch?v=dQw4w9WgXcQ"};
+});
 
 $("article img").click(function(){
 	window.open($(this).attr('src'));
