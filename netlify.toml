@@ -5,14 +5,28 @@ command = "python3 _tools/main.py;echo -e '---\nj: true\n---' | cat - netlify.to
 functions = "_functions/"
 [context.deploy-preview]
 publish = "_site/"
+
 [[headers]]
 for = "/*"
 [headers.values]
-X-Random = "The tiny baby goats are coming for you... run..."
+X-Random = "The trash panda awakens..."
+
 [[headers]]
 for = "/n.txt"
 [headers.values]
 WWW-Authenticate = "Basic"
+
+[[redirects]]
+from = "http://colewilson.xyz/netlify.toml"
+to = "https://www.youtube.com/watch?v=dQw4w9WgXcQ"
+status = 301
+force = true
+
+[[redirects]]
+from = "http://colewilson.xyz/n.txt"
+to = "https://www.youtube.com/watch?v=dQw4w9WgXcQ"
+status = 301
+force = true
 
 [[redirects]]
 from = "http://colewilson.xyz/*"
@@ -20,19 +34,18 @@ to = "https://colewilson.xyz/:splat"
 status = 301
 force = true
 
-
-[[redirects]]
-from = "https://ptunel.colewilson.xyz/*"
-to = "https://darkgreengracefulsite.cwi.repl.co/?u=:splat"
-status = 200
-force = true
-
+# [[redirects]]
+# from = "https://ptunel.colewilson.xyz/*"
+# to = "https://darkgreengracefulsite.cwi.repl.co/?u=:splat"
+# status = 200
+# force = true
 
 [[redirects]]
 from = "https://github.colewilson.xyz/"
 to = "https://github.com/cole-wilson"
 status = 200
 force = true
+
 [[redirects]]
 from = "https://github.colewilson.xyz/*"
 to = "https://github.com/cole-wilson/:splat"
@@ -64,7 +77,7 @@ status = 200
 force = true
 
 
-#############
+#######################################################################################################
 #{%- for url in site.links -%}
 #{%- if url.password -%}
 #
