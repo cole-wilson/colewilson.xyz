@@ -56,7 +56,7 @@ var agents = ['Merlin', 'Links', 'Genius', 'Peedy', 'Clippy', 'Links', 'Links', 
 var agentname = agents[Math.floor(Math.random() * agents.length)];
 var onscreen = false;
 function clippygo() {
-if (onscreen){return false;
+if (onscreen){return false;}
 onscreen = true;
 clippy.load(agentname, function(agent) {
 	agent.show();
