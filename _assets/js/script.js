@@ -51,22 +51,12 @@ window.addEventListener('devtoolschange', event => {
 if (event.detail.isOpen && localStorage.getItem('me')!='1') {alert('You found easter egg #4!');window.location = "https://www.youtube.com/watch?v=dQw4w9WgXcQ";};
 });
 
-function handler(e) {
-        event = e || window.event;
 
-        if (event.stopPropagation)
-            event.stopPropagation();
-
-        event.cancelBubble = true;
-	clippygo();
-        return false;
-    }
 var agents = ['Merlin', 'Links', 'Genius', 'Peedy', 'Clippy', 'Links', 'Links', 'Links']
 var agentname = agents[Math.floor(Math.random() * agents.length)];
 var onscreen = false;
-document.getElementsByTagName('body')[0].oncontextmenu = handler;
 function clippygo() {
-if (onscreen){return}
+if (onscreen){return false;
 onscreen = true;
 clippy.load(agentname, function(agent) {
 	agent.show();
@@ -76,7 +66,7 @@ clippy.load(agentname, function(agent) {
 	setInterval(function(){
 		agent.animate()
 	},3000);
-});}
+});return false;}
 
 $("article img").click(function(){
 	window.open($(this).attr('src'));
@@ -120,8 +110,8 @@ function myFunction() {
 }
 
 if (true) {//layout == ''
-viewportHeight = Math.max(document.documentElement.clientHeight, window.innerHeight || 0) - 50;
 document.onscroll = function() {
+	viewportHeight = Math.max(document.documentElement.clientHeight, window.innerHeight || 0) - 50;
 	// alert();
 	if (!window.matchMedia("(max-width: 600px)").matches) {
 		if ($(window).scrollTop() > viewportHeight) {
