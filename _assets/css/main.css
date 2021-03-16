@@ -258,7 +258,7 @@ code ::selection {
 	border: 1px solid var(--lc);
 	padding-bottom: 0;
 	list-style: none;
-	width: 90vw;
+	width: 98vw;
 /* 	max-width: 40vw; */
 	display: inline-block;
 	margin: 10px;
