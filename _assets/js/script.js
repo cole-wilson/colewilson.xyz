@@ -1,18 +1,11 @@
+//Console Stuff
 console.log("%c   ", atob('Zm9udC1zaXplOiAzMDBweDsgYmFja2dyb3VuZC1zaXplOiAxMDAlIDEwMCU7IGJhY2tncm91bmQtaW1hZ2U6IHVybChodHRwczovL2ltYWdlcy5jdGZhc3NldHMubmV0L3VzZjF2d3R1cXl4bS82bWlhWXVEMmk0d2Vtb2txOFEwMlVvL2JhOTIyODE3NDA3YTY2NzM0OWFlNjRjOGUzMzRkM2I2L0RvYmJ5X1dCX0YyX0RvYmJ5Q2xpY2tpbmdGaW5nZXJzQ2FzdGluZ1NwZWxsX1N0aWxsXzA4MDYxNV9MYW5kLmpwZyk7'));
 console.log(atob("JWNXZWxjb21lIHRvIHRoZSBjb25zb2xlIQpZb3UgZm91bmQgZWFzdGVyIGVnZyAjMSwgY2FuIHlvdSBmaW5kIGFsbCAyMD8="),
 	    atob('Zm9udC13ZWlnaHQ6IGJvbGQ7IHNlbGYtYWxpZ246IGNlbnRlcjt0ZXh0LWFsaWduOiBjZW50ZXI7Zm9udC1mYW1pbHk6IG1vbm9zcGFjZTsgZm9udC1zaXplOiAyMHB4O2NvbG9yOiBkYXJrYmx1ZTsgYmFja2dyb3VuZDogd2hpdGU7IGJvcmRlcjogMXB4IGRhc2hlZCBjeWFuOw==')
 );
-//import https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js
+
 document.documentElement.setAttribute('data-theme', localStorage.getItem('themeSwitch'));
-
-document.addEventListener('selectionchange', function() { // Credit: https://dev.to/rose/playing-with-easter-eggs-ideas-for-making-your-website-more-fun-1p0p
-  var selection = document.getSelection();
-  var selectedText = selection ? selection.toString() : null;
-  if (['easter', 'egg', 'cole', 'wilson'].includes(selectedText.toLowerCase())) {
-    alert('You found easter egg #5!');
-  }
-});
-
+// Functions
 const copyToClipboard = str => {
   const el = document.createElement('textarea');
   el.value = str;
@@ -22,7 +15,16 @@ const copyToClipboard = str => {
   document.body.removeChild(el);
 };
 
+$('code').click(function(){copyToClipboard($(this).text())});
 
+// Easter Egg Stuff
+document.addEventListener('selectionchange', function() { // Credit: https://dev.to/rose/playing-with-easter-eggs-ideas-for-making-your-website-more-fun-1p0p
+  var selection = document.getSelection();
+  var selectedText = selection ? selection.toString() : null;
+  if (['easter', 'egg', 'cole', 'wilson'].includes(selectedText.toLowerCase())) {
+    alert('You found easter egg #5!');
+  }
+});
 
 	$('header').prepend('<span id="openav">&equiv;</span>');
 	var l = $('.n1').html().replace(/(\<.*?\>.*?\<\/a\>)/g, '$1'+'<br>').replace(/style=".*?"/g,'');
@@ -49,8 +51,8 @@ window.addEventListener('devtoolschange', event => {
 if (event.detail.isOpen && localStorage.getItem('me')!='1') {alert('You found easter egg #4!');window.location = "https://www.youtube.com/watch?v=dQw4w9WgXcQ";};
 });
 
-function handler(event) {
-        event = event || window.event;
+function handler(e) {
+        event = e || window.event;
 
         if (event.stopPropagation)
             event.stopPropagation();
