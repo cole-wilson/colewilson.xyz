@@ -36,10 +36,11 @@ $("#openav").click(function(){
 indevtools = false;
 setInterval(
 	function(){
-		var devcheck = false;
-		setTimeout(function(){if (devcheck){alert('Open!')}else{alert('Not open')}},500);
-		debugger;
-		devcheck = true;
+		  var r = /./;
+   		  r.toString = function() {
+      			document.title = 'on';
+    		  };
+    		  console.log(r);
 	},
 	5000
 );
