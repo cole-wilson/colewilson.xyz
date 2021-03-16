@@ -17,6 +17,7 @@ const copyToClipboard = str => {
 
 
 // Emoji gen:
+
 var dateObj = new Date();
 var month = dateObj.getUTCMonth() + 1; //months from 1-12
 var day = dateObj.getUTCDate();
@@ -24,6 +25,7 @@ var year = dateObj.getUTCFullYear();
 var emojis = {
 	"-1":["??"],
 	1: {  // january
+		1: ["🎉"], // New Years Day
 		2: ["🧀"], // Swiss Cheese Day
 		4: ["🍝"], // Spaghetti Day
 		5: ["🐦"], // Bird Day
@@ -31,26 +33,28 @@ var emojis = {
 		19:["🍿"], // National Popcorn Day
 		
 		//(on 3rd monday)17:["👴🏾"], //MLK Day
-	}
-	2: {} // feburary
-	3: {14:"🥧"} // march
-	4: {} // april
+	},
+	2: {
+		2: ["🦔"], // Groundhog's Day?
+	}, // feburary
+	3: {14:"🥧"}, // march
+	4: {}, // april
 	5: {
 		31:["🌺"]	
-	} // may
-	6: {} // june
-	7: {} // july
-	8: {} // august
-	9: {} // september
+	}, // may
+	6: {}, // june
+	7: {}, // july
+	8: {}, // august
+	9: {}, // september
 	10: {
 		31:["🎃"]
-	} // october
+	}, // october
 	11: { // november
 		"-1":["?"]
-	}
+	},
 	12: {
 		25:["🎅"]
-	} // december
+	}, // december
 }
 if (day in emojis[month]) {
 	var emoji = emojis[month][day]
