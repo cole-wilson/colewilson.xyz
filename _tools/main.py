@@ -78,7 +78,9 @@ os.system('mv _assets/js/script.js assets/bundle.min.js')
 hash = hash_file('assets/bundle.min.js')
 os.system('mv assets/bundle.min.js assets/'+hash+'.min.js')
 f = open('_includes/scripts.html','w+')
-f.write('<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>'+'<script src="https://colewilson.xyz/assets/'+hash+'.min.js"></script>')#############
+f.write('<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>'+
+	'<script src="https://unpkg.com/clippyjs@latest"></script>' + 
+	'<script src="https://colewilson.xyz/assets/'+hash+'.min.js"></script>')#############
 f.close()
 
 
