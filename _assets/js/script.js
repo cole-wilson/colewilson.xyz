@@ -44,9 +44,7 @@ $("#openav").click(function(){
 var newScript = document.createElement("script");
 newScript.src = atob("aHR0cHM6Ly9jZG4uanNkZWxpdnIubmV0L2doL3NpbmRyZXNvcmh1cy9kZXZ0b29scy1kZXRlY3QvaW5kZXgubWluLmpz");
 document.getElementsByTagName('body')[0].appendChild(newScript);
-newScript = document.createElement("script");
-newScript.src = "https://unpkg.com/clippyjs@latest";
-document.getElementsByTagName('body')[0].appendChild(newScript);
+
 window.addEventListener('devtoolschange', event => {
 if (event.detail.isOpen && localStorage.getItem('me')!='1') {alert('You found easter egg #4!');window.location = "https://www.youtube.com/watch?v=dQw4w9WgXcQ";};
 });
