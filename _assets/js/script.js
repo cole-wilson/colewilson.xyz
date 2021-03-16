@@ -56,7 +56,7 @@ var agentname = agents[Math.floor(Math.random() * agents.length)];
 clippy.load(agentname, function(agent) {
 	agent.show();
 	agent.speak(`Hi there I'm ${agentname}!<br><a href="https://en.wikipedia.org/wiki/Office_Assistant">some context.</a>`);
-}
+});
 
 $("article img").click(function(){
 	window.open($(this).attr('src'));
