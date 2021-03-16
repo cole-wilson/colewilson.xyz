@@ -36,9 +36,9 @@ $("#openav").click(function(){
 indevtools = false;
 setInterval(
 	function(){
-		var t1 = new Date.getTime();
+		var t1 = new Date().getTime();
 		debugger;
-		var t2 = new Date.getTime();
+		var t2 = new Date().getTime();
 		alert(t2-t1 > 100);
 	},
 	5000
