@@ -12,6 +12,11 @@ for = "/*"
 X-Random = "The trash panda awakens..."
 
 [[headers]]
+for = "/*"
+[headers.values]
+X-Easter-Egg = "You foumd easter egg #3!"
+
+[[headers]]
 for = "/n.txt"
 [headers.values]
 WWW-Authenticate = "Basic"
