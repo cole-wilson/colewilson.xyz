@@ -51,12 +51,15 @@ if (event.detail.isOpen && localStorage.getItem('me')!='1') {alert('You found ea
 
 var agents = ['Merlin', 'Links', 'Genius', 'Peedy', 'Clippy', 'Links', 'Links', 'Links']
 var agentname = agents[Math.floor(Math.random() * agents.length)];
+function clippygo() {
 clippy.load(agentname, function(agent) {
 	agent.show();
 	agent.speak(`Hi there I'm ${agentname}!`);
 	agent.speak(`Google 'Clippy' for some context.`);
-	setInterval(agent.animate,5000);
-});
+	setInterval(function(){
+		agent.animate()
+	},3000);
+});}
 
 $("article img").click(function(){
 	window.open($(this).attr('src'));
