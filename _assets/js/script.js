@@ -1,6 +1,7 @@
-console.log("%cHello!","color:lightblue;font-family:sans-serif;font-size:4rem;-webkit-text-stroke: 1px black;font-weight:bold");
-console.log("%cWelcome to the console.","color:grey;font-family:sans-serif;font-size:1.5rem;-webkit-text-stroke: 1px black;");
-
+console.log(atob("JWM="), atob('Zm9udC1zaXplOiAzMDBweDsgYmFja2dyb3VuZC1zaXplOiAxMDAlIDEwMCU7IGJhY2tncm91bmQtaW1hZ2U6IHVybChodHRwczovL2ltYWdlcy5jdGZhc3NldHMubmV0L3VzZjF2d3R1cXl4bS82bWlhWXVEMmk0d2Vtb2txOFEwMlVvL2JhOTIyODE3NDA3YTY2NzM0OWFlNjRjOGUzMzRkM2I2L0RvYmJ5X1dCX0YyX0RvYmJ5Q2xpY2tpbmdGaW5nZXJzQ2FzdGluZ1NwZWxsX1N0aWxsXzA4MDYxNV9MYW5kLmpwZyk7'));
+console.log(atob("JWNXZWxjb21lIHRvIHRoZSBjb25zb2xlIVxuWW91IGZvdW5kIGVhc3RlciBlZ2cgIzEsIGNhbiB5b3UgZmluZCBhbGwgMjA/"),
+	    atob('Zm9udC13ZWlnaHQ6IGJvbGQ7IHNlbGYtYWxpZ246IGNlbnRlcjt0ZXh0LWFsaWduOiBjZW50ZXI7Zm9udC1mYW1pbHk6IG1vbm9zcGFjZTsgZm9udC1zaXplOiAyMHB4O2NvbG9yOiBkYXJrYmx1ZTsgYmFja2dyb3VuZDogd2hpdGU7IGJvcmRlcjogMXB4IGRhc2hlZCBjeWFuOw==')
+);
 //import https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js
 document.documentElement.setAttribute('data-theme', localStorage.getItem('themeSwitch'));
 
