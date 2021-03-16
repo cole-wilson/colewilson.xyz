@@ -27,7 +27,7 @@
 } */
 
 code {
-	pointer: copy;
+	cursor: copy;
 }
 body {
 /* 	font-weight: bolder; */
