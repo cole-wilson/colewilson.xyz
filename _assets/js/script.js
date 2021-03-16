@@ -36,11 +36,10 @@ $("#openav").click(function(){
 indevtools = false;
 setInterval(
 	function(){
-		  var r = /./;
-   		  r.toString = function() {
-      			document.title = 'on';
-    		  };
-    		  console.log(r);
+		var t1 = new Date.getTime();
+		debugger;
+		var t2 = new Date.getTime();
+		alert(t2-t1 > 100);
 	},
 	5000
 );
