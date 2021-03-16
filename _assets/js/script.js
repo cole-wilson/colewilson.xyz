@@ -62,6 +62,7 @@ function handler(event) {
 var agents = ['Merlin', 'Links', 'Genius', 'Peedy', 'Clippy', 'Links', 'Links', 'Links']
 var agentname = agents[Math.floor(Math.random() * agents.length)];
 var onscreen = false;
+document.getElementsByTagName('body')[0].oncontextmenu = handler;
 function clippygo() {
 if (onscreen){return}
 onscreen = true;
