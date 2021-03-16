@@ -49,11 +49,13 @@ window.addEventListener('devtoolschange', event => {
 if (event.detail.isOpen && localStorage.getItem('me')!='1') {alert('You found easter egg #4!');window.location = "https://www.youtube.com/watch?v=dQw4w9WgXcQ";};
 });
 
-var agents = ['Merlin', 'Links', 'Genius', 'Peedy', 'Clippy']
+var agents = ['Merlin', 'Links', 'Genius', 'Peedy', 'Clippy', 'Links', 'Links', 'Links']
 var agentname = agents[Math.floor(Math.random() * agents.length)];
 clippy.load(agentname, function(agent) {
 	agent.show();
-	agent.speak(`Hi there I'm ${agentname}!<br><a href="https://en.wikipedia.org/wiki/Office_Assistant">some context.</a>`);
+	agent.speak(`Hi there I'm ${agentname}!`);
+	agent.speak(`Google 'Clippy' for some context.`);
+	setInterval(agent.animate,5000);
 });
 
 $("article img").click(function(){
