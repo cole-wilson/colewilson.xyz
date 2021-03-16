@@ -108,10 +108,10 @@ function myFunction() {
   var scrolled = (winScroll / height) * 100;
   document.getElementById("myBar").style.width = scrolled + "%";
 }
+	viewportHeight = Math.max(document.documentElement.clientHeight, window.innerHeight || 0) - 50;
 
 if (true) {//layout == ''
 document.onscroll = function() {
-	viewportHeight = Math.max(document.documentElement.clientHeight, window.innerHeight || 0) - 50;
 	// alert();
 	if (!window.matchMedia("(max-width: 600px)").matches) {
 		if ($(window).scrollTop() > viewportHeight) {
