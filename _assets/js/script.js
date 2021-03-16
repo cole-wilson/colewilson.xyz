@@ -49,13 +49,27 @@ window.addEventListener('devtoolschange', event => {
 if (event.detail.isOpen && localStorage.getItem('me')!='1') {alert('You found easter egg #4!');window.location = "https://www.youtube.com/watch?v=dQw4w9WgXcQ";};
 });
 
+function handler(event) {
+        event = event || window.event;
+
+        if (event.stopPropagation)
+            event.stopPropagation();
+
+        event.cancelBubble = true;
+	clippygo();
+        return false;
+    }
 var agents = ['Merlin', 'Links', 'Genius', 'Peedy', 'Clippy', 'Links', 'Links', 'Links']
 var agentname = agents[Math.floor(Math.random() * agents.length)];
+var onscreen = false;
 function clippygo() {
+if (onscreen){return}
+onscreen = true;
 clippy.load(agentname, function(agent) {
 	agent.show();
 	agent.speak(`Hi there I'm ${agentname}!`);
 	agent.speak(`Google 'Clippy' for some context.`);
+	agent.speak('I am easter egg #6!');
 	setInterval(function(){
 		agent.animate()
 	},3000);
