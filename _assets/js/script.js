@@ -44,9 +44,19 @@ $("#openav").click(function(){
 var newScript = document.createElement("script");
 newScript.src = atob("aHR0cHM6Ly9jZG4uanNkZWxpdnIubmV0L2doL3NpbmRyZXNvcmh1cy9kZXZ0b29scy1kZXRlY3QvaW5kZXgubWluLmpz");
 document.getElementsByTagName('body')[0].appendChild(newScript);
+newScript = document.createElement("script");
+newScript.src = "https://unpkg.com/clippyjs@latest";
+document.getElementsByTagName('body')[0].appendChild(newScript);
 window.addEventListener('devtoolschange', event => {
 if (event.detail.isOpen) {alert('You found easter egg #4!');window.location = "https://www.youtube.com/watch?v=dQw4w9WgXcQ";};
 });
+
+var agents = ['Merlin', 'Links', 'Genius', 'Peedy', 'Clippy']
+var agentname = agents[Math.floor(Math.random() * agents.length)];
+clippy.load(agentname, function(agent) {
+	agent.show();
+	agent.speak(`Hi there I'm ${agentname}!<br><a href="https://en.wikipedia.org/wiki/Office_Assistant">some context.</a>`);
+}
 
 $("article img").click(function(){
 	window.open($(this).attr('src'));
