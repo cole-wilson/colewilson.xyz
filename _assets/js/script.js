@@ -5,6 +5,14 @@ console.log(atob("JWNXZWxjb21lIHRvIHRoZSBjb25zb2xlIQpZb3UgZm91bmQgZWFzdGVyIGVnZy
 //import https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js
 document.documentElement.setAttribute('data-theme', localStorage.getItem('themeSwitch'));
 
+document.addEventListener('selectionchange', function() { // Credit: https://dev.to/rose/playing-with-easter-eggs-ideas-for-making-your-website-more-fun-1p0p
+  var selection = document.getSelection();
+  var selectedText = selection ? selection.toString() : null;
+  if (['easter', 'egg', 'cole', 'wilson'].includes(selectedText.toLowerCase())) {
+    alert('You found easter egg #5!');
+  }
+});
+
 const copyToClipboard = str => {
   const el = document.createElement('textarea');
   el.value = str;
