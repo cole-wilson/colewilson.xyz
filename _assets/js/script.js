@@ -129,7 +129,7 @@ document.querySelectorAll('.highlight').forEach(function(node) {
 });
 
 
-$(document).on("click",":header", function () {
+$(document).on("click","article:header", function () {
    var clickedBtnID = $(this).attr('id'); // or var clickedBtnID = this.id
    window.location.hash = '#' + clickedBtnID;
 });
