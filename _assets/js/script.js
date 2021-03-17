@@ -23,7 +23,7 @@ var month = dateObj.getUTCMonth() + 1; //months from 1-12
 var day = dateObj.getUTCDate();
 var year = dateObj.getUTCFullYear();
 var emojis = {
-	"-1":["??"],
+	"-1":["😺"],
 	1: {  // january
 		1: ["🎉"], // New Years Day
 		2: ["🧀"], // Swiss Cheese Day
