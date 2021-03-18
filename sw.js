@@ -13,7 +13,7 @@ self.addEventListener('install', (event) => {
             return cache.addAll([
                 `.{{ stylesheet_url | replace: '<link rel="stylesheet" href="https://colewilson.xyz','' | replace: '"></link>','' }}`,
                 OFFLINE_URL,
-            ]+POSTS+PAGES);
+            ].concat(PAGES).concat(POSTS));
         })
     );
 });
