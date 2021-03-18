@@ -10,18 +10,22 @@ Copyright 2015, 2019, 2020, 2021 Google LLC. All Rights Reserved.
  See the License for the specific language governing permissions and
  limitations under the License.
 */
+
+{% capture stylesheet_url %}{% include styles.html %}{% endcapture %}
+
 const OFFLINE_VERSION = 1;
-const CACHE_NAME = "offline";
+const CACHE_NAME = "offline" + `{{ stylesheet_url | replace: '<link rel="stylesheet" href="https://colewilson.xyz','' | replace: '"></link>','' }}`;
 const OFFLINE_URL = "offline.html";
 
-self.addEventListener("install", (event) => {
+self.addEventListener('install', (event) => {
   event.waitUntil(
-    (async () => {
-      const cache = await caches.open(CACHE_NAME);
-      await cache.add(new Request(OFFLINE_URL, { cache: "reload" }));
-    })()
+    caches.open('v1').then((cache) => {
+      return cache.addAll([
+        "." + `{{ stylesheet_url | replace: '<link rel="stylesheet" href="https://colewilson.xyz','' | replace: '"></link>','' }}`,
+        OFFLINE_URL
+      ]);
+    })
   );
-  self.skipWaiting();
 });
 
 self.addEventListener("activate", (event) => {
