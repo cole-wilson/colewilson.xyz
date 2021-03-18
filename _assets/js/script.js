@@ -239,7 +239,7 @@ $("#darkmode").click(function() {
 });
 var mouseDown = 0;
 document.body.onmousedown = function() { 
-  ++mouseDown;if (mouseDown>100){alert(atob("WW91IGZvdW5kIEVhc3RlciBFZ2cgIzE3IQ=="))}
+  ++mouseDown;if (mouseDown>99){mouseDown=-9999;alert(atob("WW91IGZvdW5kIEVhc3RlciBFZ2cgIzE3IQ=="))}
 }
 setInterval(function(){ 
 	document.documentElement.setAttribute('data-theme', localStorage.getItem('themeSwitch'));
