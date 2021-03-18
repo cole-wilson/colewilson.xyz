@@ -28,7 +28,7 @@ status = 301
 force = true
 
 [[redirects]]
-from = "http://colewilson.xyz/easterbunny.js"
+from = "https://colewilson.xyz/easterbunny.js"
 to = "https://colewilson.xyz/easterbunny.jpg"
 status = 200
 force = true
