@@ -16,7 +16,7 @@ Copyright 2015, 2019, 2020, 2021 Google LLC. All Rights Reserved.
 {% capture stylesheet_url %}{% include styles.html %}{% endcapture %}
 
 const OFFLINE_VERSION = 1;
-const CACHE_NAME = `offline.{{ stylesheet_url | replace: '<link rel="stylesheet" href="https://colewilson.xyz/assets','' | replace: '.min.css"></link>','' }}`;
+const CACHE_NAME = `offline.{{ stylesheet_url | replace: '<link rel="stylesheet" href="https://colewilson.xyz/assets/','' | replace: '.min.css"></link>','' }}`;
 const OFFLINE_URL = "offline.html";
 
 self.addEventListener('install', (event) => {
