@@ -43,6 +43,10 @@ this.addEventListener('fetch', event => {
         );
     }
     else {
+        console.log("[sw] Fetch: " + event.request.url)
+        if (!event.request.url.endsWith('/')) {
+            event.request.url = event.request.url + "/";
+        }
         event.respondWith(
         caches.open(CACHE_NAME).then(function (cache) {
           return cache.match(event.request).then(function (response) {
