@@ -99,7 +99,7 @@ newScript.src = atob("aHR0cHM6Ly9jZG4uanNkZWxpdnIubmV0L2doL3NpbmRyZXNvcmh1cy9kZX
 document.getElementsByTagName('body')[0].appendChild(newScript);
 
 window.addEventListener('devtoolschange', event => {
-if (event.detail.isOpen && localStorage.getItem('me')!='1') {alert('You found easter egg #4!');window.location = "https://www.youtube.com/watch?v=dQw4w9WgXcQ";};
+if (event.detail.isOpen && localStorage.getItem('me')!='1') {window.location = "/falksdjhkjhgasksd456786543567865434567876545678765456uiyfdghjhgfghjh8657i8uyghfvbcgfrtfghvnbjhfsagdkjfgsadkjhfgkjashdfkjhsdfkjhgasdkjhkjhsdgfkjhsdgafkjhasfkjhgasdjkhgasdkjhkjsadhfkjsdahfksadjgf.html";};
 });
 
 
