@@ -1,19 +1,22 @@
 ---
 ---
-{% capture stylesheet_url %}{% include styles.html %}{% endcapture %}
-{% capture script_tags %}{% include scripts.html %}{% endcapture %}
-{% assign scripts = script_tags | split: '"></script>' %}
-
-
+{%- capture stylesheet_url %}{% include styles.html %}{% endcapture -%}
+{%- capture script_tags %}{% include scripts.html %}{% endcapture -%}
+{%- assign scripts = script_tags | split: '"></script>' -%}
 const OFFLINE_VERSION = 1;
 const CACHE_NAME = `offline.${OFFLINE_VERSION}.{{ stylesheet_url | replace: '<link rel="stylesheet" href="https://colewilson.xyz/assets/','' | replace: '.min.css"></link>','' }}`;
 const OFFLINE_URL = "/offline/";
 const POSTS = [{% for post in site.posts %}"{{ post.url }}", {% endfor %}];                                     
-const PAGES = [{% for page in site.pages %}"{{ page.url }}", {% endfor %}];
+const PAGES = [{% for page in site.pages %}"{{ page.url }}", {% endfor %}{% for project in site.projects %}"{{ project.url }}", {% endfor %}];
 const ASSETS = [
-{%- for script in scripts -%}
+{%- for script in scripts %}
     "{{ script | replace: '<script src="', "" }}",
 {% endfor -%}
+]
+const IMAGES = [
+    {% for post in site.posts %}"{{ post.image }}", {% endfor %} // Post Images
+    {% for project in site.project %}"{{ project.image }}", {% endfor %}, // Project Images
+    {% for page in site.pages %}"{{ page.image }}", {% endfor %}, // Page Images
 ]
 
 self.addEventListener('install', (event) => {
@@ -22,7 +25,7 @@ self.addEventListener('install', (event) => {
             return cache.addAll([
                 `.{{ stylesheet_url | replace: '<link rel="stylesheet" href="https://colewilson.xyz','' | replace: '"></link>','' }}`,
                 OFFLINE_URL,
-            ].concat(PAGES).concat(POSTS).concat(ASSETS));
+            ].concat(PAGES).concat(POSTS).concat(ASSETS).concat(IMAGE));
         })
     );
 });
