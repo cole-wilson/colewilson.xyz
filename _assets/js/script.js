@@ -4,6 +4,10 @@ console.log(atob("JWNXZWxjb21lIHRvIHRoZSBjb25zb2xlIQpZb3UgZm91bmQgZWFzdGVyIGVnZy
 	    atob('Zm9udC13ZWlnaHQ6IGJvbGQ7IHNlbGYtYWxpZ246IGNlbnRlcjt0ZXh0LWFsaWduOiBjZW50ZXI7Zm9udC1mYW1pbHk6IG1vbm9zcGFjZTsgZm9udC1zaXplOiAyMHB4O2NvbG9yOiBkYXJrYmx1ZTsgYmFja2dyb3VuZDogd2hpdGU7IGJvcmRlcjogMXB4IGRhc2hlZCBjeWFuOw==')
 );
 
+// Looking for more easter eggs?
+// 	have you tried clicking a whole bunch?
+// 		and a whole bunch more?
+
 document.documentElement.setAttribute('data-theme', localStorage.getItem('themeSwitch'));
 // Functions
 const copyToClipboard = str => {
@@ -233,6 +237,10 @@ $("#darkmode").click(function() {
 		});
 	}
 });
+var mouseDown = 0;
+document.body.onmousedown = function() { 
+  ++mouseDown;if (mouseDown>100){alert(atob("WW91IGZvdW5kIEVhc3RlciBFZ2cgIzE3IQ=="))}
+}
 setInterval(function(){ 
 	document.documentElement.setAttribute('data-theme', localStorage.getItem('themeSwitch'));
 if (localStorage.getItem('themeSwitch') == 'dark') {
