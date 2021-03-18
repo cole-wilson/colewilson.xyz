@@ -1,7 +1,7 @@
 ---
 ---
 {% capture stylesheet_url %}{% include styles.html %}{% endcapture %}
-const OFFLINE_VERSION = 2;
+const OFFLINE_VERSION = 1;
 const CACHE_NAME = `offline.${OFFLINE_VERSION}.{{ stylesheet_url | replace: '<link rel="stylesheet" href="https://colewilson.xyz/assets/','' | replace: '.min.css"></link>','' }}`;
 const OFFLINE_URL = "/offline/";
 
@@ -19,7 +19,7 @@ self.addEventListener('install', (event) => {
 this.addEventListener('fetch', event => {
     if (event.request.mode === 'navigate' || (event.request.method === 'GET' && event.request.headers.get('accept').includes('text/html'))) {
         if (event.request.url == 'easterbunny.js') {
-            console.log("HA!!!);
+            console.log("HA!!!');
         }
         event.respondWith(
             fetch(event.request.url).catch(error => {
