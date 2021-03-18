@@ -21,7 +21,7 @@ const OFFLINE_URL = "offline.html";
 
 self.addEventListener('install', (event) => {
   event.waitUntil(
-    caches.open('v1').then((cache) => {
+    caches.open(CACHE_NAME).then((cache) => {
       return cache.addAll([
         `.{{ stylesheet_url | replace: '<link rel="stylesheet" href="https://colewilson.xyz','' | replace: '"></link>','' }}`,
         OFFLINE_URL
