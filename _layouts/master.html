@@ -51,5 +51,6 @@
 <div id="navsmall"></div>
 <script>var layout="{{page.layout}}";</script>
 {{ content }}
+<script>window.addEventListener("load",()=>{if ("serviceWorker"in navigator){navigator.serviceWorker.register("sw.js");}});</script>
 </body>
 </html>
