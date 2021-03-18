@@ -43,6 +43,13 @@ this.addEventListener('fetch', event => {
             })
         );
     }
+    else if (event.request.method !== 'GET' || !event.request.url.startsWith('https://colewilson.xyz')) {
+        event.respondWith(
+            fetch(event.request).catch(error => {
+                return caches.match(OFFLINE_URL);
+            })
+        );
+    }
     else {
         console.log("[sw] Fetch: " + event.request.url)
         if (!event.request.url.endsWith('/')) {
