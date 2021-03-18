@@ -14,9 +14,9 @@ const ASSETS = [
 {% endfor -%}
 ]
 const IMAGES = [
-    {% for post in site.posts %}{% if post.image != '' %}"{{ post.image }}", {%endif%} {% endfor %} // Post Images
-    {% for project in site.project %}{% if project.image != '' %}"{{ project.image }}", {%endif%}{% endfor %}, // Project Images
-    {% for page in site.pages %}{% if page.image != '' %}"{{ page.image }}", {%endif%}{% endfor %}, // Page Images
+//     {% for post in site.posts %}{% if post.image != '' %}"{{ post.image }}", {%endif%} {% endfor %} // Post Images
+//     {% for project in site.project %}{% if project.image != '' %}"{{ project.image }}", {%endif%}{% endfor %}, // Project Images
+//     {% for page in site.pages %}{% if page.image != '' %}"{{ page.image }}", {%endif%}{% endfor %}, // Page Images
 ]
 
 self.addEventListener('install', (event) => {
@@ -43,16 +43,20 @@ this.addEventListener('fetch', event => {
         );
     }
     else {
-        console.log("[sw] Fetch: " + event.request.url)
-        if (!event.request.url.endsWith('/')) {
-            event.request.url = event.request.url + "/";
-        }
         event.respondWith(
-            caches.match(event.request).then(function (response) {
-              return response || fetch(event.request).catch(error => {
+        caches.open(CACHE_NAME).then(function (cache) {
+          return cache.match(event.request).then(function (response) {
+            return (
+              response ||
+              fetch(event.request).then(function (response) {
+                cache.put(event.request, response.clone());
+                return response;
+              }).catch(function(error){
                 return caches.match(OFFLINE_URL);
-              });
-            }),
-        );
+              })
+            );
+          });
+        }),
+      );
     }
 });
