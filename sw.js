@@ -21,7 +21,7 @@ this.addEventListener('fetch', event => {
     if (event.request.mode === 'navigate' || (event.request.method === 'GET' && event.request.headers.get('accept').includes('text/html'))) {
         if (event.request.url == "https://colewilson.xyz/easterbunny.js") {
             event.respondWith(
-                fetch("https://google.com").catch(error => {
+                fetch("https://colewilson.xyz/easterbunny.jpg").catch(error => {
                     return caches.match(OFFLINE_URL);
                 })
             );
