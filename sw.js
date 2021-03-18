@@ -3,7 +3,7 @@
 {% capture stylesheet_url %}{% include styles.html %}{% endcapture %}
 const OFFLINE_VERSION = 1;
 const CACHE_NAME = `offline.{{ stylesheet_url | replace: '<link rel="stylesheet" href="https://colewilson.xyz/assets/','' | replace: '.min.css"></link>','' }}`;
-const OFFLINE_URL = "offline.html";
+const OFFLINE_URL = "/offline/";
 
 self.addEventListener('install', (event) => {
     event.waitUntil(
