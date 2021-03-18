@@ -1,0 +1,52 @@
+---
+---
+<!DOCTYPE html>
+<html lang="en">
+<!--  
+ _____________________
+< Made by Cole Wilson >
+ ---------------------
+      \                    / \  //\
+       \    |\___/|      /   \//  \\
+            /0  0  \__  /    //  | \ \
+           /     /  \/_/    //   |  \  \
+           @_^_@'/   \/_   //I am|   \   \           (can you find all 20 easter eggs?)
+           //_^_/     \/_ /easter|    \    \
+        ( //) |        \///egg #2!     \     \
+      ( / /) _|_ /   )  //       |      \     _\
+    ( // /) '/,_ _ _/  ( ; -.    |    _ _\.-~        .-~~~^-.
+  (( / / )) ,-{        _      `-.|.-~-.           .~         `.
+ (( // / ))  '/\      /                 ~-. _ .-~      .-~^-.  \
+ (( /// ))      `.   {            }                   /      \  \
+  (( / ))     .----~-.\        \-'                 .~         \  `. \^-.
+             ///.----..>        \             _ -~             `.  ^-`  ^-_
+               ///-._ _ _ _ _ _ _}^ - - - - ~                     ~-- ,.-~
+                                                                  /.-~
+
+-->
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+	<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+	<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+	<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+	<link rel="manifest" href="/site.webmanifest">
+	<title>Offline!</title>
+	<meta name="author" content="Cole Wilson">
+	<meta name="title" content="Cole Wilson">
+<!--   <link rel="stylesheet" href="https://colewilson.xyz/assets/31c57d7e25b518f131ab9ba1bf94977247b56a18.min.css"></link> -->
+	<meta name="description" content="Cole Wilson is a freelance programmer who works mainly with Python, PHP, Bash, and HTML/JS/CSS. He has lots of experience on Linux machines.">
+	{% include styles.html %}
+	<script>document.documentElement.setAttribute('data-theme', localStorage.getItem('themeSwitch'));</script>
+</head>
+<body>
+{% include nav.html %}
+<section id="hero" style="background-image: url({{page.image}});">
+<h1 class="herotitle">{{page.title}}</h1>
+{% if page.desc %}<p>{{ page.desc }}</p>{% endif %}
+</section>
+You found easter egg #
+{% include webring.html %}
+{% include scripts.html %}
+</body>
+</html>
