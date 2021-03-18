@@ -38,11 +38,7 @@ this.addEventListener('fetch', event => {
         }
         event.respondWith(
             caches.match(event.request).then(function (response) {
-              return response || fetch(event.request).then(function () {
-                caches.open(CACHE_NAME).then((cache) => {
-                    return cache.addAll([event.request.url]);
-                })
-              }).catch(error => {
+              return response || fetch(event.request).catch(error => {
                 return caches.match(OFFLINE_URL);
               });
             }),
