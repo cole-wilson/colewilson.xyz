@@ -18,18 +18,10 @@ self.addEventListener('install', (event) => {
 
 this.addEventListener('fetch', event => {
     if (event.request.mode === 'navigate' || (event.request.method === 'GET' && event.request.headers.get('accept').includes('text/html'))) {
-        if (event.request.url == 'easterbunny.js') {
-            console.log("HA!!!");
-        }
+        console.log(event.request.url);
         event.respondWith(
             fetch(event.request.url).catch(error => {
                 return caches.match(OFFLINE_URL);
-            })
-        );
-    } else {
-        event.respondWith(caches.match(event.request)
-            .then(function(response) {
-                return response || fetch(event.request);
             })
         );
     }
