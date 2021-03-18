@@ -51,6 +51,7 @@ self.addEventListener("fetch", (event) => {
             return preloadResponse;
           }
           const networkResponse = await fetch(event.request);
+          console.log(event.request);
           return networkResponse;
         } catch (error) {
           console.log("Fetch failed; returning offline page instead.", error);
