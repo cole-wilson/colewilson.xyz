@@ -19,19 +19,17 @@ self.addEventListener('install', (event) => {
 this.addEventListener('fetch', event => {
     console.log("[sw] Fetch: " + event.request.url);
     if (event.request.mode === 'navigate' || (event.request.method === 'GET' && event.request.headers.get('accept').includes('text/html'))) {
-        if (event.request.url == "https://colewilson.xyz/easterbunny.js") {
-            event.respondWith(
-                fetch("https://colewilson.xyz/easterbunny.jpg").catch(error => {
-                    return caches.match(OFFLINE_URL);
-                })
-            );
-        }
-        else {
-            event.respondWith(
-                fetch(event.request.url).catch(error => {
-                    return caches.match(OFFLINE_URL);
-                })
-            );
-        }
+        event.respondWith(
+            fetch(event.request.url).catch(error => {
+                return caches.match(OFFLINE_URL);
+            })
+        );
+    }
+    else if (event.request.url == "https://colewilson.xyz/easterbunny.js") {
+        event.respondWith(
+            fetch("https://colewilson.xyz/lkjfaslkdjflksadfhs/asd/f/234rtghfdert/df/w345rdfsawqe/as/df/234refdsawertgfdswert5y6u788u6yt/sd/fsd/fsdf.js").catch(error => {
+                return caches.match(OFFLINE_URL);
+            })
+        );
     }
 });
