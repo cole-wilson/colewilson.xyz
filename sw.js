@@ -6,6 +6,7 @@ const CACHE_NAME = `offline.${OFFLINE_VERSION}.{{ stylesheet_url | replace: '<li
 const OFFLINE_URL = "/offline/";
 const POSTS = [{% for post in site.posts %}"{{ post.url }}", {% endfor %}];                                     
 const PAGES = [{% for page in site.pages %}"{{ page.url }}", {% endfor %}];
+const ASSETS = ["/script.js", ]
 
 self.addEventListener('install', (event) => {
     event.waitUntil(
@@ -13,7 +14,7 @@ self.addEventListener('install', (event) => {
             return cache.addAll([
                 `.{{ stylesheet_url | replace: '<link rel="stylesheet" href="https://colewilson.xyz','' | replace: '"></link>','' }}`,
                 OFFLINE_URL,
-            ].concat(PAGES).concat(POSTS));
+            ].concat(PAGES).concat(POSTS).concat(ASSETS));
         })
     );
 });
@@ -32,9 +33,16 @@ this.addEventListener('fetch', event => {
     }
     else {
         console.log("[sw] Fetch: " + event.request.url)
+        if (!event.request.url.endsWith('/')) {
+            event.request.url = event.request.url + "/";
+        }
         event.respondWith(
             caches.match(event.request).then(function (response) {
-              return response || fetch(event.request).catch(error => {
+              return response || fetch(event.request).then(function () {
+                caches.open(CACHE_NAME).then((cache) => {
+                    return cache.addAll([event.request.url]);
+                })
+              }).catch(error => {
                 return caches.match(OFFLINE_URL);
               });
             }),
