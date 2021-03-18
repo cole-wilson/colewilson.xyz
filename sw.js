@@ -1,12 +1,14 @@
 ---
 ---
 {% capture stylesheet_url %}{% include styles.html %}{% endcapture %}
+{% capture scripts %}{% include scripts.html %}{% endcapture %}
+
 const OFFLINE_VERSION = 1;
 const CACHE_NAME = `offline.${OFFLINE_VERSION}.{{ stylesheet_url | replace: '<link rel="stylesheet" href="https://colewilson.xyz/assets/','' | replace: '.min.css"></link>','' }}`;
 const OFFLINE_URL = "/offline/";
 const POSTS = [{% for post in site.posts %}"{{ post.url }}", {% endfor %}];                                     
 const PAGES = [{% for page in site.pages %}"{{ page.url }}", {% endfor %}];
-const ASSETS = ["/script.js", ]
+const ASSETS = ["https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js", "https://unpkg.com/clippyjs@latest", "{{scripts}}"]
 
 self.addEventListener('install', (event) => {
     event.waitUntil(
