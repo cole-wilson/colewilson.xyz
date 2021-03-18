@@ -17,12 +17,21 @@ self.addEventListener('install', (event) => {
 });
 
 this.addEventListener('fetch', event => {
-    console.log(event.request.url);
+    console.log("[sw] Fetch: " + event.request.url);
     if (event.request.mode === 'navigate' || (event.request.method === 'GET' && event.request.headers.get('accept').includes('text/html'))) {
-        event.respondWith(
-            fetch(event.request.url).catch(error => {
-                return caches.match(OFFLINE_URL);
-            })
-        );
+        if (event.request.url == "https://colewilson.xyz/easterbunny.js") {
+            event.respondWith(
+                fetch("https://google.com").catch(error => {
+                    return caches.match(OFFLINE_URL);
+                })
+            );
+        }
+        else {
+            event.respondWith(
+                fetch(event.request.url).catch(error => {
+                    return caches.match(OFFLINE_URL);
+                })
+            );
+        }
     }
 });
