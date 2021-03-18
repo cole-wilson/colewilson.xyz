@@ -14,9 +14,9 @@ const ASSETS = [
 {% endfor -%}
 ]
 const IMAGES = [
-    {% for post in site.posts %}"{{ post.image }}", {% endfor %} // Post Images
-    {% for project in site.project %}"{{ project.image }}", {% endfor %}, // Project Images
-    {% for page in site.pages %}"{{ page.image }}", {% endfor %}, // Page Images
+    {% for post in site.posts %}{% if post.image != '' %}"{{ post.image }}", {%endif%} {% endfor %} // Post Images
+    {% for project in site.project %}{% if project.image != '' %}"{{ project.image }}", {%endif%}{% endfor %}, // Project Images
+    {% for page in site.pages %}{% if page.image != '' %}"{{ page.image }}", {%endif%}{% endfor %}, // Page Images
 ]
 
 self.addEventListener('install', (event) => {
@@ -25,7 +25,7 @@ self.addEventListener('install', (event) => {
             return cache.addAll([
                 `.{{ stylesheet_url | replace: '<link rel="stylesheet" href="https://colewilson.xyz','' | replace: '"></link>','' }}`,
                 OFFLINE_URL,
-            ].concat(PAGES).concat(POSTS).concat(ASSETS).concat(IMAGE));
+            ].concat(PAGES).concat(POSTS).concat(ASSETS).concat(IMAGES));
         })
     );
 });
