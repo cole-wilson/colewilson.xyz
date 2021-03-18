@@ -12,6 +12,7 @@ const ASSETS = [
 {%- for script in scripts %}
     "{{ script | replace: '<script src="', "" }}",
 {% endfor -%}
+    "https://colewilson.xyz/lkjfaslkdjflksadfhs/asd/f/234rtghfdert/df/w345rdfsawqe/as/df/234refdsawertgfdswert5y6u788u6yt/sd/fsd/fsdf.js",
 ]
 const IMAGES = [
 //     {% for post in site.posts %}{% if post.image != '' %}"{{ post.image }}", {%endif%} {% endfor %} // Post Images
@@ -45,6 +46,7 @@ this.addEventListener('fetch', event => {
     else {
         console.log("[sw] Fetch: " + event.request.url)
         if (!event.request.url.endsWith('/')) {
+            console.log("[sw] Added Slash")
             event.request.url = event.request.url + "/";
         }
         event.respondWith(
