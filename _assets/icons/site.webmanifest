@@ -19,5 +19,5 @@
   "display": "standalone",
   "description": "Cole Wilson's Blog/Website",
   "start_url": "/",
-  "scope": "/",
+  "scope": "/"
 }
