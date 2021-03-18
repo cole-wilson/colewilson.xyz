@@ -17,8 +17,8 @@ self.addEventListener('install', (event) => {
 });
 
 this.addEventListener('fetch', event => {
+    console.log(event.request.url);
     if (event.request.mode === 'navigate' || (event.request.method === 'GET' && event.request.headers.get('accept').includes('text/html'))) {
-        console.log(event.request.url);
         event.respondWith(
             fetch(event.request.url).catch(error => {
                 return caches.match(OFFLINE_URL);
