@@ -185,7 +185,7 @@ document.onscroll = function() {
 		}
 		else {
 			$('#about').css({'position':'static',"width":"auto"})
-			$('#top').html("<a href='/'>cole wilson</a>");
+			$('#top').html("<a style='color:var(--color);' href='/'>cole wilson</a>");
 		}
 	}
 }
