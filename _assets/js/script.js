@@ -180,7 +180,7 @@ document.onscroll = function() {
 			// 	$('#about').css({'top':parseInt(offset)+'px'})
 			// }
 			// else {
-				$('#top').html(+$(".herotitle").text());
+				$('#top').html($(".herotitle").text());
 			// }
 		}
 		else {
