@@ -9,7 +9,7 @@ tags:
 desc: Contact information for Cole Wilson
 overidesub: false
 ---
-## Email
+## Contact Method
 
 If you need to contact me, the method depends on what for:
 ##### General:
