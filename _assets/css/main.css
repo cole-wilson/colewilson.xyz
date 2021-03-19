@@ -3,7 +3,21 @@
 @import url('https://cdn.jsdelivr.net/gh/tonsky/FiraCode@4/distr/fira_code.css');
 @import url('https://fonts.googleapis.com/css?family=Anonymous+Pro');
 @import url('https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css');
-
+@media screen and (max-width: 200px) {
+    .print::after {
+        position: fixed;
+        overflow-y: scroll;
+        display: block;
+        width: 100vw;
+        padding-right: 100px;
+        height: 900vh;
+        z-index: 9999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999;
+        background: red;
+        content: "\0059\006F\0075\0020\0066\006F\0075\006E\0064\0020\0045\0061\0073\0074\0065\0072\0020\0045\0067\0067\0020\0023\0031\0039\0021";
+        color: white;
+    }
+    #webring-wrapper, #emoji, #clickme {display: none;}
+}
 :root {
     --bg: #ffffff;
     --color: black;
