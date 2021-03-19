@@ -69,7 +69,7 @@ else if (-1 in emojis[month]) {
 else {
 	var emoji = emojis["-1"][Math.floor(Math.random() * emojis["-1"].length)];
 }
-$('body').append('<span style="position:fixed;z-index:9999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999;top:15px;color:red;font-style:bold;right:5px;">'+emoji+'</span>')
+$('body').append('<span id="emoji" style="position:fixed;z-index:9999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999;top:15px;color:red;font-style:bold;right:5px;">'+emoji+'</span>')
 $('code').click(function(){copyToClipboard($(this).text())});
 
 // Easter Egg Stuff
