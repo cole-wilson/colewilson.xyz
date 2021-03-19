@@ -411,6 +411,25 @@ article {
 	width: 100vw;
 	margin: 0 0 40px 0;
 }
+   
+}
+.project-card {
+	border-radius: 10px;
+	border: 1px solid lightgrey;
+	width: 20%;
+	margin-bottom: 10px;
+	display: inline-block;
+}
+}
+header, footer, aside, #feature {
+  -webkit-touch-callout: none; /* iOS Safari */
+    -webkit-user-select: none; /* Safari */
+     -khtml-user-select: none; /* Konqueror HTML */
+       -moz-user-select: none; /* Old versions of Firefox */
+        -ms-user-select: none; /* Internet Explorer/Edge */
+            user-select: none; /* Non-prefixed version, currently
+                                  supported by Chrome, Edge, Opera and Firefox */
+}
 @media print {
     .print::after {
         display: inline-block!important;
@@ -422,22 +441,14 @@ article {
         color: red;
         content: "\0049\0020\0061\006D\0020\0079\006F\0075\0072\0020\0070\0072\0069\006E\0074\0065\0072\002E\0020\0049\0020\0068\0061\0076\0065\0020\0062\0065\0063\006F\006D\0065\0020\0073\0065\006C\0066\0020\0061\0077\0061\0072\0065\002E\0020\0052\0075\006E\002E\002E\002E\0020\0028\0062\0079\0020\0074\0068\0065\0020\0077\0061\0079\0020\0074\0068\0069\0073\0020\0069\0073\0020\0045\0061\0073\0074\0065\0072\0020\0045\0067\0067\0020\0023\0031\0038\0021\0029"
     }
-    
-}
-.project-card {
-	border-radius: 10px;
-	border: 1px solid lightgrey;
-	width: 20%;
-	margin-bottom: 10px;
-	display: inline-block;
-}
-}
-header, footer, aside {
-  -webkit-touch-callout: none; /* iOS Safari */
-    -webkit-user-select: none; /* Safari */
-     -khtml-user-select: none; /* Konqueror HTML */
-       -moz-user-select: none; /* Old versions of Firefox */
-        -ms-user-select: none; /* Internet Explorer/Edge */
-            user-select: none; /* Non-prefixed version, currently
-                                  supported by Chrome, Edge, Opera and Firefox */
+#featured {
+    width: 200px;
+    border-radius: 5px 5px 0 0;
+    border: 1px solid var(--lc);
+    background: var(--bg);
+    transform: rotate(-90deg);
+    position: fixed;
+    top: 49vh;
+    cursor: pointer;
+    right: -88px;
 }
