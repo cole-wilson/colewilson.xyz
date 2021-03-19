@@ -10,6 +10,7 @@ const POSTS = [{% for post in site.posts %}"{{ post.url }}", {% endfor %}];
 const PAGES = [{% for page in site.pages %}"{{ page.url }}", {% endfor %}{% for project in site.projects %}"{{ project.url }}", {% endfor %}];
 const ASSETS = [{%- for script in scripts %}"{{ script | replace: '<script src="', "" }}",{% endfor -%}"https://colewilson.xyz/lkjfaslkdjflksadfhs/asd/f/234rtghfdert/df/w345rdfsawqe/as/df/234refdsawertgfdswert5y6u788u6yt/sd/fsd/fsdf.js",]
 //const IMAGES = [{% for post in site.posts %}{% if post.image != '' %}"{{ post.image }}", {%endif%} {% endfor %}{% for project in site.project %}{% if project.image != '' %}"{{ project.image }}", {%endif%}{% endfor %}{% for page in site.pages %}{% if page.image != '' %}"{{ page.image }}", {%endif%}{% endfor %}]
+const IMAGES = []
 
 self.addEventListener('install', (event) => {
     event.waitUntil(
