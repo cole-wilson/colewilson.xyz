@@ -172,7 +172,7 @@ if (true) {//layout == ''
 document.onscroll = function() {
 	// alert();
 	if (!window.matchMedia("(max-width: 600px)").matches) {
-		if ($(window).scrollTop() > viewportHeight) {
+		if ($(window).scrollTop() > Math.max(document.documentElement.clientHeight, window.innerHeight || 0) - 50) {
 			$('#about').css({'position':'fixed',"width":"18vw","top":"60px"})
 			// if (($(document).height()-viewportHeight)-135 <= $(window).scrollTop()) {
 			// 	var offset = 60-(($(window).scrollTop()) - ($(document).height()-viewportHeight-135));
