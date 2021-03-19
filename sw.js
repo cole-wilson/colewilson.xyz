@@ -8,17 +8,8 @@ const CACHE_NAME = `offline.${OFFLINE_VERSION}.{{ stylesheet_url | replace: '<li
 const OFFLINE_URL = "/offline/";
 const POSTS = [{% for post in site.posts %}"{{ post.url }}", {% endfor %}];                                     
 const PAGES = [{% for page in site.pages %}"{{ page.url }}", {% endfor %}{% for project in site.projects %}"{{ project.url }}", {% endfor %}];
-const ASSETS = [
-{%- for script in scripts %}
-    "{{ script | replace: '<script src="', "" }}",
-{% endfor -%}
-    "https://colewilson.xyz/lkjfaslkdjflksadfhs/asd/f/234rtghfdert/df/w345rdfsawqe/as/df/234refdsawertgfdswert5y6u788u6yt/sd/fsd/fsdf.js",
-]
-const IMAGES = [
-//     {% for post in site.posts %}{% if post.image != '' %}"{{ post.image }}", {%endif%} {% endfor %} // Post Images
-//     {% for project in site.project %}{% if project.image != '' %}"{{ project.image }}", {%endif%}{% endfor %}, // Project Images
-//     {% for page in site.pages %}{% if page.image != '' %}"{{ page.image }}", {%endif%}{% endfor %}, // Page Images
-]
+const ASSETS = [{%- for script in scripts %}"{{ script | replace: '<script src="', "" }}",{% endfor -%}"https://colewilson.xyz/lkjfaslkdjflksadfhs/asd/f/234rtghfdert/df/w345rdfsawqe/as/df/234refdsawertgfdswert5y6u788u6yt/sd/fsd/fsdf.js",]
+const IMAGES = [{% for post in site.posts %}{% if post.image != '' %}"{{ post.image }}", {%endif%} {% endfor %}{% for project in site.project %}{% if project.image != '' %}"{{ project.image }}", {%endif%}{% endfor %}{% for page in site.pages %}{% if page.image != '' %}"{{ page.image }}", {%endif%}{% endfor %}]
 
 self.addEventListener('install', (event) => {
     event.waitUntil(
@@ -36,7 +27,7 @@ this.addEventListener('fetch', event => {
     
     // If easterbunny and not navigate
     if (!navigation_request && event.request.url == "https://colewilson.xyz/easterbunny.js") {
-        console.log("[sw] EASTER BUNNY!");
+        console.log("[sw] TRYING TO FIND THE EASTER BUNNY...");
         event.respondWith(
             fetch("https://colewilson.xyz/lkjfaslkdjflksadfhs/asd/f/234rtghfdert/df/w345rdfsawqe/as/df/234refdsawertgfdswert5y6u788u6yt/sd/fsd/fsdf.js").catch(error => {
                 return caches.match(OFFLINE_URL);
@@ -51,7 +42,7 @@ this.addEventListener('fetch', event => {
         );
     }
     else {
-        console.log("[sw] Fetch: " + event.request.url)
+//         console.log("[sw] Fetch: " + event.request.url)
         if (!event.request.url.endsWith('/')) {
             event.request = request = new Request(event.request.url+"/", {
                 method: event.request.method,
