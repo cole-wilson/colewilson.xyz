@@ -18,7 +18,7 @@
     }
     #webring-wrapper, #emoji, #clickme {display: none;}
 }
-body {overflow-y:hidden;}
+body {overflow-x:hidden;}
 :root {
     --bg: #ffffff;
     --color: black;
