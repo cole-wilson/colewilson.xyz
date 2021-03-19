@@ -412,8 +412,6 @@ article {
 	width: 100vw;
 	margin: 0 0 40px 0;
 }
-   
-}
 .project-card {
 	border-radius: 10px;
 	border: 1px solid lightgrey;
@@ -452,4 +450,5 @@ header, footer, aside, #feature {
     top: 49vh;
     cursor: pointer;
     right: -88px;
+}
 }
