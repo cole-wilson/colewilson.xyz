@@ -7,6 +7,7 @@ console.log(atob("JWNXZWxjb21lIHRvIHRoZSBjb25zb2xlIQpZb3UgZm91bmQgZWFzdGVyIGVnZy
 // Looking for more easter eggs?
 // 	have you tried clicking a whole bunch?
 // 		and a whole bunch more?
+//			and in very specific places?
 
 document.documentElement.setAttribute('data-theme', localStorage.getItem('themeSwitch'));
 // Functions
@@ -133,9 +134,11 @@ document.querySelectorAll('.highlight').forEach(function(node) {
 });
 
 
-$(document).on("click","article:header", function () {
+$(document).on("click",":header", function () {
    var clickedBtnID = $(this).attr('id'); // or var clickedBtnID = this.id
-   window.location.hash = '#' + clickedBtnID;
+   if (clickedBtnID != undefined) {
+	   window.location.hash = '#' + clickedBtnID;
+   }
 });
 
 $(document).on("click",".copycode", function () {
@@ -177,12 +180,12 @@ document.onscroll = function() {
 			// 	$('#about').css({'top':parseInt(offset)+'px'})
 			// }
 			// else {
-				$('#toptitle').html(" / "+$(".herotitle").text());
+				$('#top').html(+$(".herotitle").text());
 			// }
 		}
 		else {
 			$('#about').css({'position':'static',"width":"auto"})
-			$('#toptitle').html("");
+			$('#top').html("<a href='/'>cole wilson</a>");
 		}
 	}
 }
