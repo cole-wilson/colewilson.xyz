@@ -56,7 +56,7 @@ this.addEventListener('fetch', event => {
             event.request = request = new Request(event.request.url+"/", {
                 method: event.request.method,
                 headers: event.request.headers,
-                mode: event.request.mode == 'navigate' ? 'cors' : event.request.mode,,
+                mode: event.request.mode == 'navigate' ? 'cors' : event.request.mode,
                 credentials: event.request.credentials,
                 redirect: event.request.redirect
              });
