@@ -7,27 +7,32 @@ layout: master
 		</section>
 		<section id="body">
 		<aside>
-		<div id="about">
+		<div id="about" style="font-style:italic;">
+{{ page.date | date_to_string }} - by Cole Wilson<hr>
 {% if page.repo %}
 <a href="https://github.com/{{page.user}}/{{page.repo}}">
-	View on GitHub.
+	View it on GitHub<br>
 </a>
 {% endif %}
 {% if page.site %}
 <a href="{{page.url}}" >
-	<span>Visit Site</span>
+	<span>Visit the site</span><br>
 </a>
 {% endif %}
 {% if page.download %}
 <a href="{{page.download}}">
-	<span>Download</span>
+	<span>Download it</span><br>
 </a>
 {% endif %}
 {% if page.post %}
 <a href="{{page.post}}">
-	<span>Related Post</span>
+	<span>View the post</span><br>
 </a>
 {% endif %}
+			<hr>
+		{% for tag in page.tags %}
+		<a class="tag" href="/tags#{{tag | downcase}}">{{tag}}</a>
+		{% endfor %}
 		</div>
 		</aside>
 		<article style="min-height:400px;">
