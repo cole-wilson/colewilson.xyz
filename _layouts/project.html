@@ -9,33 +9,31 @@ layout: master
 		<aside>
 		<div id="about">
 {% if page.repo %}
-<a href="https://github.com/{{page.user}}/{{page.repo}}" class="project-card">
-	<img src="https://img.icons8.com/windows/90/666666/github.png"><br>
-	<span>GitHub</span>
+<a href="https://github.com/{{page.user}}/{{page.repo}}">
+	View on GitHub.
 </a>
 {% endif %}
 {% if page.site %}
-<a href="{{page.url}}" class="project-card">
-	<img src="https://img.icons8.com/windows/90/666666/globe.png"><br>
+<a href="{{page.url}}" >
 	<span>Visit Site</span>
 </a>
 {% endif %}
 {% if page.download %}
-<a href="{{page.download}}" class="project-card">
-	<img src="https://img.icons8.com/windows/90/666666/download.png"><br>
+<a href="{{page.download}}">
 	<span>Download</span>
 </a>
 {% endif %}
 {% if page.post %}
-<a href="{{page.post}}" class="project-card">
-	<img src="https://img.icons8.com/windows/90/666666/document.png"><br>
+<a href="{{page.post}}">
 	<span>Related Post</span>
 </a>
 {% endif %}
 		</div>
 		</aside>
 		<article style="min-height:400px;">
-			{{content}}
+			<p>{{page.desc}}</p>
+			
+			<p>{{content}}</p>
 		</article>
 		</section>
 		{% if page.comments %}{% include comments.html %}{% endif %}
