@@ -6,7 +6,7 @@ layout: master
 	<span class="herotitle">{{page.title}}</span>
 		</section>
 		<section id="body">
-		<li><aside>
+		<aside>
 		<div id="about" style="font-style:italic;">
 {{ page.date | date_to_string }} - by Cole Wilson<hr>
 <ul>{% if page.repo %}
@@ -31,15 +31,15 @@ layout: master
 {% endif %}</ul>
 			<hr>
 		{% for tag in page.tags %}
-		<li><a class="tag" href="/tags#{{tag | downcase}}">{{tag}}</a></li>
+		<a class="tag" href="/tags#{{tag | downcase}}">{{tag}}</a>
 		{% endfor %}
 		</div>
-		</a></liside>
-		<li><article style="min-height:400px;">
+		</aside>
+		<article style="min-height:400px;">
 			<p>{{page.desc}}</p>
 			
 			<p>{{content}}</p>
-		</a></lirticle>
+		</article>
 		</section>
 		{% if page.comments %}{% include comments.html %}{% endif %}
 		{% include footer.html %}
