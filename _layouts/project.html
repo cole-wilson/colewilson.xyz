@@ -6,40 +6,40 @@ layout: master
 	<span class="herotitle">{{page.title}}</span>
 		</section>
 		<section id="body">
-		<aside>
+		<li><aside>
 		<div id="about" style="font-style:italic;">
 {{ page.date | date_to_string }} - by Cole Wilson<hr>
-{% if page.repo %}
-<a href="https://github.com/{{page.user}}/{{page.repo}}">
+<ul>{% if page.repo %}
+<li><a href="https://github.com/{{page.user}}/{{page.repo}}">
 	View it on GitHub<br>
-</a>
+</a></li>
 {% endif %}
 {% if page.site %}
-<a href="{{page.url}}" >
+<li><a href="{{page.url}}" >
 	<span>Visit the site</span><br>
-</a>
+</a></li>
 {% endif %}
 {% if page.download %}
-<a href="{{page.download}}">
+<li><a href="{{page.download}}">
 	<span>Download it</span><br>
-</a>
+</a></li>
 {% endif %}
 {% if page.post %}
-<a href="{{page.post}}">
+<li><a href="{{page.post}}">
 	<span>View the post</span><br>
-</a>
-{% endif %}
+</a></li>
+{% endif %}</ul>
 			<hr>
 		{% for tag in page.tags %}
-		<a class="tag" href="/tags#{{tag | downcase}}">{{tag}}</a>
+		<li><a class="tag" href="/tags#{{tag | downcase}}">{{tag}}</a></li>
 		{% endfor %}
 		</div>
-		</aside>
-		<article style="min-height:400px;">
+		</a></liside>
+		<li><article style="min-height:400px;">
 			<p>{{page.desc}}</p>
 			
 			<p>{{content}}</p>
-		</article>
+		</a></lirticle>
 		</section>
 		{% if page.comments %}{% include comments.html %}{% endif %}
 		{% include footer.html %}
