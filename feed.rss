@@ -11,7 +11,7 @@ layout: null
  <pubDate>{{ site.time | date_to_rfc822 }}</pubDate>
  <ttl>1800</ttl>
 
- {% for post in site.categories.categoryname %}
+ {% for post in site.posts %}
  <item>
   <title>{{ post.title }}</title>
   <description>{{ post.description }}</description>
