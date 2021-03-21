@@ -21,8 +21,8 @@ layout: master
 		</aside>
 		<article>
 			{{content}}
+			{% include comments.html %}
 		</article>
 		</section>
-		{% if page.comments %}{% include comments.html %}{% endif %}
 		{% include footer.html %}
 		{% include scripts.html %}
