@@ -24,11 +24,13 @@ body {overflow-x:hidden;}
     --color: black;
 		--lc: rgb(179, 171, 171);
 		--op: #3b3b3b;
+	--selection: cyan;
 		--opc:  rgb(224, 224, 224);
 }
 [data-theme="dark"] {
     --bg: #3b3b3b;
-		--lc: grey;
+--lc: grey;
+	--selection: red;
     --color: rgb(224, 224, 224);
 		--op: #ffffff;
 		--opc: black;
@@ -260,13 +262,9 @@ code, h1, h2, h3, h4, h5, h6, .herotitle, .bigg { font-family: 'Fira Code', mono
 @supports (font-variation-settings: normal) {
   code { font-family: 'Fira Code VF', monospace; }
 }
-article ::selection {
+::selection {
 	background: none;
-	color: red;
-}
-code ::selection {
-	background: white;
-	color: black;
+	color: var(--selection);
 }
 .archive-card {
 	transform: translate(-50px,0px);
