@@ -3,7 +3,7 @@
 {%- capture stylesheet_url %}{% include styles.html %}{% endcapture -%}
 {%- capture script_tags %}{% include scripts.html %}{% endcapture -%}
 {%- assign scripts = script_tags | split: '"></script>' -%}
-const OFFLINE_VERSION = 2;
+const OFFLINE_VERSION = 3;
 const CACHE_NAME = `offline.${OFFLINE_VERSION}.{{ stylesheet_url | replace: '<link rel="stylesheet" href="https://colewilson.xyz/assets/','' | replace: '.min.css"></link>','' }}`;
 const OFFLINE_URL = "/offline/";
 const POSTS = [{% for post in site.posts %}"{{ post.url }}", {% endfor %}];                                     
