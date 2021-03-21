@@ -23,6 +23,22 @@ self.addEventListener('install', (event) => {
     );
 });
 
+self.addEventListener('activate', function(event) {
+  event.waitUntil(
+    caches.keys().then(function(cacheNames) {
+      return Promise.all(
+        cacheNames.filter(function(cacheName) {
+          // Return true if you want to remove this cache,
+          // but remember that caches are shared across
+          // the whole origin
+        }).map(function(cacheName) {
+          return caches.delete(cacheName);
+        })
+      );
+    })
+  );
+});
+
 this.addEventListener('fetch', event => {
     var navigation_request = event.request.mode === 'navigate' || (event.request.method === 'GET' && event.request.headers.get('accept').includes('text/html'));
     
