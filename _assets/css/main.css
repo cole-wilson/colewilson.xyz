@@ -432,7 +432,7 @@ header, footer, aside, #feature {
         display: inline-block!important;
         width: 100vw;
         height: 100vh;
-        margin-left: -100px;
+/*         margin-left: -100px; */
         background-color: white;
         font-size: 15em!important;
         color: red;
