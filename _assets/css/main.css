@@ -261,7 +261,7 @@ code, h1, h2, h3, h4, h5, h6, .herotitle, .bigg { font-family: 'Fira Code', mono
   code { font-family: 'Fira Code VF', monospace; }
 }
 article ::selection {
-	background: var(--color);
+	background: none;
 	color: red;
 }
 code ::selection {
