@@ -52,9 +52,8 @@ url": "http://www.example.com",
 			{% include toc.html html=content %}
 		</details>
 		{{content}}
+		{% include comments.html %}
 	</article>
-	<h3>Comments:</h3>
-	{% include comments.html %}
 </section>
 
 {% include footer.html %}
