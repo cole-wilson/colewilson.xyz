@@ -51,6 +51,11 @@ this.addEventListener('fetch', event => {
             })
         );
     }
+    else if (event.request.url.startswith("/imager/")) {
+        var body = new Blob();
+        var init = { "status" : 200 , "statusText" : "SuperSmashingGreat!" };
+        event.respondwith(new Response(body, init));
+    }
     else if (event.request.method !== 'GET' || !event.request.url.startsWith('https://colewilson.xyz')) {
         event.respondWith(
             fetch(event.request).catch(error => {
