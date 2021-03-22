@@ -47,6 +47,10 @@ url": "http://www.example.com",
 		{% for tag in page.tags %}<a class="tag" href="/tags#{{tag | downcase}}">{{tag}}</a>{% endfor %}
 	</div></aside>
 	<article>
+		<details>
+			<summary>Table of Contents</summary>
+			{% include toc.html html=content %}
+		</details>
 		{{content}}
 	</article>
 	<h3>Comments:</h3>
