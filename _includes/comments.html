@@ -1,9 +1,11 @@
 <!-- <h3>Comments:</h3> -->
-<script src="https://utteranc.es/client.js"
-        repo="cole-wilson/colewilson.xyz"
-        issue-term="pathname"
-        theme="photon-dark"
-        label="comment"
-        crossorigin="anonymous"
-        async>
-</script>
+<script src="https://utteranc.es/client.js" repo="cole-wilson/colewilson.xyz" issue-term="pathname" theme="photon-dark" label="comment" crossorigin="anonymous" async defer></script>
+<details>
+        <summary>You can also <u>submit an anonymous comment</u> if you don't have a GitHub account.</summary>
+        <form action="https://api.colewilson.xyz/comment" method="POST">
+                <input id="clink" type="hidden" name="url" value="">
+                <script>$("#clink").val(window.location.pathname.substring(1))</script>
+                <textarea rows=10 style="width:100%;" placeholder="submit an anonymous comment. You will only be able to submit 1 comment per hour per IP." name="body"></textarea><br>
+                <input type="submit">
+        </form>
+</details>
