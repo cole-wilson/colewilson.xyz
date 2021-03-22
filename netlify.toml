@@ -34,6 +34,12 @@ status = 200
 force = true
 
 [[redirects]]
+from = "https://api.colewilson.xyz/comment"
+to = "https://github.cwi.repl.co/comment"
+status = 200
+force = true
+
+[[redirects]]
 from = "http://colewilson.xyz/n.txt"
 to = "https://www.youtube.com/watch?v=dQw4w9WgXcQ"
 status = 301
