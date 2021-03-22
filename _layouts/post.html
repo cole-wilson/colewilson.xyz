@@ -1,43 +1,15 @@
 ---
 layout: master
 --- 
+<!-- Start Navigation -->
 {% include nav.html %}
+<!-- End Navigation -->
 
 <!-- Hero Image/Title -->
 <section id="hero" style="background-image: url({{page.image}});">
 	<span class="herotitle">{{page.title}}</span>
 </section>
-
-<!-- start SEO -->
-<script type="application/ld+json">
-{"@context": "https://schema.org", 
-"@type": "Article",
-"headline": "{{ page.title }}",
-"alternativeHeadline": "{{ page.description }}",
-{% if site.image %}"image": "{{ page.image | absolute_url }}",{% endif -%}
-"author": "Cole Wilson",
-"genre": "{% for tag in page.tags %}{{ tag }} {% endfor %}", 
-"keywords": "{% for tag in page.tags %}{{ tag }} {% endfor %}", 
-"wordcount": "{{ content | size }}",
-"publisher": {
-   "@type": "Organization",
-   "name": "Google",
-   "logo": {
-   "@type": "ImageObject",
-   "url": "https://google.com/logo.jpg"
-  }
-},
-url": "http://www.example.com",
-  "mainEntityOfPage": {
-  "@type": "WebPage",
-  "@id": "https://google.com/article"
-},
-"datePublished": "{{ page.date }}",
-"description": "{{ page.description }}",
-"articleBody": "{{ content | escape }}"
-}
-</script>
-<!-- end SEO -->
+<!-- End Hero -->
 
 <section id="body">
 	<aside><div id="about">
