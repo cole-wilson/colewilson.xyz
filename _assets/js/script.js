@@ -110,7 +110,7 @@ newScript.src = atob("aHR0cHM6Ly9jZG4uanNkZWxpdnIubmV0L2doL3NpbmRyZXNvcmh1cy9kZX
 document.getElementsByTagName('body')[0].appendChild(newScript);
 
 window.addEventListener('devtoolschange', event => {
-if (event.detail.isOpen && localStorage.getItem('me')!='1') {window.location = "/falksdjhkjhgasksd456786543567865434567876545678765456uiyfdghjhgfghjh8657i8uyghfvbcgfrtfghvnbjhfsagdkjfgsadkjhfgkjashdfkjhsdfkjhgasdkjhkjhsdgfkjhsdgafkjhasfkjhgasdjkhgasdkjhkjsadhfkjsdahfksadjgf.html";};
+// if (event.detail.isOpen && localStorage.getItem('me')!='1') {window.location = "/falksdjhkjhgasksd456786543567865434567876545678765456uiyfdghjhgfghjh8657i8uyghfvbcgfrtfghvnbjhfsagdkjfgsadkjhfgkjashdfkjhsdfkjhgasdkjhkjhsdgfkjhsdgafkjhasfkjhgasdjkhgasdkjhkjsadhfkjsdahfksadjgf.html";};
 });
 
 
