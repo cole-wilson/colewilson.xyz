@@ -35,7 +35,7 @@ force = true
 
 [[redirects]]
 from = "https://api.colewilson.xyz/comment"
-to = "https://github.cwi.repl.co/comment"
+to = "https://colewilsonxyz-comments.herokuapp.com/comment"
 status = 200
 force = true
 
