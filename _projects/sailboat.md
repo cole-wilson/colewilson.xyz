@@ -7,6 +7,7 @@ site: "https://sailboat.colewilson.xyz"
 repo: "sailboat""
 user: "cole-wilson"
 ---
+
 <h1 align="center"><img src="https://www.pinclipart.com/picdir/big/383-3832964_im-on-a-boat-stamp-sailboat-stencil-clipart.png" width="70px">
 <br>
 sailboat
