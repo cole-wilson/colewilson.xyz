@@ -26,38 +26,54 @@
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
 	<meta name="apple-mobile-web-app-status-bar-style" content="black">
-	<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
-	<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
-	<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
-	<link rel="manifest" href="/site.webmanifest">
-	<title>{{page.title}} {% if page.overidesub %}{% else %} | Cole Wilson{% endif %}</title>
 	<meta name="author" content="Cole Wilson">
-	<meta name="title" content="{{page.title}} {% if page.overidesub %}{% else %} | Cole Wilson{% endif %}">
-	<meta name="description" content="{% if page.desc %}{{ page.desc }}{% else %}Cole Wilson is a freelance programmer who works mainly with Python, PHP, Bash, and HTML/JS/CSS. He has lots of experience on Linux machines.{% endif %}">
+	<meta name="title" content="{{page.title}} | Cole Wilson">
+	<meta name="description" content="{{ page.desc }}">
+	<meta property="og:url" content="{{ page.url | absolute_url }}">
 	<meta property="og:type" content="website">
-	<meta property="og:url" content="https://colewilson.xyz/">
-	<meta property="og:title" content="{{page.title}} {% if page.overidesub %}{% else %} | Cole Wilson{% endif %}">
-	<meta property="og:description" content="{% if page.desc %}{{ page.desc }}{% else %}Cole Wilson is a freelance programmer who works mainly with Python, PHP, Bash, and HTML/JS/CSS. He has lots of experience on Linux machines.{% endif %}">
-	<meta property="og:image" content="{{page.image}}">
-	<meta property="twitter:card" content="summary_large_image">
-	<meta property="twitter:url" content="https://colewilson.xyz/">
-	<meta property="twitter:title" content="{{page.title}} {% if page.overidesub %}{% else %} | Cole Wilson{% endif %}">
-	<meta property="twitter:description" content="{% if page.desc %}{{ page.desc }}{% else %}Cole Wilson is a freelance programmer who works mainly with Python, PHP, Bash, and HTML/JS/CSS. He has lots of experience on Linux machines.{% endif %}">
-	<meta property="twitter:image" content="{{page.image}}">
-	<script id="easterbunny" src="/easterbunny.js">
-	// Well?
+	<meta property="og:title" content="{{ page.title }}">
+	{% if page.image -%}
+	<meta property="og:image" content="{{ page.image }}">
+	<meta property="og:image:alt" content="{{ page.desc }}">
+	{%- endif %}
+	<meta property="og:description" content="{{ site.desc }}">
+	<meta property="og:site_name" content="{{ site.title }}">
+	<meta property="og:locale" content="en_US">
+	<meta property="article:author" content="Cole Wilson">
+	<meta name="twitter:url" content="{{ page.url | absolute_url }}">
+	<meta name="twitter:title" content="{{ page.title }}">
+	<meta name="twitter:description" content="{{ page.desc }}">
+	{% if page.image -%}
+	<meta name="twitter:image" content="{{ page.image }}">
+	<meta name="twitter:image:alt" content="{{ page.desc }}">
+	{% endif %}
+	<meta name="robots" content="index,follow">
+	<meta name="googlebot" content="index,follow">
+	<title>{{ page.title }} | Cole Wilson</title>
+	<script id="easterbunny" src="{{ '/easterbunny.js' | absolute_url }}"></script>
+	<script>window.addEventListener("load",()=>{if ("serviceWorker"in navigator){navigator.serviceWorker.register("/sw.js");}});</script>
+	<script>
+	page: { // Jekyll static site generator variables for use in JavaScript
+		url: "{{ page.url }}",
+		desc: "{{ page.desc }}",
+		image: "{{ page.image }}",
+		title: "{{ page.title }}",
+		layout: "{{ page.layout }}",
+		date: "{{ page.date }}",
+		tags: [{% for tag in page.tags %}"{{ tag }}", {% endfor %}],
+		generated: "{{ site.time }}",
+	}
 	</script>
+	<noscript>Wow, your browser is either really old or very messed up, no JavaScript!</noscript>
+	<link rel="apple-touch-icon" sizes="180x180" href="{{ '/apple-touch-icon.png' | absolute_url }}">
+	<link rel="icon" type="image/png" sizes="32x32" href="{{ '/favicon-32x32.png' | absolute_url }}">
+	<link rel="icon" type="image/png" sizes="16x16" href="{{ '/favicon-16x16.png' | absolute_url }}">
+	<link rel="alternate" href="{{ '/feed.rss' | absolute_url }}" type="application/rss+xml" title="RSS">
+	<link rel="manifest" href="{{ '/site.webmanifest' | absolute_url }}">
 	{% include styles.html %}
-	{% include analytics.html %}
 </head>
-
 <body oncontextmenu="clippygo(event)">
-<!--[if lt IE 7]>
-<p style="position: fixed;top: 0;left: 0;width: 100vw;height: 100vh;background: red;" class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
-<![endif]-->
-<div id="navsmall"></div>
-<script>var layout="{{page.layout}}";</script>
-{{ content }}
-<script>window.addEventListener("load",()=>{if ("serviceWorker"in navigator){navigator.serviceWorker.register("/sw.js");}});</script>
+	<div id="navsmall"></div>
+	{{ content }}
 </body>
 </html>
