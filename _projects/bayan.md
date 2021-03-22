@@ -1,11 +1,11 @@
 ---
-title: bayan
+title: "bayan"
 date: 2020-03-29T03:38:21Z
-desc: None
+desc: ""
 image: ""
-site: None
-repo: bayan
-user: cole-wilson
+site: "None"
+repo: "bayan""
+user: "cole-wilson"
 ---
 # Bayan Machine Learning
 

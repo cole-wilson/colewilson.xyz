@@ -1,11 +1,11 @@
 ---
-title: HTML-Clock
+title: "HTML-Clock"
 date: 2020-03-29T03:38:21Z
-desc: :watch: Clock made with HTML5+CSS3+JS
+desc: "watch Clock made with HTML5+CSS3+JS"
 image: ""
-site: http://urbanoalvarez.es/HTML-Clock/
-repo: HTML-Clock
-user: cole-wilson
+site: "http://urbanoalvarez.es/HTML-Clock/"
+repo: "HTML-Clock""
+user: "cole-wilson"
 ---
 #HTML Clock
 

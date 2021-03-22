@@ -1,11 +1,11 @@
 ---
-title: colewilson.xyz
-date: 2021-03-21T21:33:17Z
-desc: My awesome personal website :octocat:
+title: "colewilson.xyz"
+date: 2021-03-22T15:16:02Z
+desc: "My awesome personal website octocat"
 image: ""
-site: https://colewilson.xyz
-repo: colewilson.xyz
-user: cole-wilson
+site: "https://colewilson.xyz"
+repo: "colewilson.xyz""
+user: "cole-wilson"
 ---
 # colewilson.xyz
 ```

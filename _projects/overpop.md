@@ -1,11 +1,11 @@
 ---
-title: overpop
+title: "overpop"
 date: 2021-01-25T22:46:31Z
-desc: :earth_americas: A website for school on the effects of overpopulation.
+desc: "earth_americas A website for school on the effects of overpopulation."
 image: ""
-site: https://overpop.colewilson.xyz
-repo: overpop
-user: cole-wilson
+site: "https://overpop.colewilson.xyz"
+repo: "overpop""
+user: "cole-wilson"
 ---
 # Overpopulation
 _causes, effects, and solutions_

@@ -1,11 +1,11 @@
 ---
-title: anaconda
+title: "anaconda"
 date: 2021-01-26T00:12:22Z
-desc: A graphing calculator built in Python3
+desc: "A graphing calculator built in Python3"
 image: ""
-site: 
-repo: anaconda
-user: cole-wilson
+site: ""
+repo: "anaconda""
+user: "cole-wilson"
 ---
 # Installation
 ### Linux

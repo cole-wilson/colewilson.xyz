@@ -1,11 +1,11 @@
 ---
-title: orf-inventory
+title: "orf-inventory"
 date: 2021-03-04T18:08:39Z
-desc: An automated inventory system for the ORF-4450 robotics team.
+desc: "An automated inventory system for the ORF-4450 robotics team."
 image: ""
-site: None
-repo: orf-inventory
-user: cole-wilson
+site: "None"
+repo: "orf-inventory""
+user: "cole-wilson"
 ---
 # ORF Inventory
 

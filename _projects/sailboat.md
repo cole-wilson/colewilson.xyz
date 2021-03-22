@@ -1,11 +1,11 @@
 ---
-title: sailboat
+title: "sailboat"
 date: 2021-03-19T06:49:55Z
-desc: 🐍 A quick and easy way to distribute your Python projects!
+desc: "🐍 A quick and easy way to distribute your Python projects!"
 image: ""
-site: https://sailboat.colewilson.xyz
-repo: sailboat
-user: cole-wilson
+site: "https://sailboat.colewilson.xyz"
+repo: "sailboat""
+user: "cole-wilson"
 ---
 <h1 align="center"><img src="https://www.pinclipart.com/picdir/big/383-3832964_im-on-a-boat-stamp-sailboat-stencil-clipart.png" width="70px">
 <br>

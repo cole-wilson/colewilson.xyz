@@ -1,11 +1,11 @@
 ---
-title: guess-my-number
+title: "guess-my-number"
 date: 2020-12-09T03:19:22Z
-desc: None
+desc: ""
 image: ""
-site: None
-repo: guess-my-number
-user: cole-wilson
+site: "None"
+repo: "guess-my-number""
+user: "cole-wilson"
 ---
 # Guess My Number
 A guess my number game.
