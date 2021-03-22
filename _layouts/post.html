@@ -2,27 +2,56 @@
 layout: master
 --- 
 {% include nav.html %}
+
+<!-- Hero Image/Title -->
 <section id="hero" style="background-image: url({{page.image}});">
 	<span class="herotitle">{{page.title}}</span>
-		</section>
-		<section id="body">
-		<aside>
-		<div id="about">
-		{% if page.desc %}
-		<p id="desc"><i>{{page.desc}}</i></p>
-		<hr>
-		{% endif %}
+</section>
+
+<!-- start SEO -->
+<script type="application/ld+json">
+{"@context": "https://schema.org", 
+"@type": "Article",
+"headline": "{{ page.title }}",
+"alternativeHeadline": "{{ page.description }}",
+{% if site.image %}"image": "{{ page.image | absolute_url }}",{% endif -%}
+"author": "Cole Wilson",
+"genre": "{% for tag in page.tags %}{{ tag }} {% endfor %}", 
+"keywords": "{% for tag in page.tags %}{{ tag }} {% endfor %}", 
+"wordcount": "{{ content | size }}",
+"publisher": {
+   "@type": "Organization",
+   "name": "Google",
+   "logo": {
+   "@type": "ImageObject",
+   "url": "https://google.com/logo.jpg"
+  }
+},
+url": "http://www.example.com",
+  "mainEntityOfPage": {
+  "@type": "WebPage",
+  "@id": "https://google.com/article"
+},
+"datePublished": "{{ page.date }}",
+"description": "{{ page.description }}",
+"articleBody": "{{ content | escape }}"
+}
+</script>
+<!-- end SEO -->
+
+<section id="body">
+	<aside><div id="about">
+		{% if page.desc %}<p id="desc"><i>{{page.desc}}</i></p><hr>{% endif %}
 		<span><i>{{ page.date | date_to_string }} - by Cole Wilson</i></span>
 		<hr>
-		{% for tag in page.tags %}
-		<a class="tag" href="/tags#{{tag | downcase}}">{{tag}}</a>
-		{% endfor %}
-		</div>
-		</aside>
-		<article>
-			{{content}}
-			{% include comments.html %}
-		</article>
-		</section>
-		{% include footer.html %}
-		{% include scripts.html %}
+		{% for tag in page.tags %}<a class="tag" href="/tags#{{tag | downcase}}">{{tag}}</a>{% endfor %}
+	</div></aside>
+	<article>
+		{{content}}
+	</article>
+	<h3>Comments:</h3>
+	{% include comments.html %}
+</section>
+
+{% include footer.html %}
+{% include scripts.html %}
