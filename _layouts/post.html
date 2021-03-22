@@ -25,6 +25,15 @@ layout: master
 		</details>
 		{{content}}
 		{% include comments.html %}
+		<details>
+			<summary>You can also <u>submit an anonymous comment</u> if you don't have a GitHub account.</summary>
+			<form action="https://api.colewilson.xyz/comment" method="POST">
+				<input id="clink" type="hidden" name="url" value="">
+				<script>$("#clink").val(window.location.pathname.substring(1))</script>
+				<textarea rows=10 placeholder="submit an anonymous comment. You will only be able to submit 1 comment per hour per IP." name="body"></textarea><br>
+				<input type="submit">
+			</form>
+		</details>
 	</article>
 </section>
 
