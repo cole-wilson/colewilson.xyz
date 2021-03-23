@@ -14,12 +14,12 @@ collections:
     output: true
   pages:
     output: true
-    permalink: /:name
+    permalink: /:name/
   links:
     output: false
   slideshows:
     output: true
-    premalink: /slides/:name
+    premalink: /slides/:name/
 
 defaults:
   - scope:
