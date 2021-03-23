@@ -12,37 +12,37 @@ bigfile = open('_assets/css/main.css').read()
 # Find imports
 f = re.findall('\@import url\(\'(.*)\'\)',open('_assets/css/main.css').read())
 for x in f:
-	print('Bundling CSS file: '+x)
-	if os.path.isfile('_assets/css/'+x):
-		# local imports
-		content = open('_assets/css/'+x).read()
-		#replace relative urls in remote source to absolute
-		fa = re.findall('url\((.*?)\)',content)
-		for fd in fa:
-			b = fd.replace('\'','').replace('"','')
-			if b[0:8]!='https://' and b[0:7]!='http://' and b[0:2]!='//' and b[0:5]!='data:':
-				content = content.replace(b,x+'/'+b)
-				print('\t'+b)
-		#add content to main css file
-		bigfile=bigfile.replace('@import url(\''+x+'\');',content)
-	else:
-		os.system('wget -q '+x+' -O temp')
-		content = open('temp').read()
-		#replace relative urls in remote source to absolute
-		fa = re.findall('url\((.*?)\)',content)
-		for fd in fa:
-			b = fd.replace('\'','').replace('"','')
-			if b[0:8]!='https://' and b[0:7]!='http://' and b[0:2]!='//' and b[0:5]!='data:':
-				#get absolute url
-				dirr = x.split('/')[-1]
-				dirr = x.replace(dirr,'')
-				# print('\t'+dirr)
-				content = content.replace(b,dirr+b)
-				print('\t'+b+' --> '+dirr+b)
-		#add content to main css file
-		bigfile=bigfile.replace('@import url(\''+x+'\');',content)
-		
-		os.system('rm -rf temp')
+#	print('Bundling CSS file: '+x)
+#	if os.path.isfile('_assets/css/'+x):
+#		# local imports
+#		content = open('_assets/css/'+x).read()
+#		#replace relative urls in remote source to absolute
+#		fa = re.findall('url\((.*?)\)',content)
+#		for fd in fa:
+#			b = fd.replace('\'','').replace('"','')
+#			if b[0:8]!='https://' and b[0:7]!='http://' and b[0:2]!='//' and b[0:5]!='data:':
+#				content = content.replace(b,x+'/'+b)
+#				print('\t'+b)
+#		#add content to main css file
+#		bigfile=bigfile.replace('@import url(\''+x+'\');',content)
+#	else:
+#		os.system('wget -q '+x+' -O temp')
+#		content = open('temp').read()
+#		#replace relative urls in remote source to absolute
+#		fa = re.findall('url\((.*?)\)',content)
+#		for fd in fa:
+#			b = fd.replace('\'','').replace('"','')
+#			if b[0:8]!='https://' and b[0:7]!='http://' and b[0:2]!='//' and b[0:5]!='data:':
+#				#get absolute url
+#				dirr = x.split('/')[-1]
+#				dirr = x.replace(dirr,'')
+#				# print('\t'+dirr)
+#				content = content.replace(b,dirr+b)
+#				print('\t'+b+' --> '+dirr+b)
+#		#add content to main css file
+#		bigfile=bigfile.replace('@import url(\''+x+'\');',content)
+#		
+#		os.system('rm -rf temp')
 
 # exit()
 fa = re.findall('url\((.*?)\)',bigfile)
