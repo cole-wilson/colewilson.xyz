@@ -41,14 +41,14 @@ defaults:
 jekyll-spaceship:
   # default enabled processors
   processors:
-    - table-processor
-    - mathjax-processor
-    - plantuml-processor
-    - mermaid-processor
-    - polyfill-processor
-    - media-processor
-    - emoji-processor
-    - element-processor
+   # - table-processor
+   # - mathjax-processor
+   # - plantuml-processor
+   # - mermaid-processor
+   # - polyfill-processor
+   # - media-processor
+   # - emoji-processor
+   # - element-processor
   mathjax-processor:
     src:
       - https://polyfill.io/v3/polyfill.min.js?features=es6
