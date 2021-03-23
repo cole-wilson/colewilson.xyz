@@ -53,7 +53,7 @@ for fd in fa:
 
 
 os.system('rm -rf assets/;mkdir assets')
-open('assets/bundle.min.css','w+').write(mincss.cssmin(bigfile)) # Make ugly
+#open('assets/bundle.min.css','w+').write(mincss.cssmin(bigfile)) # Make ugly
 # open('assets/bundle.min.css','w+').write(bigfile) # Keep nice
 
 hash = hash_file('assets/bundle.min.css')
