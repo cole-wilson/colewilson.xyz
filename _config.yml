@@ -1,9 +1,13 @@
-url: "https://colewilson.xyz"
 plugins:
   - jekyll-sitemap
   - jekyll-feed
+  - jekyll-spaceship
+  - jekyll/scholar
+  - jekyll-mentions
+  - jekyll-gist
   - jemoji
-  
+
+url: "https://colewilson.xyz"
 permalink: /:title/
 collections:
   projects:
@@ -33,4 +37,3 @@ defaults:
       type: slideshows
     values:
       layout: slideshow
-#
