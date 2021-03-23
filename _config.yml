@@ -1,7 +1,7 @@
 plugins:
   - jekyll-sitemap
   - jekyll-feed
-  - jekyll-spaceship
+#  - jekyll-spaceship
   - jekyll/scholar
   - jekyll-mentions
   - jekyll-gist
