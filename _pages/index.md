@@ -1,5 +1,5 @@
 ---
-layout: master
+layout: home
 title: Cole Wilson
 permalink: /
 image: https://miro.medium.com/max/2880/1*Sn80dgiwpMjBVrqjfiDbnA.jpeg
