@@ -1,4 +1,5 @@
 # colewilson.xyz
+[take me there](//colewilson.xyz)
 ```
 Congrats! You found easter egg #14!
 ```
