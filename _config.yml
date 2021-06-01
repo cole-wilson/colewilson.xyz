@@ -5,8 +5,11 @@ plugins:
   - jekyll/scholar
   - jekyll-mentions
   - jekyll-gist
+  - jekyll-tex
   - jemoji
-
+tex:
+  source: assets/tex
+  output: assets
 url: "https://colewilson.xyz"
 permalink: /:title/
 collections:
