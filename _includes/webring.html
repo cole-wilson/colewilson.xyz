@@ -78,7 +78,7 @@
         l = document.getElementById("previousBtn"),
         m = document.getElementById("nextBtn"),
         b = new XMLHttpRequest;
-    b.open("GET", "https://webring.hackclub.com/public/members.json");
+    b.open("GET", "https://webring.hackclub.com/members.json");
     b.responseType = "json";
     b.send();
     b.onload = function() {
